@@ -5,6 +5,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "yg-jalnan";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* #EFEBE4; */
 * {
   margin: 0;
@@ -32,7 +38,7 @@ button {
 }
 
 body {
-  background-color: #F5F5F3;
+  background-color: #fff;
   height: 3000px;
   min-width: 1280px;
   overflow-x: hidden;
@@ -83,7 +89,7 @@ body {
   position: relative;
   font-size: 50px;
   margin: 0 auto;
-  background: linear-gradient(to bottom, #F5F5F3 1%, #ebdfcb 99%);
+  background: linear-gradient(to bottom, #F5F5F3 50%, #ebdfcb 99%);
 }
 .page_outer .intro .typing {
   font-family: "Chakra Petch", sans-serif;
@@ -129,12 +135,11 @@ body {
 }
 .page_outer .page {
   text-align: center;
-  height: 2000px;
 }
 .page_outer #about {
-  background-color: #ebdfcb;
   position: relative;
   height: 2600px;
+  background: linear-gradient(to bottom, #ebdfcb 50%, #fff 99%);
 }
 .page_outer #about #about_box {
   position: absolute;
@@ -148,6 +153,7 @@ body {
   width: 1000px;
   margin: 0 auto;
   padding-top: 300px;
+  margin-bottom: 450px;
 }
 .page_outer #about #about_box .visual_main .visual_main_img {
   width: 30%;
@@ -194,7 +200,6 @@ body {
   margin-right: 10px;
 }
 .page_outer #about #about_box .flow_wrap {
-  margin-top: 100px;
   padding: 5px 0;
   font-size: 18px;
   font-weight: bold;
@@ -204,17 +209,18 @@ body {
   white-space: nowrap;
   overflow: hidden;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .page_outer #about #about_box .flow_wrap:hover .flow_text {
   animation-play-state: paused;
-  cursor: pointer;
 }
 .page_outer #about #about_box .flow_wrap .flow_text {
   padding-right: 10px;
 }
 .page_outer #about #about_box .flow_wrap01 {
+  margin-bottom: 50px;
   background-color: #e3cdcd;
-  transform: rotate(-5deg);
+  transform: rotate(0deg);
 }
 .page_outer #about #about_box .flow_wrap01:hover {
   background-color: #ecf6ce;
@@ -231,8 +237,9 @@ body {
   }
 }
 .page_outer #about #about_box .flow_wrap02 {
+  margin-bottom: 50px;
   background-color: #cacb96;
-  transform: rotate(5deg);
+  transform: rotate(0deg);
 }
 .page_outer #about #about_box .flow_wrap02:hover {
   background-color: #aeecac;
@@ -249,8 +256,9 @@ body {
   }
 }
 .page_outer #about #about_box .flow_wrap03 {
+  margin-bottom: 50px;
   background-color: #d6d5ea;
-  transform: rotate(-7deg);
+  transform: rotate(0deg);
 }
 .page_outer #about #about_box .flow_wrap03:hover {
   background-color: #ead1f3;
@@ -267,8 +275,9 @@ body {
   }
 }
 .page_outer #about #about_box .flow_wrap04 {
+  margin-bottom: 50px;
   background-color: #f4f4be;
-  transform: rotate(7deg);
+  transform: rotate(0deg);
 }
 .page_outer #about #about_box .flow_wrap04:hover {
   background-color: #e7fac4;
@@ -281,7 +290,7 @@ body {
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 .page_outer #about #about_box .info_tap_menu {
@@ -334,12 +343,11 @@ body {
 .page_outer #about #about_box .info_tap .tap {
   display: none;
   position: relative;
-  padding: 50px;
-  background-color: pink;
-  height: 300px;
+  padding: 30px;
+  height: 400px;
 }
 .page_outer #about #about_box .info_tap .tap p {
-  font-size: 30px;
+  font-size: 20px;
   border: 1px solid #000;
 }
 .page_outer #about #about_box .info_tap .tap .arrow01 {
@@ -373,64 +381,147 @@ body {
 .page_outer #about #about_box .info_tap .active {
   display: block;
 }
-.page_outer #profile #main {
-  width: 1280px;
+.page_outer #profile {
+  padding-top: 150px;
+  background-color: #fff;
+  padding-bottom: 200px;
+}
+.page_outer #profile #main .main_wrap {
+  width: 1000px;
   margin: 0 auto;
-  background-color: pink;
+  background-color: #ebdfcb;
+  padding: 50px;
+  position: relative;
 }
-.page_outer #profile #main .main_box {
-  border: 3px solid #000;
+.page_outer #profile #main .main_wrap .tape {
+  transform: rotate(0deg);
+  position: absolute;
+  top: -140px;
+  left: 420px;
 }
-.page_outer #profile #main .main_box .main_content {
+.page_outer #profile #main .main_wrap .main_content {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  font-size: 14px;
 }
-.page_outer #profile #main .main_box .main_content li {
-  width: 300px;
+.page_outer #profile #main .main_wrap .main_content .main_box {
+  width: 400px;
   height: 300px;
-  border: 1px solid #000;
 }
-.page_outer #profile #main .main_box .main_top {
-  margin-bottom: 30px;
+.page_outer #profile #main .main_wrap .main_content h3 {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 30px;
+  margin-bottom: 20px;
 }
-.page_outer #profile #main .main_box .main_top .main01 {
+.page_outer #profile #main .main_wrap .main_top {
+  margin-bottom: 50px;
+}
+.page_outer #profile #main .main_wrap .main_top .main01 {
   overflow: hidden;
 }
-.page_outer #profile #main .main_box .main_top .main01 img {
+.page_outer #profile #main .main_wrap .main_top .main01 img {
   width: 100%;
   height: auto;
   display: block;
 }
-.page_outer #skils {
-  height: 100vh;
-  padding-top: 10vh;
+.page_outer #profile #main .main_wrap .main_top .main02 ul {
+  display: flex;
+  justify-content: space-around;
 }
-.page_outer #skils .waves {
+.page_outer #profile #main .main_wrap .main_top .main02 ul li {
+  width: 70%;
+  text-align: left;
+}
+.page_outer #profile #main .main_wrap .main_top .main02 ul li div {
+  margin-top: 15px;
+}
+.page_outer #profile #main .main_wrap .main_top .main02 ul .bold {
+  width: 30%;
+  font-weight: bold;
+}
+.page_outer #profile #main .main_wrap .main_bottom ul {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.page_outer #profile #main .main_wrap .main_bottom ul li {
+  margin-top: 30px;
+}
+.page_outer #profile #main .resume {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.page_outer #profile #ask {
+  padding-top: 200px;
+  width: 800px;
+  margin: 0 auto;
+}
+.page_outer #profile #ask .ask_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.page_outer #profile #ask .ask_wrap .ask_title h1 {
+  font-size: 80px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  background-color: #ebdfcb;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+.page_outer #profile #ask .ask_wrap .ask_title p {
+  font-size: 20px;
+}
+.page_outer #profile #ask .ask_wrap img {
+  width: 100%;
+}
+.page_outer #profile #ask .ask_wrap .swiper {
+  width: 500px;
+  height: 400px;
+  margin: 0;
+}
+.page_outer #profile #ask .ask_wrap .swiper .swiper-slide {
+  border-radius: 0px;
+  font-size: 22px;
+  border: 3px solid #000;
+  background-color: #fff;
+}
+.page_outer #profile #ask .ask_wrap .swiper .swiper-slide .text_box .ask_text {
+  text-align: center;
+  font-weight: bold;
+  background-color: #ebdfcb;
+}
+.page_outer #profile #ask .ask_wrap .swiper .swiper-slide .text_box .answer_text {
+  background-color: #fff;
+}
+.page_outer #skils {
+  background-color: #fff;
+  padding-top: 200px;
+}
+.page_outer #skils .wave {
   position: relative;
   width: 100%;
-  height: 10vh;
   margin-bottom: -7px; /*Fix for safari gap*/
-  min-height: 100px;
   max-height: 150px;
   /* Animation */
   /*Shrinking for mobile*/
 }
-.page_outer #skils .waves .parallax > use {
+.page_outer #skils .wave .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
-.page_outer #skils .waves .parallax > use:nth-child(1) {
+.page_outer #skils .wave .parallax > use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
-.page_outer #skils .waves .parallax > use:nth-child(2) {
+.page_outer #skils .wave .parallax > use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
-.page_outer #skils .waves .parallax > use:nth-child(3) {
+.page_outer #skils .wave .parallax > use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
-.page_outer #skils .waves .parallax > use:nth-child(4) {
+.page_outer #skils .wave .parallax > use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
@@ -443,20 +534,224 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .page_outer #skils .waves .waves {
+  .page_outer #skils .wave .waves {
     height: 40px;
     min-height: 40px;
   }
 }
-.page_outer #skils .skils_box {
-  background-color: #ebdfcb;
-  border: 1px solid #000;
+.page_outer #skils .wave02 {
+  transform: scaleY(-1);
 }
-.page_outer #skils .skils_box .skils_info {
+.page_outer #skils .skils_box_outer {
+  background-color: #ebdfcb;
+}
+.page_outer #skils .skils_box_outer .skils_box {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+.page_outer #skils .skils_box_outer .skils_box h5 {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 50px;
+  font-family: "Chakra Petch", sans-serif;
+  font-style: italic;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul {
+  display: flex;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li {
+  width: 50%;
+  height: 260px;
+  padding: 20px;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Chakra Petch", sans-serif;
+  letter-spacing: 2px;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .progress_box {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .progress_box img {
+  display: block;
+  width: 45px;
+  margin-right: 20px;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .progress_box .progressbar {
+  width: 100%;
+  height: 15px;
+  background-color: #c7c7c5;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .progress_box .progress {
+  width: 0%;
+  height: 15px;
+  background-color: rgb(75, 77, 75);
+  border-radius: 20px;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .progress_box .num {
+  font-weight: bold;
+  font-size: 13px;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .icon {
+  display: flex;
+  justify-content: space-between;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .icon li {
+  height: auto;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .icon li img {
+  width: 50px;
+}
+.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .icon li p {
+  font-size: 15px;
+  font-weight: bold;
+}
+.page_outer #works {
+  height: 100vh;
+  background: linear-gradient(to right, #ebdfcb 20%, #fff 70%);
+}
+.page_outer #works .works_outer {
   width: 1280px;
   margin: 0 auto;
+  display: flex;
+}
+.page_outer #works .works_outer .works_tapmenu_box {
+  width: 35%;
+  height: 100vh;
+  background-color: #ebdfcb;
+}
+.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu {
+  margin-top: 200px;
+}
+.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu h1 {
+  text-align: left;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  margin-bottom: 80px;
+}
+.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu ul li {
+  text-align: left;
+  margin-bottom: 60px;
+  font-size: 15px;
+}
+.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu ul li span {
+  cursor: pointer;
+}
+.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu ul .active {
+  font-weight: bold;
+}
+.page_outer #works .works_outer .works_tap_box {
+  width: 60%;
+  height: 100vh;
+  background-color: #fff;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap {
+  margin: 100px 0;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .works_tap {
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .active {
+  opacity: 1;
+  height: 100%;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_box {
+  width: 500px;
+  height: 350px;
   border: 1px solid #000;
-  height: 80vh;
+  margin: 0 auto;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box {
+  width: 500px;
+  margin: 0 auto;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .title {
+  font-family: "yg-jalnan";
+  font-size: 20px;
+  margin-top: 20px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .comment {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .plan {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box h3 {
+  font-weight: bold;
+  text-align: left;
+  margin-top: 20px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color {
+  width: 80px;
+  text-align: center;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view01 {
+  background-color: #F68514;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view02 {
+  background-color: #EFD6A1;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view03 {
+  background-color: #C5C2BB;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color p {
+  font-size: 11px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .url_box button {
+  border: none;
+  width: 140px;
+  height: 40px;
+  margin-right: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #2e2d2d;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .url_box button:hover {
+  background-color: #ebdfcb;
+  color: black;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap02 {
+  background-color: red;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap03 {
+  background-color: yellowgreen;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap04 {
+  background-color: green;
 }
 .page_outer .contact {
   height: 100vh;
@@ -474,7 +769,7 @@ body {
 }
 .page_outer .contact .contact_box {
   width: 1000px;
-  height: 400px;
+  height: 500px;
   margin: 0 auto;
   background-color: #fff;
 }
@@ -482,19 +777,24 @@ body {
   display: flex;
   width: 800px;
   margin: 0 auto;
+  padding-top: 70px;
 }
 .page_outer .contact .contact_box ul .left {
   width: 30%;
-  margin-right: 10%;
+  margin-right: 30%;
 }
 .page_outer .contact .contact_box ul .left img {
   width: 350px;
   height: auto;
   display: block;
-  border-radius: 150px 150px 0 0;
+  border-radius: 180px 180px 0 0;
 }
 .page_outer .contact .contact_box ul .right {
-  width: 60%;
+  border: 1px solid #000;
+}
+.page_outer .contact .contact_box ul .right h5 {
+  font-family: "yg-jalnan";
+  font-size: 25px;
 }
 .page_outer .contact .text01 {
   font-weight: bold;
