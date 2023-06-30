@@ -187,19 +187,164 @@ $(document).ready(function() {
 //[제이쿼리] works : 모달창   -----------------------------------------------
 
 
-document.querySelector('.url_01').addEventListener('click', function() {
-  document.getElementById('modal1').style.display = 'block';
+const url01 = document.querySelector('.url_01')
+const url02 = document.querySelector('.url_02')
+
+const modal01 = document.querySelector('#modal_01')
+const modal02 = document.querySelector('#modal_02')
+
+const back01 = document.querySelector('#background_01')
+const back02 = document.querySelector('#background_02')
+
+const close01= document.querySelector('#close_01')
+const close02= document.querySelector('#close_02')
+
+const body = document.querySelector('body');
+
+url01.addEventListener('click', function() {
+  modal01.style.display = 'block';
+  back01.style.display = 'block';
+  body.style.overflow = 'hidden';
 });
-document.querySelector('.url_02').addEventListener('click', function() {
-  document.getElementById('modal2').style.display = 'block';
-});
-document.getElementById('close1').addEventListener('click', function() {
-  document.getElementById('modal1').style.display = 'none';
-});
-document.getElementById('close2').addEventListener('click', function() {
-  document.getElementById('modal2').style.display = 'none';
+url02.addEventListener('click', function() {
+  modal02.style.display = 'block';
+  back02.style.display = 'block';
+  body.style.overflow = 'hidden';
 });
 
-//[바닐라] 프로필 : swiper / AOS  -----------------------------------------------
+close01.addEventListener('click', function() {
+  modal01.style.display = 'none';
+  back01.style.display = 'none';
+  body.style.overflowY = 'auto';
+
+  //나갔다 들어올때 active 첫번재 이동
+  $('.modal_menu .menu').removeClass('active');
+  $('.modal_menu .menu').eq(0).addClass('active');
+  $('.modal_tap').css('display', 'none').removeClass('active');
+  $('.modal_tap').eq(0).css('display', 'block').addClass('active');
+});
+close02.addEventListener('click', function() {
+  modal02.style.display = 'none';
+  back02.style.display = 'none';
+  body.style.overflowY = 'auto';
+
+    //나갔다 들어올때 active 첫번재 이동
+  $('.modal_menu .menu').removeClass('active');
+  $('.modal_menu .menu').eq(0).addClass('active');
+  $('.modal_tap').css('display', 'none').removeClass('active');
+  $('.modal_tap').eq(0).css('display', 'block').addClass('active');
+});
+
+
+
+
+
+//[바닐라] 모달창 : 탭메뉴 -----------------------------------------------
+
+
+
+
+ //모달 메뉴를 클릭할때
+$('.modal_menu .menu').click(function() {
+
+  //메뉴전체에서 일단 active를 지우고
+  $('.modal_menu .menu').removeClass('active');
+  //선택된 메뉴만 active시킨다
+  $(this).addClass('active');
+
+  //그리고 선택된 메뉴에 해당하는 인덱스를 찾아서
+  let index = $(this).index();
+
+
+  $('.modal_tap').css('display', 'none').removeClass('active');
+  $('.modal_tap').eq(index).css('display', 'block').addClass('active');
+  
+  //탭메뉴의 스와이퍼 첫페이지시작
+  if (index == 0) {
+    swiper01.slideTo(0);
+  } else if (index == 1) {
+    swiper02.slideTo(0);
+  } else if (index == 2) {
+    swiper03.slideTo(0);
+  }
+});
+
+
+
+
+
+//[바닐라] 모달창 : swiper  -----------------------------------------------
+
+
+
+
+
+var swiper01 = new Swiper(".swiper01", {
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop:true,
+  grabCursor:true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+var swiper02 = new Swiper(".swiper02", {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  loop:true,
+  grabCursor:true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+var swiper03 = new Swiper(".swiper03", {
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  loop:true,
+  grabCursor:true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+
+
+
+
+
+
+
+
+
+
+//[바닐라]  AOS  -----------------------------------------------
 
 AOS.init();
+
+

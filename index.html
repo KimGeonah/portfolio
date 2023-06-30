@@ -334,14 +334,16 @@
 
                 <div class="ask_wrap">
 
-                    <div
-                        data-aos="fade-right"
-                        data-aos-offset="-100"
-                        data-aos-delay="50"
-                        data-aos-duration="1000"
-                        data-aos-easing="ease-in-out"
-                        data-aos-once="false"
-                        data-aos-anchor-placement="top-center" class="ask_title">
+
+                    <div                    
+                    data-aos="fade-right"
+                    data-aos-offset="-100"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    data-aos-easing="ease-in-out"
+                    data-aos-once="false"
+                    data-aos-anchor-placement="top-center" 
+ class="ask_title">
                         <h1>Q&A</h1>
                         <p>질문!!!</p>
                       </div>
@@ -619,7 +621,7 @@
             
             
         
-<!--            <svg class="wave02 wave"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <svg class="wave02 wave"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 <defs>
                     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
                 </defs>
@@ -629,7 +631,7 @@
                     <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(234,223,203,0.3)"/>
                     <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(234,223,203)"/>
                 </g>
-            </svg>  -->
+            </svg> 
 
 
 
@@ -647,8 +649,9 @@
             <div class="works_outer">
 
 
-
-                <div class="works_tapmenu_box">
+              <!-- 왼쪽 메뉴 -->
+              <div class="works_tapmenu_box">
+                
                 <div class="works_tapmenu">
                     <p>포트폴리오</p>
                     <h1>- CODING IS MY LIFE</h1>
@@ -659,16 +662,32 @@
                         <li class="tapmenu04"><span><i class="far fa-square"></i> 개인 프로젝트 : 휠라 사이트 로그인 기능</span> </li>
                     </ul>
                 </div>
-            </div>
+              </div>
 
 
-            <div class="works_tap_box">
+              <!-- 오른쪽 작품 -->
+              <div class="works_tap_box">
                 <div class="works_tap">
                     <ul>
+
+                        <!-- 오른쪽 탭1 -->
                         <li class="tap01 works_tap active">
                             
-                            <section class="mockup_box">목업 이미지</section>
+                            <!-- 목업 -->
+                            <section class="mockup_box">
 
+                              <div class="pc">
+                                <img src="./img/pc_04.jpg" alt="pc">
+                              </div>
+
+                              <div class="tab"></div>
+
+                              <div class="mobile"></div>
+
+                            </section>
+
+                            
+                            <!-- 정보 -->
                             <section class="info_box">
 
                                 <h1 class="title">반응형웹 : 체험뷰 사이트 리뉴얼</h1>
@@ -676,11 +695,11 @@
                                 <p class="comment">
                                     체험뷰는 마케팅 커뮤니티 사이트이며 반응형웹으로 제작되었습니다.
                                     <br>
-                                    사용성으로 고려한 UI&UX 수정과 컨텐츠 개편 또한 추가하였습니다.
+                                    사용성으로 고려한 UI & UX 수정과 컨텐츠 개편을 구현하였습니다.
                                     <br>
-                                    기존의 사이트는 컨텐츠별 분류가 명확하지 않아 사용자에게 큰 
+<!--                                     기존의 사이트는 컨텐츠별 분류가 명확하지 않아 사용자에게 큰 
                                     <br>
-                                    불편함을 주는 사이트였습니다.
+                                    불편함을 주는 사이트였습니다. -->
                                 </p>
 
                                 <p class="plan period">✔ 제작기간 : 3주</p>
@@ -707,35 +726,592 @@
                                 
                             </section>
 
-                            <section class="url_box">
-                                <button class="url_01 url_btn">SITE 제안서</button>
-                                <button class="url_02 url_btn">CODE VIEW</button>
-                                <button class="url_03 url_btn"><a href="https://kimgeonah.github.io/site/" target="_blank"> URL 방문</a></button>
-                            </section>
+                            <!-- 모달 버튼 -->
+                            <div class="url_box">
+                              <button class="url_01">기획서</button>
+                              <button class="url_02">코드리뷰</button>
+                              <button class="url_03"><a href="https://kimgeonah.github.io/site/" target="_blank">SITE 방문</a></button>
+                            </div>
+
+                            <!-- 모달창1 -->
+                            <div class="modal_background" id="background_01">
 
 
-                            <div id="modal1" class="modal" style="display:none; width:1000px; height:500px;">
-                                <p>모달창1 내용</p>
-                                <button id="close1">close</button>
+
+                                <div id="modal_01" class="modal">
+
+                                    <div class="circle_box">
+                                        <div class="circle01 circle"></div>
+                                        <div class="circle02 circle"></div>
+                                        <div class="circle03 circle"></div>
+                                    </div>
+                                    
+                                    <button id="close_01" class="close_btn"><i class="fas fa-times"></i></button>
+                                    
+
+
+
+
+                                    <div class="content01 content">
+
+                                        <div class="modal_menu">
+
+                                            <div class="menu01 menu active">
+                                                <i class="fas fa-file-powerpoint"></i>
+                                                <br>
+                                                PPT
+                                            </div>
+
+                                            <div class="menu02 menu">
+                                                <i class="fas fa-edit"></i>
+                                                <br>
+                                                Idea Sketch
+                                            </div>
+
+                                            <div class="menu03 menu">
+                                                <i class="fas fa-desktop"></i>
+                                                <br>
+                                                Proto Type
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal_tap_box">
+
+
+                                            <div class="modal_tap01 modal_tap active">
+                                                
+                                                <div class="swiper01 swiper_modal">
+                                                    <div class="swiper-wrapper">
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_01.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_02.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_03.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_04.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_05.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_06.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_07.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_08.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_09.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_10.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_11.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_12.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_13.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_14.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_15.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_16.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_17.JPG" alt="ppt">
+                                                      </div>
+                                                    </div>
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-pagination"></div>
+                                                  </div>
+                                                
+                                            </div>
+
+                                            <div class="modal_tap02 modal_tap">
+
+                                                <div class="swiper_box">
+                                                <div class="swiper02">
+                                                    <div class="swiper-wrapper">
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_01.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_02.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_03.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_04.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_05.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_06.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_07.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_08.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_09.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_10.JPG" alt="idea">
+                                                      </div>
+
+
+                                                    </div>
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+
+                                                
+                                                <div class="modal_info_box">
+                                                <div class="modal_info">
+
+
+                                                    <h1>Idea Sketch</h1>
+
+                                                    <h3>폰트 플랜</h3>
+                                                    <p>강조 폰트 : Black Han Sans</p>
+                                                    <p>메인 폰트 : Noto Sans Korean</p>
+
+
+                                                    <h3>사이트 컨셉</h3>
+                                                    <p>깔끔한 / 신뢰가는 / 생기있는</p>
+
+                                                    <h3>제작물</h3>
+                                                    <p>메인페이지/서브페이지(반응형)</p>
+
+
+
+                                                    <h3>컨셉 기획</h3>
+                                                    <p class="text">
+                                                        ✔️ 메뉴를 한번에 탐색 가능하도록 지역별로 분류 
+                                                        <br>
+                                                        ✔️ 메인페이지 다양한 컨텐츠 구현으로 신뢰성 증가
+                                                        <br>
+                                                        ✔️ 서브페이지 UI를 개편으로 사용자 접근성 증대
+                                                       
+    
+                                                    </p>
+
+
+
+                                                </div>
+                                            </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="modal_tap03 modal_tap">
+                                                <div class="swiper_box">
+                                                    <div class="swiper03">
+                                                        <div class="swiper-wrapper">
+                                                          <div class="swiper-slide">
+                                                            <img class="img01" src="./img/type_01.JPG" alt="type">
+                                                          </div>
+                                                          <div class="swiper-slide">
+                                                            <img class="img02" src="./img/type_02.JPG" alt="type">
+                                                          </div>
+                                                          <div class="swiper-slide">
+                                                            <img class="img03" src="./img/type_03.JPG" alt="type">
+                                                          </div>
+
+                                                          <div class="swiper-slide">
+                                                            <img class="img04" src="./img/type_04.JPG" alt="type">
+                                                          </div>
+
+                                                          <div class="swiper-slide">
+                                                            <img class="img05" src="./img/type_05.JPG" alt="type">
+                                                          </div>
+
+                                                          <div class="swiper-slide">
+                                                            <img class="img06" src="./img/type_06.JPG" alt="type">
+                                                          </div>
+
+                                                          <div class="swiper-slide">
+                                                            <img class="img07" src="./img/type_07.JPG" alt="type">
+                                                          </div>
+    
+                                                          <div class="swiper-slide">
+                                                            <img class="img08" src="./img/type_08.JPG" alt="type">
+                                                          </div>
+    
+                                                        </div>
+                                                        <div class="swiper-button-next"></div>
+                                                        <div class="swiper-button-prev"></div>
+                                                        <div class="swiper-pagination"></div>
+                                                    </div>
+    
+                                                    <div class="modal_info_box">
+                                                        <div class="modal_info">
+        
+        
+                                                            <h1>Proto Type</h1>
+        
+                                                            <h3>WEB</h3>
+                                                            <p>브레이크 포인트: 1280px</p>
+                                                            <p>1칼럼 80px / gutter 10px  </p>
+                                                            <p>양쪽 여백 각 105px </p>
+                                                            <br>
+
+                                                            <h3>TAB</h3>
+                                                            <p>브레이크 포인트: 1024px</p>
+                                                            <p>1칼럼 100px / gutter 20px  </p>
+                                                            <p>양쪽 여백 각 42px </p>
+                                                            <br>
+
+                                                            <h3>MOBILE</h3>
+                                                            <p>브레이크 포인트: 600px</p>
+                                                            <p>1칼럼 80px / gutter 15px  </p>
+                                                            <p>양쪽 여백 각 22px </p>
+
+
+
+
+
+                                                            
+        
+        
+
+        
+    
+        
+        
+        
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
                             </div>
                             
-                            <div id="modal2" class="modal" style="display:none; width:1000px; height:500px;">
-                                <p>모달창2 내용</p>
-                                <button id="close2">close</button>
+
+                            <!-- 모달창2 -->
+                            <div class="modal_background" id="background_02">
+
+
+                                <div id="modal_02" class="modal">
+
+                                    <div class="circle_box">
+                                        <div class="circle01 circle"></div>
+                                        <div class="circle02 circle"></div>
+                                        <div class="circle03 circle"></div>
+                                    </div>
+                                    
+                                    <button id="close_02" class="close_btn"><i class="fas fa-times"></i></button>
+
+                                    <div class="content01 content">
+
+                                        <div class="modal_menu">
+
+                                            <div class="menu01 menu active">
+                                                <i class="fas fa-file-powerpoint"></i>
+                                                <br>
+                                                PPT
+                                            </div>
+
+                                            <div class="menu02 menu">
+                                                <i class="fas fa-edit"></i>
+                                                <br>
+                                                Idea Sketch
+                                            </div>
+
+                                            <div class="menu03 menu">
+                                                <i class="fas fa-desktop"></i>
+                                                <br>
+                                                Proto Type
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal_tap_box">
+
+
+                                            <div class="modal_tap01 modal_tap active">
+                                                
+                                                <div class="swiper01 swiper_modal">
+                                                    <div class="swiper-wrapper">
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_01.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_02.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_03.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_04.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_05.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_06.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_07.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_08.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_09.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_10.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_11.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_12.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_13.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_14.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_15.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_16.JPG" alt="ppt">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/ppt_17.JPG" alt="ppt">
+                                                      </div>
+                                                    </div>
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-pagination"></div>
+                                                  </div>
+                                                
+                                            </div>
+
+                                            <div class="modal_tap02 modal_tap">
+
+                                                <div class="swiper_box">
+                                                <div class="swiper02">
+                                                    <div class="swiper-wrapper">
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_01.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_02.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_03.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_04.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_05.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_06.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_07.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_08.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_09.JPG" alt="idea">
+                                                      </div>
+                                                      <div class="swiper-slide">
+                                                        <img src="./img/idea_10.JPG" alt="idea">
+                                                      </div>
+
+
+                                                    </div>
+                                                    <div class="swiper-button-next"></div>
+                                                    <div class="swiper-button-prev"></div>
+                                                    <div class="swiper-pagination"></div>
+                                                </div>
+
+                                                
+                                                <div class="modal_info_box">
+                                                <div class="modal_info">
+
+
+                                                    <h1>Idea Sketch</h1>
+
+                                                    <h3>폰트 플랜</h3>
+                                                    <p>강조 폰트 : Black Han Sans</p>
+                                                    <p>메인 폰트 : Noto Sans Korean</p>
+
+
+                                                    <h3>사이트 컨셉</h3>
+                                                    <p>깔끔한 / 신뢰가는 / 생기있는</p>
+
+                                                    <h3>제작물</h3>
+                                                    <p>메인페이지/서브페이지(반응형)</p>
+
+
+
+                                                    <h3>컨셉 기획</h3>
+                                                    <p class="text">
+                                                        ✔️ 메뉴를 한번에 탐색 가능하도록 지역별로 분류 
+                                                        <br>
+                                                        ✔️ 메인페이지 다양한 컨텐츠 구현으로 신뢰성 증가
+                                                        <br>
+                                                        ✔️ 서브페이지 UI를 개편으로 사용자 접근성 증대
+                                                       
+    
+                                                    </p>
+
+
+
+                                                </div>
+                                            </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="modal_tap03 modal_tap">
+                                                <div class="swiper_box">
+                                                    <div class="swiper03">
+                                                        <div class="swiper-wrapper">
+                                                          <div class="swiper-slide">
+                                                            <img class="img01" src="./img/type_01.JPG" alt="type">
+                                                          </div>
+                                                          <div class="swiper-slide">
+                                                            <img class="img02" src="./img/type_02.JPG" alt="type">
+                                                          </div>
+                                                          <div class="swiper-slide">
+                                                            <img class="img03" src="./img/type_03.JPG" alt="type">
+                                                          </div>
+
+                                                          <div class="swiper-slide">
+                                                            <img class="img04" src="./img/type_04.JPG" alt="type">
+                                                          </div>
+
+                                                          <div class="swiper-slide">
+                                                            <img class="img05" src="./img/type_05.JPG" alt="type">
+                                                          </div>
+
+                                                          <div class="swiper-slide">
+                                                            <img class="img06" src="./img/type_06.JPG" alt="type">
+                                                          </div>
+
+                                                          <div class="swiper-slide">
+                                                            <img class="img07" src="./img/type_07.JPG" alt="type">
+                                                          </div>
+    
+                                                          <div class="swiper-slide">
+                                                            <img class="img08" src="./img/type_08.JPG" alt="type">
+                                                          </div>
+    
+                                                        </div>
+                                                        <div class="swiper-button-next"></div>
+                                                        <div class="swiper-button-prev"></div>
+                                                        <div class="swiper-pagination"></div>
+                                                    </div>
+    
+                                                    <div class="modal_info_box">
+                                                        <div class="modal_info">
+        
+        
+                                                            <h1>Proto Type</h1>
+        
+                                                            <h3>WEB</h3>
+                                                            <p>브레이크 포인트: 1280px</p>
+                                                            <p>1칼럼 80px / gutter 10px  </p>
+                                                            <p>양쪽 여백 각 105px </p>
+                                                            <br>
+
+                                                            <h3>TAB</h3>
+                                                            <p>브레이크 포인트: 1024px</p>
+                                                            <p>1칼럼 100px / gutter 20px  </p>
+                                                            <p>양쪽 여백 각 42px </p>
+                                                            <br>
+
+                                                            <h3>MOBILE</h3>
+                                                            <p>브레이크 포인트: 600px</p>
+                                                            <p>1칼럼 80px / gutter 15px  </p>
+                                                            <p>양쪽 여백 각 22px </p>
+
+
+
+
+
+                                                            
+        
+        
+
+        
+    
+        
+        
+        
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
                             </div>
+                            
 
                         </li>
 
 
 
-
+                        <!-- 오른쪽 탭2 -->
                         <li class="tap02  works_tap ">2번 </li>
+
+                        <!-- 오른쪽 탭3 -->
                         <li class="tap03  works_tap ">333333</li>
+
+                        <!-- 오른쪽 탭4 -->
                         <li class="tap04  works_tap ">444444</li>
                     </ul>
                 </div>
-            </div>
-
+              </div>
 
             </div>
 
@@ -760,9 +1336,9 @@
                     </ul>
             </div>
 
-            <p class="text01">Copyrightⓒ2023. Front-end 김건아.All rights reserved.</p>
-            <p class="text02">본 사이트는 상업적 목적이 아닌 개인포트폴리오 사이트로 제작되었습니다.</p>
-            <p class="text03">일부 이미지 및 폰트 등은 그 출처가 따로 있음을 밝힙니다.</p>
+            <p class="footer01">Copyrightⓒ2023. Front-end 김건아.All rights reserved.</p>
+            <p class="footer02">본 사이트는 상업적 목적이 아닌 개인포트폴리오 사이트로 제작되었습니다.</p>
+            <p class="footer03">일부 이미지 및 폰트 등은 그 출처가 따로 있음을 밝힙니다.</p>
         </section>
 
 

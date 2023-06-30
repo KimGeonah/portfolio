@@ -50,7 +50,7 @@ body {
   top: 0;
   left: 0;
   border-bottom: 1px solid #707070;
-  z-index: 9999;
+  z-index: 10;
   background-color: #F5F5F3;
 }
 .header_outer .header {
@@ -479,6 +479,7 @@ body {
   width: 500px;
   height: 400px;
   margin: 0;
+  z-index: 0;
 }
 .page_outer #profile #ask .ask_wrap .swiper .swiper-slide {
   border-radius: 0px;
@@ -618,6 +619,7 @@ body {
 .page_outer #works {
   height: 100vh;
   background: linear-gradient(to right, #ebdfcb 20%, #fff 70%);
+  position: relative;
 }
 .page_outer #works .works_outer {
   width: 1280px;
@@ -625,7 +627,7 @@ body {
   display: flex;
 }
 .page_outer #works .works_outer .works_tapmenu_box {
-  width: 35%;
+  width: 50%;
   height: 100vh;
   background-color: #ebdfcb;
 }
@@ -744,6 +746,322 @@ body {
   background-color: #ebdfcb;
   color: black;
 }
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #EDF0F3;
+  display: none;
+  z-index: 9999;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal {
+  display: none;
+  width: 1300px;
+  height: 850px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 2 !important;
+  box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.2);
+  position: relative;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background-color: black;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle01 {
+  background-color: #ec5a5a;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle02 {
+  background-color: #f3d678;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle03 {
+  background-color: #9de04f;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn i {
+  font-size: 30px;
+  transition: all 0.3s;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn:hover {
+  color: rgb(247, 43, 43);
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #969494;
+  font-weight: bold;
+  cursor: pointer;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu:hover {
+  color: #66c7ee;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .active {
+  color: #66c7ee;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 {
+  width: 100%;
+  height: 100%;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-slide img {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 5%;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-horizontal > .swiper-scrollbar, .page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  width: 1200px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev,
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
+  color: black;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
+  right: 40px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev {
+  left: 40px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet {
+  background-color: rgb(173, 171, 169);
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet-active {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box {
+  display: flex;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 {
+  width: 50%;
+  overflow: hidden;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-slide img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 15%;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-scrollbar, .page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  width: 1200px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev,
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
+  color: black;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
+  right: 650px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev {
+  left: 50px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet {
+  background-color: rgb(173, 171, 169);
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet-active {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-pagination-bullets,
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullets.swiper-pagination-horizontal,
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-custom, .page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-fraction {
+  width: 50%;
+  bottom: var(--swiper-pagination-bottom, 19px);
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box {
+  width: 50%;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info {
+  width: 400px;
+  margin: 0 auto;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info .text {
+  text-align: left;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box {
+  display: flex;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 {
+  width: 50%;
+  overflow: hidden;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img01 {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 25%;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img02 {
+  width: 38%;
+  height: auto;
+  display: block;
+  margin: 0 29%;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img03,
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img04 {
+  width: 32%;
+  height: auto;
+  display: block;
+  margin: 0 34%;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img05 {
+  width: 52%;
+  height: auto;
+  display: block;
+  margin: 0 24%;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img06 {
+  width: 48%;
+  height: auto;
+  display: block;
+  margin: 0 26%;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img07,
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img08 {
+  width: 28%;
+  height: auto;
+  display: block;
+  margin: 0 36%;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-scrollbar, .page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  width: 1200px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev,
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
+  color: black;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
+  right: 650px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev {
+  left: 50px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet {
+  background-color: rgb(173, 171, 169);
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet-active {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-pagination-bullets,
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullets.swiper-pagination-horizontal,
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-custom, .page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-fraction {
+  width: 50%;
+  bottom: var(--swiper-pagination-bottom, 19px);
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box {
+  width: 50%;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info {
+  width: 400px;
+  margin: 0 auto;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .active {
+  display: block;
+}
+.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 {
+  background-color: teal;
+}
 .page_outer #works .works_outer .works_tap_box .works_tap ul .tap02 {
   background-color: red;
 }
@@ -796,15 +1114,15 @@ body {
   font-family: "yg-jalnan";
   font-size: 25px;
 }
-.page_outer .contact .text01 {
+.page_outer .contact .footer01 {
   font-weight: bold;
   margin-top: 40px;
 }
-.page_outer .contact .text02 {
+.page_outer .contact .footer02 {
   font-size: 13px;
   margin-top: 40px;
 }
-.page_outer .contact .text03 {
+.page_outer .contact .footer03 {
   font-size: 13px;
 }
 
