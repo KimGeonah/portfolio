@@ -30,7 +30,8 @@ $pointcolor : #ebdfcb;
 $subcolor : #F5F5F3;
 /* #EFEBE4; */
 
-$pointfont : 'Chakra Petch', sans-serif;
+$pointfont : 'Chakra Petch',
+sans-serif;
 $mainfont : 'S-CoreDream-3Light';
 $subfont : 'yg-jalnan';
 
@@ -39,8 +40,9 @@ $subfont : 'yg-jalnan';
 
 
 // 기본세팅 --------------------------------------------
-* { 
-    margin: 0; padding: 0; 
+* {
+    margin: 0;
+    padding: 0;
     font-family: $mainfont;
     /* 드래그나 더블클릭 시에 텍스트가 선택이 되지 않도록 설정
     -webkit-user-select: none;
@@ -48,10 +50,24 @@ $subfont : 'yg-jalnan';
     -ms-user-select: none;
     user-select: none;  */
 }
-li {list-style: none;}
-a {text-decoration: none;cursor: pointer;color: black;}
-button{cursor: pointer;}
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    height: calc(var(--vh, 1vh) * 100);
+  }
 
 
 
@@ -64,11 +80,11 @@ body {
     height: 3000px;
     min-width: 1280px;
     overflow-x: hidden;
+    text-align: center;
 }
 
 
-
-.header_outer{
+.header_outer {
     width: 100%;
     position: fixed;
     top: 0;
@@ -76,623 +92,822 @@ body {
     border-bottom: 1px solid #707070;
     z-index: 10;
     background-color: $subcolor;
-    .header{
+
+    .header {
         display: flex;
-        align-items:center;
+        align-items: center;
         width: 1280px;
         height: 70px;
         margin: 0 auto;
-        .logo{
+
+        .logo {
             font-family: 'S-CoreDream-3Light';
             flex-grow: 1;
             text-align: center;
             font-size: 30px;
         }
-    
+
         .lnb {
             flex-grow: 5;
-            ul{
+
+            ul {
                 display: flex;
                 justify-content: space-around;
-            }
-        } 
 
-        .contact_btn{
+                li:hover a {
+                    font-weight: bold;
+                    color: orangered;
+                }
+
+                .active {
+                    font-weight: bold;
+                    color: orangered;
+                }
+            }
+        }
+
+         .contact_btn {
             flex-grow: 1;
             border: none;
             background-color: transparent;
-            font-size: 20px;
+            font-size: 15px;
+            border: 2px solid #707070;
+            padding: 5px 0px;
+            width: 0px;
+            transition: all 0.3s;
             a{
-                border: 1px solid #707070;
-                padding: 5px 10px;
+                font-family: $subfont;
             }
+                &:hover {
+
+                    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(83, 83, 83, 0.3);
+                    
+                }
+
+        } 
+        
+        
+
+
+
+
+
         }
+
+
+
     }
 
 
 
+.intro {
+    height: 100vh;
+    position: relative;
+    font-size: 50px;
+    background: linear-gradient(to bottom, $subcolor 50%, $pointcolor 99%);
+
+
+
+
+    .typing {
+        font-family: $pointfont;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+
+    .scroll {
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        color: #6e6b6b;
+        animation: blink 1.5s infinite;
+        i {
+            color: black;
+            animation: blink 1.5s infinite;
+            @keyframes blink {
+                0% {opacity: 0;}
+                50% {opacity: 1;}
+                100% {opacity: 0;}
+            }
+        }
+    }
 
 }
 
 
-.page_outer {
+.about_01 {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ebdfcb 50%,#ebdfcb 99%);
+    #about_box {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
 
+        .visual_main {
+            display: flex;
+            width: 1000px;
+            margin: 0 auto;
+            padding-top: 300px;
 
-    
-    .intro{
-        height: 100vh;
-        position: relative;
-        font-size: 50px;
-        margin: 0 auto;
-        background: linear-gradient(to bottom, $subcolor 50% , $pointcolor 99%);
+            .visual_main_img {
+                width: 30%;
+                margin-right: 10%;
+                position: relative;
 
-        .typing{
-            font-family: $pointfont;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-        }
-        .typing::after {
-          content: '';
-          margin-left: 1rem;
-          border-right: 1px solid #2e2d2d;
-          animation: cursor 2s infinite steps(2);
-        }
-        .typed-cursor{
-            display: none;
-        }
-        .scroll{
-            position: absolute;
-            bottom: 100px;
-            left: 50%;
-            transform: translate(-50%,0);
-            font-size: 14px;
-            font-weight: bold;
-            letter-spacing: 3px;
-            color: #6e6b6b;
-            animation: blink 1.5s infinite;
-            i{
-                color: black;
-                animation: blink 1.5s infinite;
-                @keyframes blink {
-                    0%{opacity: 0;}
-                    50%{opacity: 1;}
-                    100%{opacity: 0;}
-                    
+                img {
+                    width: 250px;
+                    height: auto;
+                    display: block;
+                    margin: 0 auto;
+                    border-radius: 100px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
             }
-        }
-    }
 
+            .visual_main_content {
+                width: 60%;
+                text-align-last: left;
+                position: relative;
 
+                .goals {
+                    position: absolute;
+                    top: -100px;
+                    left: 100px;
+                }
 
-    .page{
-        text-align: center;
-    }
+                h2 {
+                    line-height: 40px;
 
-
-
-    #about{
-        position: relative;
-        height: 2600px;
-        background: linear-gradient(to bottom, #ebdfcb 50%, #fff 99%);
-        #about_box{
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%,0);
-
-
-
-
-            .visual_main{
-                width: 1280px;
-                margin: 0 auto;
-                display: flex;
-                width: 1000px;
-                margin: 0 auto;
-                padding-top: 300px;
-                margin-bottom: 450px;
-                .visual_main_img{
-                    width: 30%;
-                    margin-right: 10%;
-                    position: relative;
-                    img{
-                        width: 250px;
-                        height: auto;
-                        display: block;
-                        margin: 0 auto;
-                        border-radius: 100px;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%,-50%);
+                    span {
+                        color: rgb(226, 40, 40);
                     }
                 }
-                .visual_main_content{
-                    width: 60%;
-                    text-align-last: left;
-                    position: relative;
-                    .goals{
-                        position: absolute;
-                        top: -100px;
-                        left: 100px;
-                    }
-                    h2{
+
+                ul {
+                    margin-top: 30px;
+
+                    li {
+                        font-size: 18px;
                         line-height: 40px;
-                        span{
-                            color: rgb(226, 40, 40);
+
+                        i {
+                            color: #2e2d2d;
+                            margin-right: 10px;
                         }
                     }
-                    ul{
-                        margin-top: 30px;
-                        li{
-                            font-size: 18px;
-                            line-height: 40px;
-                            i{
-                                color: #2e2d2d;
-                                margin-right: 10px;
+                }
+
+                    .roller_box {
+                        text-align: left;
+                        .roller {
+                            height: 4rem;
+                            line-height: 4rem;
+                            position: relative;
+                            overflow: hidden;
+
+                            #rolltext {
+
+                                position: absolute;
+                                animation: slide 8s infinite;
+
+                                font-family: $pointfont;
+                                font-weight: bold;
+                                font-size: 16px;
+                                text-transform: uppercase;
+                                letter-spacing: 2px;
+
+                            }
+            
+                            @keyframes slide {
+                                0% {
+                                    top: 0;
+                                  }
+                                
+                                  20% {
+                                    top: -4rem;
+                                  }
+                                
+                                  40% {
+                                    top: -8rem;
+                                  }
+                                
+                                  60% {
+                                    top: -12.25rem;
+                                  }
+                                
+                                  80% {
+                                    top: -12.25rem;
+                                  }
+                                
+                                100%{
+                                    top:0rem;
+                                }
                             }
                         }
-                    }
+
                 }
             }
+        }
+    }
+}
 
 
+.about_02 {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ebdfcb 50%, #fff 99%);
+    padding-top: 130px;
+    #about_box {
 
-            .flow_wrap{
-                padding: 5px 0;
-                font-size: 18px;
-                font-weight:bold;
-                font-style: italic;
+        .info_tap_menu {
+           
+            h3 {
+                margin-bottom: 50px;
+                font-family: $pointfont;
+                font-size: 30px;
+            }
 
+            ul {
+                width: 1000px;
+                margin: 0 auto;
                 display: flex;
-                flex: 0 0 auto; 
-                white-space: nowrap;
-                overflow: hidden;
-                transition: all 0.3s;
-                cursor: pointer;
+                justify-content: space-between;
 
-
-
-                &:hover .flow_text {
-                    animation-play-state: paused;
-                  }
-                  .flow_text {
-                    padding-right: 10px;
-                  }
-
-            }
-
-                        
-            .flow_wrap01{
-                margin-bottom: 50px;
-                background-color: #e3cdcd;
-                transform: rotate(0deg);
-
-
-                &:hover{
-                    background-color: #ecf6ce;
-                }
-
-
-                .flow_text {
-                    animation: textLoop01 10s linear infinite;
-                  }
-                  
-                  @keyframes textLoop01 {
-                    0% {
-                      -webkit-transform: translate3d(0, 0, 0);
-                      transform: translate3d(0, 0, 0);
+                li {
+                    width: 200px;
+                    height: 200px;
+                    cursor: pointer;
+                    overflow: hidden;
+                    position: relative;
+                    border-radius: 20px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
                     }
-                    100% {
-                      -webkit-transform: translate3d(-100%, 0, 0);
-                      transform: translate3d(100%, 0, 0);
-                    }
-                  }
+                    .text {
+                        position: absolute;
+                        top: 0px;
+                        background-color: #020202b6;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 1s;
+                        color: white;
+                        font-weight: bold;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
-            }
-            
-            .flow_wrap02{
-                margin-bottom: 50px;
-                background-color: #cacb96;
-                transform: rotate(0deg);
-
-                &:hover{
-                    background-color: #aeecac;
-                }
-
-
-                .flow_text {
-                    animation: textLoop02 10s linear infinite;
-                  }
-                  
-                  @keyframes textLoop02 {
-                    0% {
-                      -webkit-transform: translate3d(0, 0, 0);
-                      transform: translate3d(0, 0, 0);
-                    }
-                    100% {
-                      -webkit-transform: translate3d(-100%, 0, 0);
-                      transform: translate3d(-100%, 0, 0);
-                    }
-                  }
-
-            }
-
-            .flow_wrap03{
-                margin-bottom: 50px;
-                background-color: #d6d5ea;
-                transform: rotate(0deg);
-
-                &:hover{
-                    background-color: #ead1f3;
-                }
-
-
-                .flow_text {
-                    animation: textLoop03 10s linear infinite;
-                  }
-                  
-                  @keyframes textLoop03 {
-                    0% {
-                      -webkit-transform: translate3d(0, 0, 0);
-                      transform: translate3d(0, 0, 0);
-                    }
-                    100% {
-                      -webkit-transform: translate3d(-100%, 0, 0);
-                      transform: translate3d(100%, 0, 0);
-                    }
-                  }
-
-            }
-
-            .flow_wrap04{
-                margin-bottom: 50px;
-                background-color: #f4f4be;
-                transform: rotate(0deg);
-
-                &:hover{
-                    background-color: #e7fac4;
-                }
-
-
-                .flow_text {
-                    animation: textLoop04 10s linear infinite;
-                  }
-                  
-                  @keyframes textLoop04 {
-                    0% {
-                      -webkit-transform: translate3d(0, 0, 0);
-                      transform: translate3d(0, 0, 0);
-                    }
-                    100% {
-                      -webkit-transform: translate3d(-100%, 0, 0);
-                      transform: translate3d(-100%, 0, 0);
-                    }
-                  }
-
-            }
-
-
-
-
-
-
-
-
-
-
-            .info_tap_menu{
-                margin-top: 300px;
-                h3{
-                    margin-bottom: 100px;
-                }
-                ul{
-                    width: 1280px;
-                    margin: 0 auto;
-                    display: flex;
-                    justify-content: space-between;
-                    li{
-                        width: 250px;
-                        height: 250px;
-                        cursor: pointer;
-                        overflow: hidden;
-                        position: relative;
-
-
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            display: block;
-                        }
-                        .text{
-                            position: absolute;
-                            top:  0px;
-                            background-color: #020202b6;
-                            width: 100%;
-                            height: 100%;
-                            transition: all 1s;
-                            color: white;
-                            font-weight: bold;
+                        p {
                             display: flex;
                             justify-content: center;
                             align-items: center;
 
-                            p{
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-
-                            }
                         }
-
-                    }
-
-
                     }
 
                 }
 
 
-            .info_tap{
-                border: 1px solid #000;
-                width: 1280px;
+            }
 
-                margin: 100px auto 0;
-                .tap{
-                    display: none;
-                    position: relative;
-                    padding: 30px;
-                    height: 400px;
-                    p{
-                        font-size: 20px;
-                        border: 1px solid #000;
-                    }
+        }
 
+        .info_tap {
+            width: 1000px;
+            margin: 80px auto 0;
+            
+            .arrow{
+                width: 85px;
+                top: -70px;
+                position: absolute;
+            }
 
-
-
-                    .arrow01{
-                        width: 114px;
-                        transform: rotate(22deg);
-                        position: absolute;
-                        top: -120px;
-                        left: 0;
-                    }
-                    .arrow02{
-                        width: 114px;
-                        transform: rotate(37deg);
-                        position: absolute;
-                        top: -120px;
-                        left: 400px;
-                    }
-                    .arrow03{
-                        width: 114px;
-                        transform: scaleX(-1) rotate(35deg);
-                        position: absolute;
-                        top: -120px;
-                        left: 807px;
-                    }
-                    .arrow04{
-                        width: 114px;
-                        transform: scaleX(-1) rotate(35deg);
-                        position: absolute;
-                        top: -120px;
-                        right: 0;
-                    }
+            .arrow01 {
+                transform: rotate(22deg);
+                left: 0;
+            }
 
 
+            .arrow02 {
+                transform: rotate(37deg);
+                left: 330px;
+            }
 
+            .arrow03 {
+                transform: scaleX(-1) rotate(35deg);
+                right: 330px;
+            }
+
+            .arrow04 {
+                transform: scaleX(-1) rotate(35deg);
+                right: 0;
+            }
+
+
+            .tap {
+                display: none;
+                position: relative;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.151);
+                font-size: 14px;
+                height: 300px;
+
+                p {
+                    font-size: 17px;
+                    margin-bottom: 30px;
+                    font-weight: bold;
                 }
 
-                .active{
-                    display: block;
+                .info_text{
+                    display: flex;
+                    align-items: center;
+                    padding: 20px 40px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0,-50%);
+                    p {
+                        font-size: 17px;
+                        margin-bottom: 30px;
+                        font-weight: bold;
+                    }
+
+
+                    div{
+                        margin-left: 10px;
+                        text-align: justify;
+                        strong {
+                            font-weight: bold;
+                            color: red;
+                        }
+                    }
+                }
+
+            }
+
+            .tap01 {
+                .info_text {
+                    img {
+                        width: 400px;
+                        margin-right: 20px;
+                    }
+                    div{
+                        span{
+                            font-weight: bold;
+                        }
+                    }
                 }
             }
 
 
+            .tap02 {
 
 
-        }
-    }
+                .info_text {
 
+                    video {
+                        width: 400px;
+                        margin-right: 20px;
+                    }
 
-    #profile{
-        padding-top: 150px;
-        background-color: #fff;
-        padding-bottom: 200px;
-        #main{
+                    div{
+                        p {
+    
+                        }
+                    }
 
-            .main_wrap{
-                width: 1000px;
-                margin: 0 auto;
-                background-color: $pointcolor;
-                padding: 50px;
-                position: relative;
-                .tape{
-                    transform: rotate(0deg);
+                }           
+                .annotation {
+                    text-align: left;
                     position: absolute;
-                    top: -140px;
-                    left: 420px;
+                    left: 60px;
+                    bottom: 0;
+                    font-size: 11px !important;
                 }
-            .main_content{
-                display: flex;  
+            }
+
+            .tap03 {
+
+                p{
+                    margin-top: 5px;
+                }
+
+                .hobby_swiper {
+                    width: 90%;
+                    margin: 0 5%;
+                    overflow: hidden;
+
+                    img {
+                        width: 200px;
+                        height: auto;
+                        display: block;
+                        cursor: pointer;
+                        overflow: hidden;
+
+                    }
+
+
+
+                }
+
+                .hobby_text {
+                    font-weight: normal;
+                    font-size: 14px;
+                    margin-top: 20px;
+
+                    span {
+                        font-weight: bold;
+                        color: red;
+                    }
+
+                }
+            }
+
+            .tap04 {
+                .info_text {
+                    img {
+                        width: 250px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .active {
+                display: block;
+
+            }
+        }
+
+    }
+}
+
+
+.profile_01 {
+    background-color: #fff;
+    height: 100vh;
+    padding-top: 150px;
+    #main {
+
+        .main_wrap {
+            width: 1000px;
+            margin: 0 auto;
+            background-color: $pointcolor;
+            position: relative;
+            padding: 20px 40px; 
+            .tape {
+                transform: rotate(0deg);
+                position: absolute;
+                top: -140px;
+                left: 420px;
+            }
+
+            .main_content {
+
+                display: flex;
                 justify-content: space-evenly;
                 font-size: 14px;
-                .main_box{
+
+                .main_box {
                     width: 400px;
-                    height: 300px; 
+                    height: 300px;
                 }
-                h3{
+
+                h3 {
                     font-family: $pointfont;
                     font-size: 30px;
                     margin-bottom: 20px;
                 }
-                ul{
-                }
+
             }
 
-            .main_top{
+            .main_top {
                 margin-bottom: 50px;
 
-                .main01{
+                .main01 {
                     overflow: hidden;
-                    img{
+
+                    img {
                         width: 100%;
                         height: auto;
                         display: block;
                     }
                 }
 
-                .main02{
-
-                    ul{
+                .main02 {
+                    ul {
                         display: flex;
                         justify-content: space-around;
-                        li{
+
+                        li {
                             width: 70%;
                             text-align: left;
-                            div{
+
+                            div {
                                 margin-top: 15px;
                             }
                         }
-                        .bold{
+
+                        .bold {
                             width: 30%;
                             font-weight: bold;
                         }
                     }
                 }
             }
+            .main_bottom {
 
-            .main_bottom{
+                ul {
+                    text-align-last: left;
 
-
-                    ul{
-                        text-align-last: left;
-                        li{
-                            margin-top: 30px;
-                        }
+                    li {
+                        margin-top: 30px;
                     }
+                }
 
             }
 
 
-            }
-            .resume{
-                font-weight: bold;
-                text-decoration: underline; 
-            }
         }
 
-
-
-
-
-
-
-
-
-        #ask{
-            padding-top: 200px;
-            width: 800px;
-            margin: 0 auto;
-
-            .ask_wrap{
-                display: flex;
-                justify-content: space-between;
-
-                .ask_title{
-                    h1{
-                        font-size: 80px;
-                        margin-bottom: 100px;
-                        margin-top: 100px;
-                        background-color: $pointcolor;
-                        width: 200px;height: 100px;
-                        text-align: center;
-                        line-height: 100px;
-                    }
-                    p{
-                        font-size: 20px;
-                    }
-                }
-
-                img{
-                    width: 100%;
-                }
-                .swiper {
-                    width: 500px;
-                    height: 400px;
-                    margin: 0;
-                    z-index: 0;
-                    .swiper-slide {
-                        border-radius: 0px;
-                        font-size: 22px;
-                        border: 3px solid #000;
-                        background-color: #fff;
-        
-                        .text_box{
-        
-                            .ask_text{
-                                text-align: center;
-                                font-weight: bold;
-                                background-color: $pointcolor;
-                            }
-                            .answer_text{
-                                background-color: #fff;
-                            }
-                        }
-        
-                      }
-                  }
-              
-            }
-
-
-
-          
+        .resume {
+            font-weight: bold;
+            text-decoration: underline;
         }
     }
-
-    #skils{
-        background-color: #fff;
-        padding-top: 200px;
+}
 
 
-        .wave {
-            position: relative;
-            width: 100%;
-            margin-bottom: -7px; /*Fix for safari gap*/
-            max-height: 150px;
-            
-            /* Animation */
-        .parallax > use {
-            animation: move-forever 25s cubic-bezier(0.55,.5,0.45,.5) infinite;
+.profile_02 {
+    height: 100vh;
+    background-color: #fff;
+
+
+    #ask {
+        padding-top: 300px;
+        width: 800px;
+        margin: 0 auto;
+
+
+        .ask_wrap {
+            display: flex;
+            justify-content: space-between;
+
+            .ask_title {
+                h1 {
+                    font-size: 80px;
+                    margin-top: 130px;
+                    background-color: $pointcolor;
+                    height: 100px;
+                    text-align: center;
+                    line-height: 100px;
+                    padding: 10px;
+                }
+                .pen{
+                    background: linear-gradient(to top, #FFE400 14%, transparent 10%);
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .swiper {
+                width: 500px;
+                height: 400px;
+                margin: 0;
+                z-index: 0;
+                .swiper-slide {
+                    border-radius: 0px;
+                    font-size: 22px;
+                    border: 3px solid #000;
+                    background-color: #fff;
+
+                    .text_box {
+
+                        .ask_text {
+                            text-align: center;
+                            font-weight: bold;
+                            background-color: $pointcolor;
+                            height: 100px;
+                            line-height: 100px;
+                        }
+
+                        .answer_text {
+                            background-color: #fff;
+                            padding: 50px;
+                            font-size: 17px;
+                            text-align: justify;
+
+                            strong {
+                                color: red;
+                            }
+                        }
+                    }
+
+                }
+            }
+
         }
-        .parallax > use:nth-child(1) {
+
+
+
+
+    }
+
+
+/*          
+    .flow_wrap {
+        margin-bottom: 15px;
+        padding: 5px 0;
+        font-size: 15px;
+        font-weight: bold;
+        font-style: italic;
+
+        display: flex;
+        flex: 0 0 auto;
+        white-space: nowrap;
+        overflow: hidden;
+        transition: all 0.3s;
+        cursor: pointer;
+
+
+
+        &:hover .flow_text {
+            animation-play-state: paused;
+        }
+
+        .flow_text {
+            padding-right: 10px;
+        }
+
+    }
+
+    .flow_wrap01 {
+        background-color: #ece0e0;
+
+        &:hover {
+            background-color: #ecf6ce;
+        }
+
+
+        .flow_text {
+            animation: textLoop01 10s linear infinite;
+        }
+
+        @keyframes textLoop01 {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+        }
+
+    }
+
+    .flow_wrap02 {
+        background-color: #f5f7ca;
+
+        &:hover {
+            background-color: #aeecac;
+        }
+
+
+        .flow_text {
+            animation: textLoop02 10s linear infinite;
+        }
+
+        @keyframes textLoop02 {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+        }
+
+    }
+
+    .flow_wrap03 {
+        background-color: #dedcfc;
+
+        &:hover {
+            background-color: #ead1f3;
+        }
+
+
+        .flow_text {
+            animation: textLoop03 10s linear infinite;
+        }
+
+        @keyframes textLoop03 {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+        }
+
+    }
+
+    .flow_wrap04 {
+        background-color: #ddffdf;
+        &:hover {
+            background-color: #e7fac4;
+        }
+
+
+        .flow_text {
+            animation: textLoop04 10s linear infinite;
+        }
+
+        @keyframes textLoop04 {
+            0% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+        }
+
+    }
+ */
+}
+
+
+
+#skils {
+    background-color: #fff;
+    padding-top: 200px;
+
+    .wave {
+        position: relative;
+        width: 100%;
+        margin-bottom: -7px;
+        /*Fix for safari gap*/
+        max-height: 150px;
+
+        /* Animation */
+        .parallax>use {
+            animation: move-forever 25s cubic-bezier(0.55, .5, 0.45, .5) infinite;
+        }
+
+        .parallax>use:nth-child(1) {
             animation-delay: -2s;
             animation-duration: 7s;
         }
-        .parallax > use:nth-child(2) {
+
+        .parallax>use:nth-child(2) {
             animation-delay: -3s;
             animation-duration: 10s;
         }
-        .parallax > use:nth-child(3) {
+
+        .parallax>use:nth-child(3) {
             animation-delay: -4s;
             animation-duration: 13s;
         }
-        .parallax > use:nth-child(4) {
+
+        .parallax>use:nth-child(4) {
             animation-delay: -5s;
             animation-duration: 20s;
         }
+
         @keyframes move-forever {
             0% {
                 transform: translate3d(-90px, 0, 0);
             }
+
             100% {
                 transform: translate3d(85px, 0, 0);
             }
         }
+
         /*Shrinking for mobile*/
         @media(max-width: 768px) {
             .waves {
@@ -700,193 +915,346 @@ body {
                 min-height: 40px;
             }
         }
-        }
+    }
 
 
-        .wave02 {
+    .wave02 {
 
-            transform: scaleY(-1);
-        }
-
-
-
+        transform: scaleY(-1);
+    }
 
 
 
-        .skils_box_outer{
-            background-color: $pointcolor;
-            .skils_box{
-                width: 1100px;
-                margin: 0 auto;
-                position: relative;
-
-                h5{
-                    position: absolute;
-                    top: -150px;
-                    left: 50%;
-                    transform: translate(-50%,0);
-                    font-size: 50px;
-                    font-family: $pointfont;
-                    font-style: italic;
-                }
 
 
-                .skils_content{
-                    ul{
-                        display: flex;
-                        li{
-                            width: 50%;
-                            height: 260px;
-                            padding: 20px;
-                            p{
-                                font-size: 20px;
-                                text-align: center;
-                                margin-bottom: 30px;
-                                font-family: $pointfont;
-                                letter-spacing: 2px;
-                            }
 
-                            .progress_box{
-                                display: flex;
-                                align-items: center;
-                                margin-top: 30px;
-                                img{
-                                    display: block;
-                                    width: 45px;
-                                    margin-right: 20px;
+    .skils_box_outer {
+        background-color: $pointcolor;
 
-                                }
-                                .progressbar {
-                                    width: 100%;
-                                    height: 15px;
-                                    background-color: #c7c7c5;
-                                    border-radius: 20px;
-                                    margin-right: 20px;
-                                  }
-                                  
-                                .progress {
-                                    width: 0%;
-                                    height: 15px;
-                                    background-color: rgb(75, 77, 75);
-                                    border-radius: 20px;
-                                  }
-                                .num{
-                                    font-weight: bold;
-                                    font-size: 13px;
-                                  }
-                                  
-                            }
+        .skils_box {
+            width: 1100px;
+            margin: 0 auto;
+            position: relative;
 
-                            .icon{
-                                display: flex;
-                                justify-content: space-between;
-                                li{
-                                    height: auto;
-                                    img{
-                                        width: 50px;
-                                    }
-                                    p{
-                                        font-size: 15px;
-                                        font-weight: bold;
-                                    }
-                                }
-                            }
+            h5 {
+                position: absolute;
+                top: -150px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                font-size: 50px;
+                font-family: $pointfont;
+                font-style: italic;
+            }
 
 
-                            
-                             
+            .skils_content {
+                ul {
+                    display: flex;
+
+                    li {
+                        width: 50%;
+                        height: 260px;
+                        padding: 20px;
+
+                        p {
+                            font-size: 20px;
+                            text-align: center;
+                            margin-bottom: 30px;
+                            font-family: $pointfont;
+                            letter-spacing: 2px;
                         }
+
+                        .progress_box {
+                            display: flex;
+                            align-items: center;
+                            margin-top: 30px;
+
+                            img {
+                                display: block;
+                                width: 45px;
+                                margin-right: 20px;
+
+                            }
+
+                            .progressbar {
+                                width: 100%;
+                                height: 15px;
+                                background-color: #c7c7c5;
+                                border-radius: 20px;
+                                margin-right: 20px;
+                            }
+
+                            .progress {
+                                width: 0%;
+                                height: 15px;
+                                background-color: rgb(75, 77, 75);
+                                border-radius: 20px;
+                            }
+
+                            .num {
+                                font-weight: bold;
+                                font-size: 13px;
+                            }
+
+                        }
+
+                        .icon {
+                            display: flex;
+                            justify-content: space-between;
+
+                            li {
+                                height: auto;
+
+                                img {
+                                    width: 50px;
+                                }
+
+                                p {
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+
+
+
+
                     }
                 }
             }
         }
-
-
-        
     }
 
 
-    #works{
-        height: 100vh;
-        background: linear-gradient(to right, $pointcolor 20%, #fff 70%);
-        position: relative;
 
-        .works_outer{
-            width: 1280px;
-            margin: 0 auto;
-            display: flex;
+}
 
-            .works_tapmenu_box{
-                width: 50%;
-                height: 100vh;
-                background-color: $pointcolor;
-                .works_tapmenu{
+
+#works {
+    height: 100vh;
+    background: linear-gradient(to right, $pointcolor 20%, #fff 70%);
+    position: relative;
+
+    .works_outer {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+
+        .works_tapmenu_box {
+            width: 50%;
+            height: 100vh;
+            background-color: $pointcolor;
+
+            .works_tapmenu {
                 margin-top: 200px;
-                p{
+
+                p {
                     text-align: left;
                     margin-bottom: 20px;
                 }
-                h1{
+
+                h1 {
                     text-align: left;
                     font-family: $pointfont;
                     font-weight: lighter;
                     font-size: 40px;
                     margin-bottom: 80px;
                 }
-                ul{
-                    li{
+
+                ul {
+                    li {
                         text-align: left;
                         margin-bottom: 60px;
                         font-size: 15px;
-                        span{
+
+                        span {
                             cursor: pointer;
                         }
                     }
-                    .active{
+
+                    .active {
                         font-weight: bold;
                     }
                 }
-            }   
             }
+        }
 
 
 
-            .works_tap_box{
-                width: 60%;
-                height: 100vh;
-                background-color: #fff;
-                .works_tap{
-                    margin: 100px 0;
+        .works_tap_box {
+            width: 60%;
+            height: 100vh;
+            background-color: #fff;
 
-                ul{
-                    .works_tap{
+            .works_tap {
+                margin: 100px 0;
+
+                ul {
+                    .works_tap {
                         height: 0;
                         opacity: 0;
                         transition: all 0.3s;
                     }
-                    .active{
+
+                    .active {
                         opacity: 1;
                         height: 100%;
                     }
-                    
-                    .tap01{
 
-                        .mockup_box{
-                            width: 500px;
-                            height: 350px;
-                            border: 1px solid #000;
-                            margin: 0 auto;
+                    .tap01 {
+
+                        @keyframes anime_textup {
+                            0% {
+                                top: 0;
+                            }
+
+                            20% {
+                                top: -0.2rem;
+                            }
+
+                            40% {
+                                top: 0
+                            }
+
+                            60% {
+                                top: 0
+                            }
+
+                            80% {
+                                top: 0
+                            }
+
+                            100% {
+                                top: 0
+                            }
                         }
 
-                        .info_box{
+                        .text_up span {
+                            position: relative;
+                            animation: anime_textup 1.5s infinite;
+                            font-weight: bold;
+                            font-size: 14px;
+                            color: #F68514;
+                        }
+
+                        .text_up span:nth-of-type(1) {
+                            animation-delay: .1s;
+                        }
+
+                        .text_up span:nth-of-type(2) {
+                            animation-delay: .2s;
+                        }
+
+                        .text_up span:nth-of-type(3) {
+                            animation-delay: .3s;
+                        }
+
+                        .text_up span:nth-of-type(4) {
+                            animation-delay: .4s;
+                        }
+
+                        .text_up span:nth-of-type(5) {
+                            animation-delay: .5s;
+                        }
+
+                        .text_up span:nth-of-type(6) {
+                            animation-delay: .6s;
+                        }
+
+                        .text_up span:nth-of-type(7) {
+                            animation-delay: .7s;
+                        }
+
+
+                        .text_up span:nth-of-type(8) {
+                            animation-delay: .8s;
+                        }
+
+                        .text_up span:nth-of-type(9) {
+                            animation-delay: .9s;
+                        }
+
+
+                        .mockup_outer{
+                            position: relative;
+                           .tab{
+                            width: 148px;
+                            position: absolute;
+                            top: 143px;
+                            left: 90px;
+                            z-index: 1;
+                            }
+                            .mobile{
+                                width: 70px;
+                                position: absolute;
+                                top: 207px;
+                                right: 90px;
+                                z-index: 1;
+                            }
+
+                            .mockup_box {
+                                width: 440px;
+                                height: 350px;
+                                margin: 0 auto;
+                                overflow: hidden;
+    
+                                .pc {
+                                    content: "";
+                                    background: url(../img/pc_01.png) no-repeat;
+                                    background-size: cover;
+                                    height: 350px;
+                                    position: relative;
+    
+                                    span {
+                                        display: block;
+                                        width: 401px;
+                                        height: 228px;
+                                        position: absolute;
+                                        top: 18px;
+                                        left: 20px;
+                                        background: url(../img/pc_hover_02.png) no-repeat;
+                                        background-size: cover;
+    
+                                        &:hover {
+                                            animation: scroll 15s ease;
+                                            cursor: pointer;
+                                        }
+                                    }
+    
+    
+                                    @keyframes scroll {
+                                        0% {
+                                            background-position: 0 0
+                                        }
+    
+                                        50% {
+                                            background-position: 0 -780px
+                                        }
+    
+                                        100% {
+                                            background-position: 0 -780px
+                                        }
+    
+                                    }
+                                }
+    
+    
+    
+                            }
+                        }
+
+
+                        .info_box {
                             width: 500px;
                             margin: 0 auto;
-                            .title{
+
+                            .title {
                                 font-family: $subfont;
                                 font-size: 20px;
                                 margin-top: 20px;
                             }
-                            .comment{
+
+                            .comment {
                                 text-align: left;
                                 font-size: 14px;
                                 margin-top: 20px;
@@ -894,38 +1262,49 @@ body {
                                 line-height: 25px;
                             }
 
-                            .plan{
+                            .plan {
                                 text-align: left;
                                 margin-bottom: 5px;
                                 font-size: 15px;
                             }
 
-                            h3{
+                            h3 {
                                 font-weight: bold;
                                 text-align: left;
                                 margin-top: 20px;
                             }
-                            .color_plan{
+
+                            .color_plan {
                                 margin-top: 20px;
                                 margin-bottom: 20px;
                                 display: flex;
 
-                                .color{
+                                .color {
                                     width: 80px;
                                     text-align: center;
 
-                                    .view{
+                                    .view {
                                         width: 40px;
                                         height: 40px;
                                         border-radius: 50px;
-                                        margin-bottom: 10px; 
-                                        margin-left: 20px;  
+                                        margin-bottom: 10px;
+                                        margin-left: 20px;
 
                                     }
-                                    .view01{background-color: #F68514;}
-                                    .view02{background-color: #EFD6A1;}
-                                    .view03{background-color: #C5C2BB;}
-                                    p{
+
+                                    .view01 {
+                                        background-color: #F68514;
+                                    }
+
+                                    .view02 {
+                                        background-color: #EFD6A1;
+                                    }
+
+                                    .view03 {
+                                        background-color: #C5C2BB;
+                                    }
+
+                                    p {
                                         font-size: 11px;
                                     }
                                 }
@@ -933,8 +1312,8 @@ body {
 
                         }
 
-                        .url_box{
-                            button{
+                        .url_box {
+                            button {
                                 border: none;
                                 width: 140px;
                                 height: 40px;
@@ -942,7 +1321,8 @@ body {
                                 letter-spacing: 2px;
                                 font-weight: bold;
                                 color: #2e2d2d;
-                                &:hover{
+                                margin-bottom: 5px;
+                                &:hover {
                                     background-color: $pointcolor;
                                     color: black;
 
@@ -950,14 +1330,19 @@ body {
                             }
                         }
 
-                        .modal_background{
+                        .modal_background {
                             position: fixed;
-                            top:0; left: 0; bottom: 0; right: 0;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
                             background: #EDF0F3;
                             display: none;
                             z-index: 9999;
 
-                            .modal{
+
+
+                            .modal {
                                 display: none;
                                 width: 1300px;
                                 height: 850px;
@@ -965,7 +1350,7 @@ body {
                                 position: fixed;
                                 top: 50%;
                                 left: 50%;
-                                transform: translate(-50%,-50%);
+                                transform: translate(-50%, -50%);
                                 border-radius: 10px;
                                 z-index: 2 !important;
                                 box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
@@ -973,12 +1358,13 @@ body {
 
 
 
-                                .circle_box{
+                                .circle_box {
                                     display: flex;
                                     border-bottom: 1px solid #ccc;
                                     padding-bottom: 10px;
                                     padding-left: 20px;
-                                    .circle{
+
+                                    .circle {
                                         width: 15px;
                                         height: 15px;
                                         border-radius: 50px;
@@ -987,186 +1373,230 @@ body {
                                         margin-top: 10px;
                                     }
 
-                                    .circle01{
+                                    .circle01 {
                                         background-color: #ec5a5a;
                                     }
 
-                                    .circle02{
+                                    .circle02 {
                                         background-color: #f3d678;
                                     }
 
-                                    .circle03{
+                                    .circle03 {
                                         background-color: #9de04f;
                                     }
                                 }
 
-                                .close_btn{
+                                .close_btn {
                                     border: none;
                                     background: none;
                                     position: absolute;
                                     top: 3px;
                                     right: 20px;
-                                    i{
-                                        font-size: 30px;  
+
+                                    i {
+                                        font-size: 30px;
                                         transition: all 0.3s;
-    
-                                        } 
-                                    &:hover{
+
+                                    }
+
+                                    &:hover {
                                         color: rgb(247, 43, 43);
                                     }
                                 }
 
-                                .content{
+                                .content {
 
 
-                                    .modal_menu{
+                                    .modal_menu {
                                         display: flex;
                                         justify-content: space-around;
                                         margin: 0 auto;
                                         margin-top: 50px;
-                                        .menu{
+
+                                        .menu {
                                             font-size: 14px;
                                             letter-spacing: 2px;
                                             color: #969494;
-                                            font-weight: bold;   
-                                            cursor: pointer;                                   
-                                            i{
+                                            font-weight: bold;
+                                            cursor: pointer;
+
+                                            i {
                                                 font-size: 30px;
                                                 margin-bottom: 10px;
                                             }
-                                            &:hover{
+
+                                            &:hover {
                                                 color: #66c7ee;
                                             }
                                         }
-                                        .active{
+
+                                        .active {
                                             color: #66c7ee;
                                         }
 
                                     }
 
+                                    .modal_tap_box {
 
-                                    .modal_tap_box{
-                                        .modal_tap01{
+
+                                        .modal_tap01 {
                                             width: 1200px;
                                             margin: 50px auto 0;
                                             overflow: hidden;
+                                        }
 
+
+                                        .modal_tap02 {
+                                            width: 1200px;
+                                            margin: 50px auto 0;
+                                            overflow: hidden;
+                                            display: none;
+
+                                        }
+
+
+                                        .modal_tap03 {
+                                            width: 1200px;
+                                            margin: 50px auto 0;
+                                            overflow: hidden;
+                                            display: none;
+
+                                        }
+
+                                        .active {
+                                            display: block;
+
+                                        }
+
+                                    }
+
+                                }
+                            }
+
+
+
+                            #modal_01 {
+
+                                .content {
+
+                                    .modal_tap_box {
+                                        .modal_tap01 {
                                             .swiper01 {
                                                 width: 100%;
                                                 height: 100%;
-                                                     
-                                            //각 슬라이드
-                                              .swiper-slide {
-                                                img{
-                                                    width: 90%;
-                                                    height: auto;
-                                                    display: block;
-                                                    margin: 0 5%;
+
+                                                //각 슬라이드
+                                                .swiper-slide {
+                                                    img {
+                                                        width: 90%;
+                                                        height: auto;
+                                                        display: block;
+                                                        margin: 0 5%;
+                                                    }
                                                 }
-                                              }
 
-                                            //하단 스크롤바
-                                              .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
-                                                position: relative;
-                                                left: 0;
-                                                cursor: pointer;
-                                                width: 1200px;
-                                              }
+                                                //하단 스크롤바
+                                                .swiper-horizontal>.swiper-scrollbar,
+                                                .swiper-scrollbar.swiper-scrollbar-horizontal {
+                                                    position: relative;
+                                                    left: 0;
+                                                    cursor: pointer;
+                                                    width: 1200px;
+                                                }
 
-                                            //양쪽 버튼
-                                            .swiper-button-prev,
-                                            .swiper-button-next{
-                                                color: black;
+                                                //양쪽 버튼
+                                                .swiper-button-prev,
+                                                .swiper-button-next {
+                                                    color: black;
+                                                }
+
+                                                .swiper-button-next {
+                                                    right: 40px;
+                                                    top: var(--swiper-navigation-top-offset, 58%);
+                                                }
+
+                                                .swiper-button-prev {
+                                                    left: 40px;
+                                                    top: var(--swiper-navigation-top-offset, 58%);
+                                                }
+
+                                                .swiper-pagination-bullet {
+                                                    background-color: rgb(173, 171, 169);
+                                                    width: 10px;
+                                                    height: 10px;
+                                                    border-radius: 0;
+                                                }
+
+                                                .swiper-pagination-bullet-active {
+                                                    background-color: black;
+                                                    width: 10px;
+                                                    height: 10px;
+                                                    border-radius: 0;
+                                                }
+
+
                                             }
 
-                                            .swiper-button-next{
-                                                right: 40px;
-                                                top: var(--swiper-navigation-top-offset,58%);
-                                            }   
-                                            
-                                            .swiper-button-prev {
-                                                left: 40px;
-                                                top: var(--swiper-navigation-top-offset,58%);
-                                            }
 
-                                            .swiper-pagination-bullet{
-                                                background-color: rgb(173, 171, 169);
-                                                width: 10px;
-                                                height: 10px;
-                                                border-radius: 0;
-                                            }
-                                            .swiper-pagination-bullet-active{
-                                                background-color: black;
-                                                width: 10px;
-                                                height: 10px;
-                                                border-radius: 0;
-                                            }
-
-
-                                              }
-
-                                          
 
 
 
                                         }
 
-                                            
-                                        .modal_tap02{
-                                                width: 1200px;
-                                                margin: 50px auto 0;
-                                                overflow: hidden;
-                                                display: none;
-                                            
-                                                .swiper_box{
 
-                                                    display: flex;
+                                        .modal_tap02 {
 
-                                                    .swiper02 {
-                                                        width: 50%;
-                                                        overflow: hidden;
-                                                             
+                                            .swiper_box {
+
+                                                display: flex;
+
+                                                .swiper02 {
+                                                    width: 50%;
+                                                    overflow: hidden;
+
                                                     //각 슬라이드
-                                                      .swiper-slide {
-                                                        img{
+                                                    .swiper-slide {
+                                                        img {
                                                             width: 70%;
                                                             height: auto;
                                                             display: block;
                                                             margin: 0 15%;
                                                         }
-                                                      }
-        
+                                                    }
+
                                                     //하단 스크롤바
-                                                      .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+                                                    .swiper-horizontal>.swiper-scrollbar,
+                                                    .swiper-scrollbar.swiper-scrollbar-horizontal {
                                                         position: relative;
                                                         left: 0;
                                                         cursor: pointer;
                                                         width: 1200px;
-                                                      }
-        
+                                                    }
+
                                                     //양쪽 버튼
                                                     .swiper-button-prev,
-                                                    .swiper-button-next{
+                                                    .swiper-button-next {
                                                         color: black;
                                                     }
-        
-                                                    .swiper-button-next{
+
+                                                    .swiper-button-next {
                                                         right: 650px;
-                                                        top: var(--swiper-navigation-top-offset,58%);
-                                                    }   
-                                                    
+                                                        top: var(--swiper-navigation-top-offset, 58%);
+                                                    }
+
                                                     .swiper-button-prev {
                                                         left: 50px;
-                                                        top: var(--swiper-navigation-top-offset,58%);
+                                                        top: var(--swiper-navigation-top-offset, 58%);
                                                     }
-        
-                                                    .swiper-pagination-bullet{
+
+                                                    .swiper-pagination-bullet {
                                                         background-color: rgb(173, 171, 169);
                                                         width: 10px;
                                                         height: 10px;
                                                         border-radius: 0;
                                                     }
-                                                    .swiper-pagination-bullet-active{
+
+                                                    .swiper-pagination-bullet-active {
                                                         background-color: black;
                                                         width: 10px;
                                                         height: 10px;
@@ -1174,207 +1604,290 @@ body {
                                                     }
 
                                                     .swiper-horizontal>.swiper-pagination-bullets,
-                                                     .swiper-pagination-bullets.swiper-pagination-horizontal, 
-                                                     .swiper-pagination-custom, .swiper-pagination-fraction{
+                                                    .swiper-pagination-bullets.swiper-pagination-horizontal,
+                                                    .swiper-pagination-custom,
+                                                    .swiper-pagination-fraction {
                                                         width: 50%;
-                                                        bottom: var(--swiper-pagination-bottom,19px);
-                                                     }
-        
-        
-                                                      }
+                                                        bottom: var(--swiper-pagination-bottom, 19px);
+                                                    }
 
-                                                      .modal_info_box{
-                                                        width: 50%;
-                                                        text-align-last: left;
-                                                        .modal_info{
-                                                            width: 400px;
-                                                            margin: 0 auto;
-                                                            h1{
-                                                                font-size: 40px;
-                                                                letter-spacing: 2px;
-                                                                font-style: italic;
-                                                            }
-                                                            h3{
-                                                                margin-top: 50px;
-                                                                margin-bottom: 10px;
-                                                            }
 
-                                                            .text{
-                                                                text-align: left;
-                                                            }
-    
-
-                                                                
-                                                                
-    
-                                                          }
-                                                      }
-
-        
                                                 }
 
-
-
-                                              
-    
-    
-    
-                                        }
-    
-    
-                                        .modal_tap03{
-                                            width: 1200px;
-                                            margin: 50px auto 0;
-                                            overflow: hidden;
-                                            display: none;
-                                        
-                                            .swiper_box{
-
-                                                display: flex;
-
-                                                .swiper03{
-                                                    width: 50%;
-                                                    overflow: hidden;
-                                                         
-                                                //각 슬라이드
-                                                  .swiper-slide {
-                                                    .img01{
-                                                        width: 50%;
-                                                        height: auto;
-                                                        display: block;
-                                                        margin: 0 25%;
-                                                    }
-
-                                                    .img02{
-                                                        width: 38%;
-                                                        height: auto;
-                                                        display: block;
-                                                        margin: 0 29%;
-                                                    }
-
-                                                    .img03,
-                                                    .img04{
-                                                        width: 32%;
-                                                        height: auto;
-                                                        display: block;
-                                                        margin: 0 34%;
-                                                    }
-
-
-                                                    .img05{
-                                                        width: 52%;
-                                                        height: auto;
-                                                        display: block;
-                                                        margin: 0 24%;
-                                                    }
-
-
-
-                                                    .img06{
-                                                        width: 48%;
-                                                        height: auto;
-                                                        display: block;
-                                                        margin: 0 26%;
-                                                    }
-
-                                                    
-                                                    .img07,
-                                                    .img08{
-                                                        width: 28%;
-                                                        height: auto;
-                                                        display: block;
-                                                        margin: 0 36%;
-                                                    }
-
-
-
-
-                                                  }
-    
-                                                //하단 스크롤바
-                                                  .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
-                                                    position: relative;
-                                                    left: 0;
-                                                    cursor: pointer;
-                                                    width: 1200px;
-                                                  }
-    
-                                                //양쪽 버튼
-                                                .swiper-button-prev,
-                                                .swiper-button-next{
-                                                    color: black;
-                                                }
-    
-                                                .swiper-button-next{
-                                                    right: 650px;
-                                                    top: var(--swiper-navigation-top-offset,58%);
-                                                }   
-                                                
-                                                .swiper-button-prev {
-                                                    left: 50px;
-                                                    top: var(--swiper-navigation-top-offset,58%);
-                                                }
-    
-                                                .swiper-pagination-bullet{
-                                                    background-color: rgb(173, 171, 169);
-                                                    width: 10px;
-                                                    height: 10px;
-                                                    border-radius: 0;
-                                                }
-                                                .swiper-pagination-bullet-active{
-                                                    background-color: black;
-                                                    width: 10px;
-                                                    height: 10px;
-                                                    border-radius: 0;
-                                                }
-
-                                                .swiper-horizontal>.swiper-pagination-bullets,
-                                                 .swiper-pagination-bullets.swiper-pagination-horizontal, 
-                                                 .swiper-pagination-custom, .swiper-pagination-fraction{
-                                                    width: 50%;
-                                                    bottom: var(--swiper-pagination-bottom,19px);
-                                                 }
-    
-    
-                                                  }
-                                                  .modal_info_box{
+                                                .modal_info_box {
                                                     width: 50%;
                                                     text-align-last: left;
-                                                    .modal_info{
+
+                                                    .modal_info {
                                                         width: 400px;
                                                         margin: 0 auto;
-                                                        h1{
+
+                                                        h1 {
                                                             font-size: 40px;
                                                             letter-spacing: 2px;
                                                             font-style: italic;
                                                         }
-                                                        h3{
+
+                                                        h3 {
+                                                            margin-top: 50px;
+                                                            margin-bottom: 10px;
+                                                        }
+
+                                                        .text {
+                                                            text-align: left;
+                                                        }
+
+
+
+
+
+                                                    }
+                                                }
+
+
+                                            }
+
+
+
+
+
+
+
+                                        }
+
+
+                                        .modal_tap03 {
+
+                                            .swiper_box {
+
+                                                display: flex;
+
+                                                .swiper03 {
+                                                    width: 50%;
+                                                    overflow: hidden;
+
+                                                    //각 슬라이드
+                                                    .swiper-slide {
+                                                        .img01 {
+                                                            width: 50%;
+                                                            height: auto;
+                                                            display: block;
+                                                            margin: 0 25%;
+                                                        }
+
+                                                        .img02 {
+                                                            width: 38%;
+                                                            height: auto;
+                                                            display: block;
+                                                            margin: 0 29%;
+                                                        }
+
+                                                        .img03,
+                                                        .img04 {
+                                                            width: 32%;
+                                                            height: auto;
+                                                            display: block;
+                                                            margin: 0 34%;
+                                                        }
+
+
+                                                        .img05 {
+                                                            width: 52%;
+                                                            height: auto;
+                                                            display: block;
+                                                            margin: 0 24%;
+                                                        }
+
+
+
+                                                        .img06 {
+                                                            width: 48%;
+                                                            height: auto;
+                                                            display: block;
+                                                            margin: 0 26%;
+                                                        }
+
+
+                                                        .img07,
+                                                        .img08 {
+                                                            width: 28%;
+                                                            height: auto;
+                                                            display: block;
+                                                            margin: 0 36%;
+                                                        }
+
+
+
+
+                                                    }
+
+                                                    //하단 스크롤바
+                                                    .swiper-horizontal>.swiper-scrollbar,
+                                                    .swiper-scrollbar.swiper-scrollbar-horizontal {
+                                                        position: relative;
+                                                        left: 0;
+                                                        cursor: pointer;
+                                                        width: 1200px;
+                                                    }
+
+                                                    //양쪽 버튼
+                                                    .swiper-button-prev,
+                                                    .swiper-button-next {
+                                                        color: black;
+                                                    }
+
+                                                    .swiper-button-next {
+                                                        right: 650px;
+                                                        top: var(--swiper-navigation-top-offset, 58%);
+                                                    }
+
+                                                    .swiper-button-prev {
+                                                        left: 50px;
+                                                        top: var(--swiper-navigation-top-offset, 58%);
+                                                    }
+
+                                                    .swiper-pagination-bullet {
+                                                        background-color: rgb(173, 171, 169);
+                                                        width: 10px;
+                                                        height: 10px;
+                                                        border-radius: 0;
+                                                    }
+
+                                                    .swiper-pagination-bullet-active {
+                                                        background-color: black;
+                                                        width: 10px;
+                                                        height: 10px;
+                                                        border-radius: 0;
+                                                    }
+
+                                                    .swiper-horizontal>.swiper-pagination-bullets,
+                                                    .swiper-pagination-bullets.swiper-pagination-horizontal,
+                                                    .swiper-pagination-custom,
+                                                    .swiper-pagination-fraction {
+                                                        width: 50%;
+                                                        bottom: var(--swiper-pagination-bottom, 19px);
+                                                    }
+
+
+                                                }
+
+                                                .modal_info_box {
+                                                    width: 50%;
+                                                    text-align-last: left;
+
+                                                    .modal_info {
+                                                        width: 400px;
+                                                        margin: 0 auto;
+
+                                                        h1 {
+                                                            font-size: 40px;
+                                                            letter-spacing: 2px;
+                                                            font-style: italic;
+                                                        }
+
+                                                        h3 {
                                                             margin-top: 50px;
                                                             margin-bottom: 10px;
                                                         }
 
 
 
-                                                            
-                                                            
 
-                                                      }
-                                                  }
-    
+
+
+                                                    }
+                                                }
+
                                             }
 
-                                          
+
+
+
+
+                                        }
 
 
 
                                     }
 
-    
 
 
-                                        .active{
+                                }
+
+
+
+                            }
+
+
+                            #modal_02 {
+
+                                .content {
+                                    .modal_tap_box {
+
+                                        .modal_tap {
+                                            .code_box {
+                                                width: 80%;
+                                                margin: 0 10%;
+
+                                                img {
+                                                    width: 100%;
+                                                }
+
+                                                .code_text {
+                                                    text-align-last: left;
+
+                                                    .title {
+                                                        font-family: $subfont;
+                                                        margin-top: 30px;
+                                                        font-size: 25px;
+                                                    }
+
+                                                    p {
+                                                        font-size: 20px;
+                                                        margin-top: 10px;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .modal_tap01 {
+                                            width: 1200px;
+                                            margin: 50px auto 0;
+                                            overflow: hidden;
+
+
+                                        }
+
+
+                                        .modal_tap02 {
+                                            width: 1200px;
+                                            margin: 50px auto 0;
+                                            overflow: hidden;
+                                            display: none;
+
+                                            .code_box {
+                                                width: 80%;
+                                                margin: 0 10%;
+
+                                                img {
+                                                    width: 80%;
+                                                }
+                                            }
+
+                                        }
+
+
+                                        .modal_tap03 {
+                                            width: 1200px;
+                                            margin: 50px auto 0;
+                                            overflow: hidden;
+                                            display: none;
+
+                                        }
+
+                                        .active {
                                             display: block;
-    
+
                                         }
 
                                     }
@@ -1388,19 +1901,16 @@ body {
                             }
 
 
-                            #modal_01{}
-                            #modal_02{background-color: teal;}
 
 
 
 
 
 
-                            
                         }
 
 
-                        
+
 
 
 
@@ -1408,9 +1918,17 @@ body {
 
                     }
 
-                    .tap02{background-color: red;}
-                    .tap03{background-color: yellowgreen;}
-                    .tap04{background-color: green;}
+                    .tap02 {
+                        background-color: red;
+                    }
+
+                    .tap03 {
+                        background-color: yellowgreen;
+                    }
+
+                    .tap04 {
+                        background-color: green;
+                    }
 
 
 
@@ -1418,90 +1936,115 @@ body {
                 }
             }
         }
-            }
-
     }
 
-
-
-
-
-
-
-
-    .contact{
-        height: 100vh;
-        text-align: center;
-        border: 1px solid #000;
-        background-color: $pointcolor;
-        .title{
-            margin-top: 150px;
-            margin-bottom: 50px;
-            font-family: $pointfont;
-            font-size: 50px;
-            font-weight: 100;
-            letter-spacing: 5px;
-        }
-        .contact_box{
-            width: 1000px;
-            height: 500px;
-            margin: 0 auto; 
-            background-color: #fff;
-            ul{
-                display: flex;
-                width: 800px;
-                margin: 0 auto;
-                padding-top: 70px;
-                .left{
-                    width: 30%;
-                    margin-right: 30%;
-                    img{
-                        width: 350px;
-                        height: auto;
-                        display: block;
-                        border-radius: 180px 180px 0 0;
-                    }
-                }
-                .right{
-                    border: 1px solid #000;
-                    h5{
-                        font-family: $subfont;
-                        font-size: 25px;
-                    }
-                }
-            }
-
-        }
-
-        .footer01{
-            font-weight: bold;
-            margin-top: 40px;
-        }
-        .footer02{
-            font-size: 13px;
-            margin-top: 40px;
-        }
-        .footer03{
-            font-size: 13px;
-        }
-
-    }
 }
 
 
 
 
+#contact {
+    height: 100vh;
+    text-align: center;
+    border: 1px solid $pointcolor;
+    background-color: $pointcolor;
+
+    .title {
+        margin-top: 150px;
+        margin-bottom: 50px;
+        font-family: $pointfont;
+        font-size: 50px;
+        font-weight: 100;
+        letter-spacing: 5px;
+    }
+
+    .contact_box {
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+
+        ul {
+            display: flex;
+            width: 800px;
+            margin: 0 auto;
+            padding-top: 70px;
+
+            .left {
+                width: 30%;
+                margin-right: 30%;
+
+                img {
+                    width: 350px;
+                    height: auto;
+                    display: block;
+                    border-radius: 180px 180px 0 0;
+                }
+            }
+
+            .right {
+                padding: 30px 0;
+
+                h5 {
+                    font-family: $subfont;
+                    font-size: 25px;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    font-size: 20px;
+
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+
+                .point {
+                    margin-top: 50px;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+
+            }
+        }
+
+    }
+
+    .footer01 {
+        font-weight: bold;
+        margin-top: 40px;
+    }
+
+    .footer02 {
+        font-size: 13px;
+        margin-top: 40px;
+    }
+
+    .footer03 {
+        font-size: 13px;
+    }
+
+}
 
 
-.scroll_btns{
+
+
+.scroll_btns {
     position: fixed;
     right: 100px;
     bottom: 100px;
-    .scroll_btn{
+    display: flex;
+    flex-direction: column;
+
+    .scroll_btn {
         border: none;
         width: 30px;
         height: 30px;
-        border-radius: 50px;
-        background-color: $pointcolor;
+        margin-top: 10px;
+        font-size: 20px;
+        background-color: transparent;
+
+        &:hover {
+            color: rgb(243, 98, 98);
+        }
     }
-}   
+}

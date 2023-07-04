@@ -38,10 +38,15 @@ button {
 }
 
 body {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+body {
   background-color: #fff;
   height: 3000px;
   min-width: 1280px;
   overflow-x: hidden;
+  text-align: center;
 }
 
 .header_outer {
@@ -73,41 +78,46 @@ body {
   display: flex;
   justify-content: space-around;
 }
+.header_outer .header .lnb ul li:hover a {
+  font-weight: bold;
+  color: orangered;
+}
+.header_outer .header .lnb ul .active {
+  font-weight: bold;
+  color: orangered;
+}
 .header_outer .header .contact_btn {
   flex-grow: 1;
   border: none;
   background-color: transparent;
-  font-size: 20px;
+  font-size: 15px;
+  border: 2px solid #707070;
+  padding: 5px 0px;
+  width: 0px;
+  transition: all 0.3s;
 }
 .header_outer .header .contact_btn a {
-  border: 1px solid #707070;
-  padding: 5px 10px;
+  font-family: "yg-jalnan";
+}
+.header_outer .header .contact_btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(83, 83, 83, 0.3);
 }
 
-.page_outer .intro {
+.intro {
   height: 100vh;
   position: relative;
   font-size: 50px;
-  margin: 0 auto;
   background: linear-gradient(to bottom, #F5F5F3 50%, #ebdfcb 99%);
 }
-.page_outer .intro .typing {
+.intro .typing {
   font-family: "Chakra Petch", sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.page_outer .intro .typing::after {
-  content: "";
-  margin-left: 1rem;
-  border-right: 1px solid #2e2d2d;
-  animation: cursor 2s infinite steps(2);
-}
-.page_outer .intro .typed-cursor {
-  display: none;
-}
-.page_outer .intro .scroll {
+.intro .scroll {
   position: absolute;
   bottom: 100px;
   left: 50%;
@@ -118,7 +128,7 @@ body {
   color: #6e6b6b;
   animation: blink 1.5s infinite;
 }
-.page_outer .intro .scroll i {
+.intro .scroll i {
   color: black;
   animation: blink 1.5s infinite;
 }
@@ -133,34 +143,29 @@ body {
     opacity: 0;
   }
 }
-.page_outer .page {
-  text-align: center;
-}
-.page_outer #about {
+
+.about_01 {
   position: relative;
-  height: 2600px;
-  background: linear-gradient(to bottom, #ebdfcb 50%, #fff 99%);
+  height: 100vh;
+  background: linear-gradient(to bottom, #ebdfcb 50%, #ebdfcb 99%);
 }
-.page_outer #about #about_box {
+.about_01 #about_box {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
 }
-.page_outer #about #about_box .visual_main {
-  width: 1280px;
-  margin: 0 auto;
+.about_01 #about_box .visual_main {
   display: flex;
   width: 1000px;
   margin: 0 auto;
   padding-top: 300px;
-  margin-bottom: 450px;
 }
-.page_outer #about #about_box .visual_main .visual_main_img {
+.about_01 #about_box .visual_main .visual_main_img {
   width: 30%;
   margin-right: 10%;
   position: relative;
 }
-.page_outer #about #about_box .visual_main .visual_main_img img {
+.about_01 #about_box .visual_main .visual_main_img img {
   width: 250px;
   height: auto;
   display: block;
@@ -171,153 +176,104 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.page_outer #about #about_box .visual_main .visual_main_content {
+.about_01 #about_box .visual_main .visual_main_content {
   width: 60%;
   -moz-text-align-last: left;
        text-align-last: left;
   position: relative;
 }
-.page_outer #about #about_box .visual_main .visual_main_content .goals {
+.about_01 #about_box .visual_main .visual_main_content .goals {
   position: absolute;
   top: -100px;
   left: 100px;
 }
-.page_outer #about #about_box .visual_main .visual_main_content h2 {
+.about_01 #about_box .visual_main .visual_main_content h2 {
   line-height: 40px;
 }
-.page_outer #about #about_box .visual_main .visual_main_content h2 span {
+.about_01 #about_box .visual_main .visual_main_content h2 span {
   color: rgb(226, 40, 40);
 }
-.page_outer #about #about_box .visual_main .visual_main_content ul {
+.about_01 #about_box .visual_main .visual_main_content ul {
   margin-top: 30px;
 }
-.page_outer #about #about_box .visual_main .visual_main_content ul li {
+.about_01 #about_box .visual_main .visual_main_content ul li {
   font-size: 18px;
   line-height: 40px;
 }
-.page_outer #about #about_box .visual_main .visual_main_content ul li i {
+.about_01 #about_box .visual_main .visual_main_content ul li i {
   color: #2e2d2d;
   margin-right: 10px;
 }
-.page_outer #about #about_box .flow_wrap {
-  padding: 5px 0;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: italic;
-  display: flex;
-  flex: 0 0 auto;
-  white-space: nowrap;
+.about_01 #about_box .visual_main .visual_main_content .roller_box {
+  text-align: left;
+}
+.about_01 #about_box .visual_main .visual_main_content .roller_box .roller {
+  height: 4rem;
+  line-height: 4rem;
+  position: relative;
   overflow: hidden;
-  transition: all 0.3s;
-  cursor: pointer;
 }
-.page_outer #about #about_box .flow_wrap:hover .flow_text {
-  animation-play-state: paused;
+.about_01 #about_box .visual_main .visual_main_content .roller_box .roller #rolltext {
+  position: absolute;
+  animation: slide 8s infinite;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
-.page_outer #about #about_box .flow_wrap .flow_text {
-  padding-right: 10px;
-}
-.page_outer #about #about_box .flow_wrap01 {
-  margin-bottom: 50px;
-  background-color: #e3cdcd;
-  transform: rotate(0deg);
-}
-.page_outer #about #about_box .flow_wrap01:hover {
-  background-color: #ecf6ce;
-}
-.page_outer #about #about_box .flow_wrap01 .flow_text {
-  animation: textLoop01 10s linear infinite;
-}
-@keyframes textLoop01 {
+@keyframes slide {
   0% {
-    transform: translate3d(0, 0, 0);
+    top: 0;
+  }
+  20% {
+    top: -4rem;
+  }
+  40% {
+    top: -8rem;
+  }
+  60% {
+    top: -12.25rem;
+  }
+  80% {
+    top: -12.25rem;
   }
   100% {
-    transform: translate3d(100%, 0, 0);
+    top: 0rem;
   }
 }
-.page_outer #about #about_box .flow_wrap02 {
+
+.about_02 {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ebdfcb 50%, #fff 99%);
+  padding-top: 130px;
+}
+.about_02 #about_box .info_tap_menu h3 {
   margin-bottom: 50px;
-  background-color: #cacb96;
-  transform: rotate(0deg);
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 30px;
 }
-.page_outer #about #about_box .flow_wrap02:hover {
-  background-color: #aeecac;
-}
-.page_outer #about #about_box .flow_wrap02 .flow_text {
-  animation: textLoop02 10s linear infinite;
-}
-@keyframes textLoop02 {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-.page_outer #about #about_box .flow_wrap03 {
-  margin-bottom: 50px;
-  background-color: #d6d5ea;
-  transform: rotate(0deg);
-}
-.page_outer #about #about_box .flow_wrap03:hover {
-  background-color: #ead1f3;
-}
-.page_outer #about #about_box .flow_wrap03 .flow_text {
-  animation: textLoop03 10s linear infinite;
-}
-@keyframes textLoop03 {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(100%, 0, 0);
-  }
-}
-.page_outer #about #about_box .flow_wrap04 {
-  margin-bottom: 50px;
-  background-color: #f4f4be;
-  transform: rotate(0deg);
-}
-.page_outer #about #about_box .flow_wrap04:hover {
-  background-color: #e7fac4;
-}
-.page_outer #about #about_box .flow_wrap04 .flow_text {
-  animation: textLoop04 10s linear infinite;
-}
-@keyframes textLoop04 {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-.page_outer #about #about_box .info_tap_menu {
-  margin-top: 300px;
-}
-.page_outer #about #about_box .info_tap_menu h3 {
-  margin-bottom: 100px;
-}
-.page_outer #about #about_box .info_tap_menu ul {
-  width: 1280px;
+.about_02 #about_box .info_tap_menu ul {
+  width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-.page_outer #about #about_box .info_tap_menu ul li {
-  width: 250px;
-  height: 250px;
+.about_02 #about_box .info_tap_menu ul li {
+  width: 200px;
+  height: 200px;
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  border-radius: 20px;
 }
-.page_outer #about #about_box .info_tap_menu ul li img {
+.about_02 #about_box .info_tap_menu ul li img {
   width: 100%;
   height: 100%;
   display: block;
 }
-.page_outer #about #about_box .info_tap_menu ul li .text {
+.about_02 #about_box .info_tap_menu ul li .text {
   position: absolute;
   top: 0px;
   background-color: rgba(2, 2, 2, 0.7137254902);
@@ -330,199 +286,406 @@ body {
   justify-content: center;
   align-items: center;
 }
-.page_outer #about #about_box .info_tap_menu ul li .text p {
+.about_02 #about_box .info_tap_menu ul li .text p {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.page_outer #about #about_box .info_tap {
-  border: 1px solid #000;
-  width: 1280px;
-  margin: 100px auto 0;
+.about_02 #about_box .info_tap {
+  width: 1000px;
+  margin: 80px auto 0;
 }
-.page_outer #about #about_box .info_tap .tap {
-  display: none;
-  position: relative;
-  padding: 30px;
-  height: 400px;
-}
-.page_outer #about #about_box .info_tap .tap p {
-  font-size: 20px;
-  border: 1px solid #000;
-}
-.page_outer #about #about_box .info_tap .tap .arrow01 {
-  width: 114px;
-  transform: rotate(22deg);
+.about_02 #about_box .info_tap .arrow {
+  width: 85px;
+  top: -70px;
   position: absolute;
-  top: -120px;
+}
+.about_02 #about_box .info_tap .arrow01 {
+  transform: rotate(22deg);
   left: 0;
 }
-.page_outer #about #about_box .info_tap .tap .arrow02 {
-  width: 114px;
+.about_02 #about_box .info_tap .arrow02 {
   transform: rotate(37deg);
-  position: absolute;
-  top: -120px;
-  left: 400px;
+  left: 330px;
 }
-.page_outer #about #about_box .info_tap .tap .arrow03 {
-  width: 114px;
+.about_02 #about_box .info_tap .arrow03 {
   transform: scaleX(-1) rotate(35deg);
-  position: absolute;
-  top: -120px;
-  left: 807px;
+  right: 330px;
 }
-.page_outer #about #about_box .info_tap .tap .arrow04 {
-  width: 114px;
+.about_02 #about_box .info_tap .arrow04 {
   transform: scaleX(-1) rotate(35deg);
-  position: absolute;
-  top: -120px;
   right: 0;
 }
-.page_outer #about #about_box .info_tap .active {
+.about_02 #about_box .info_tap .tap {
+  display: none;
+  position: relative;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.151);
+  font-size: 14px;
+  height: 300px;
+}
+.about_02 #about_box .info_tap .tap p {
+  font-size: 17px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.about_02 #about_box .info_tap .tap .info_text {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.about_02 #about_box .info_tap .tap .info_text p {
+  font-size: 17px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+.about_02 #about_box .info_tap .tap .info_text div {
+  margin-left: 10px;
+  text-align: justify;
+}
+.about_02 #about_box .info_tap .tap .info_text div strong {
+  font-weight: bold;
+  color: red;
+}
+.about_02 #about_box .info_tap .tap01 .info_text img {
+  width: 400px;
+  margin-right: 20px;
+}
+.about_02 #about_box .info_tap .tap01 .info_text div span {
+  font-weight: bold;
+}
+.about_02 #about_box .info_tap .tap02 .info_text video {
+  width: 400px;
+  margin-right: 20px;
+}
+.about_02 #about_box .info_tap .tap02 .annotation {
+  text-align: left;
+  position: absolute;
+  left: 60px;
+  bottom: 0;
+  font-size: 11px !important;
+}
+.about_02 #about_box .info_tap .tap03 p {
+  margin-top: 5px;
+}
+.about_02 #about_box .info_tap .tap03 .hobby_swiper {
+  width: 90%;
+  margin: 0 5%;
+  overflow: hidden;
+}
+.about_02 #about_box .info_tap .tap03 .hobby_swiper img {
+  width: 200px;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.about_02 #about_box .info_tap .tap03 .hobby_text {
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 20px;
+}
+.about_02 #about_box .info_tap .tap03 .hobby_text span {
+  font-weight: bold;
+  color: red;
+}
+.about_02 #about_box .info_tap .tap04 .info_text img {
+  width: 250px;
+  margin-right: 10px;
+}
+.about_02 #about_box .info_tap .active {
   display: block;
 }
-.page_outer #profile {
-  padding-top: 150px;
+
+.profile_01 {
   background-color: #fff;
-  padding-bottom: 200px;
+  height: 100vh;
+  padding-top: 150px;
 }
-.page_outer #profile #main .main_wrap {
+.profile_01 #main .main_wrap {
   width: 1000px;
   margin: 0 auto;
   background-color: #ebdfcb;
-  padding: 50px;
   position: relative;
+  padding: 20px 40px;
 }
-.page_outer #profile #main .main_wrap .tape {
+.profile_01 #main .main_wrap .tape {
   transform: rotate(0deg);
   position: absolute;
   top: -140px;
   left: 420px;
 }
-.page_outer #profile #main .main_wrap .main_content {
+.profile_01 #main .main_wrap .main_content {
   display: flex;
   justify-content: space-evenly;
   font-size: 14px;
 }
-.page_outer #profile #main .main_wrap .main_content .main_box {
+.profile_01 #main .main_wrap .main_content .main_box {
   width: 400px;
   height: 300px;
 }
-.page_outer #profile #main .main_wrap .main_content h3 {
+.profile_01 #main .main_wrap .main_content h3 {
   font-family: "Chakra Petch", sans-serif;
   font-size: 30px;
   margin-bottom: 20px;
 }
-.page_outer #profile #main .main_wrap .main_top {
+.profile_01 #main .main_wrap .main_top {
   margin-bottom: 50px;
 }
-.page_outer #profile #main .main_wrap .main_top .main01 {
+.profile_01 #main .main_wrap .main_top .main01 {
   overflow: hidden;
 }
-.page_outer #profile #main .main_wrap .main_top .main01 img {
+.profile_01 #main .main_wrap .main_top .main01 img {
   width: 100%;
   height: auto;
   display: block;
 }
-.page_outer #profile #main .main_wrap .main_top .main02 ul {
+.profile_01 #main .main_wrap .main_top .main02 ul {
   display: flex;
   justify-content: space-around;
 }
-.page_outer #profile #main .main_wrap .main_top .main02 ul li {
+.profile_01 #main .main_wrap .main_top .main02 ul li {
   width: 70%;
   text-align: left;
 }
-.page_outer #profile #main .main_wrap .main_top .main02 ul li div {
+.profile_01 #main .main_wrap .main_top .main02 ul li div {
   margin-top: 15px;
 }
-.page_outer #profile #main .main_wrap .main_top .main02 ul .bold {
+.profile_01 #main .main_wrap .main_top .main02 ul .bold {
   width: 30%;
   font-weight: bold;
 }
-.page_outer #profile #main .main_wrap .main_bottom ul {
+.profile_01 #main .main_wrap .main_bottom ul {
   -moz-text-align-last: left;
        text-align-last: left;
 }
-.page_outer #profile #main .main_wrap .main_bottom ul li {
+.profile_01 #main .main_wrap .main_bottom ul li {
   margin-top: 30px;
 }
-.page_outer #profile #main .resume {
+.profile_01 #main .resume {
   font-weight: bold;
   text-decoration: underline;
 }
-.page_outer #profile #ask {
-  padding-top: 200px;
+
+.profile_02 {
+  height: 100vh;
+  background-color: #fff;
+  /*          
+      .flow_wrap {
+          margin-bottom: 15px;
+          padding: 5px 0;
+          font-size: 15px;
+          font-weight: bold;
+          font-style: italic;
+
+          display: flex;
+          flex: 0 0 auto;
+          white-space: nowrap;
+          overflow: hidden;
+          transition: all 0.3s;
+          cursor: pointer;
+
+
+
+          &:hover .flow_text {
+              animation-play-state: paused;
+          }
+
+          .flow_text {
+              padding-right: 10px;
+          }
+
+      }
+
+      .flow_wrap01 {
+          background-color: #ece0e0;
+
+          &:hover {
+              background-color: #ecf6ce;
+          }
+
+
+          .flow_text {
+              animation: textLoop01 10s linear infinite;
+          }
+
+          @keyframes textLoop01 {
+              0% {
+                  -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+              }
+
+              100% {
+                  -webkit-transform: translate3d(-100%, 0, 0);
+                  transform: translate3d(100%, 0, 0);
+              }
+          }
+
+      }
+
+      .flow_wrap02 {
+          background-color: #f5f7ca;
+
+          &:hover {
+              background-color: #aeecac;
+          }
+
+
+          .flow_text {
+              animation: textLoop02 10s linear infinite;
+          }
+
+          @keyframes textLoop02 {
+              0% {
+                  -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+              }
+
+              100% {
+                  -webkit-transform: translate3d(-100%, 0, 0);
+                  transform: translate3d(-100%, 0, 0);
+              }
+          }
+
+      }
+
+      .flow_wrap03 {
+          background-color: #dedcfc;
+
+          &:hover {
+              background-color: #ead1f3;
+          }
+
+
+          .flow_text {
+              animation: textLoop03 10s linear infinite;
+          }
+
+          @keyframes textLoop03 {
+              0% {
+                  -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+              }
+
+              100% {
+                  -webkit-transform: translate3d(-100%, 0, 0);
+                  transform: translate3d(100%, 0, 0);
+              }
+          }
+
+      }
+
+      .flow_wrap04 {
+          background-color: #ddffdf;
+          &:hover {
+              background-color: #e7fac4;
+          }
+
+
+          .flow_text {
+              animation: textLoop04 10s linear infinite;
+          }
+
+          @keyframes textLoop04 {
+              0% {
+                  -webkit-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+              }
+
+              100% {
+                  -webkit-transform: translate3d(-100%, 0, 0);
+                  transform: translate3d(-100%, 0, 0);
+              }
+          }
+
+      }
+   */
+}
+.profile_02 #ask {
+  padding-top: 300px;
   width: 800px;
   margin: 0 auto;
 }
-.page_outer #profile #ask .ask_wrap {
+.profile_02 #ask .ask_wrap {
   display: flex;
   justify-content: space-between;
 }
-.page_outer #profile #ask .ask_wrap .ask_title h1 {
+.profile_02 #ask .ask_wrap .ask_title h1 {
   font-size: 80px;
-  margin-bottom: 100px;
-  margin-top: 100px;
+  margin-top: 130px;
   background-color: #ebdfcb;
-  width: 200px;
   height: 100px;
   text-align: center;
   line-height: 100px;
+  padding: 10px;
 }
-.page_outer #profile #ask .ask_wrap .ask_title p {
-  font-size: 20px;
+.profile_02 #ask .ask_wrap .ask_title .pen {
+  background: linear-gradient(to top, #FFE400 14%, transparent 10%);
 }
-.page_outer #profile #ask .ask_wrap img {
+.profile_02 #ask .ask_wrap img {
   width: 100%;
 }
-.page_outer #profile #ask .ask_wrap .swiper {
+.profile_02 #ask .ask_wrap .swiper {
   width: 500px;
   height: 400px;
   margin: 0;
   z-index: 0;
 }
-.page_outer #profile #ask .ask_wrap .swiper .swiper-slide {
+.profile_02 #ask .ask_wrap .swiper .swiper-slide {
   border-radius: 0px;
   font-size: 22px;
   border: 3px solid #000;
   background-color: #fff;
 }
-.page_outer #profile #ask .ask_wrap .swiper .swiper-slide .text_box .ask_text {
+.profile_02 #ask .ask_wrap .swiper .swiper-slide .text_box .ask_text {
   text-align: center;
   font-weight: bold;
   background-color: #ebdfcb;
+  height: 100px;
+  line-height: 100px;
 }
-.page_outer #profile #ask .ask_wrap .swiper .swiper-slide .text_box .answer_text {
+.profile_02 #ask .ask_wrap .swiper .swiper-slide .text_box .answer_text {
   background-color: #fff;
+  padding: 50px;
+  font-size: 17px;
+  text-align: justify;
 }
-.page_outer #skils {
+.profile_02 #ask .ask_wrap .swiper .swiper-slide .text_box .answer_text strong {
+  color: red;
+}
+
+#skils {
   background-color: #fff;
   padding-top: 200px;
 }
-.page_outer #skils .wave {
+#skils .wave {
   position: relative;
   width: 100%;
-  margin-bottom: -7px; /*Fix for safari gap*/
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
   max-height: 150px;
   /* Animation */
   /*Shrinking for mobile*/
 }
-.page_outer #skils .wave .parallax > use {
+#skils .wave .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
-.page_outer #skils .wave .parallax > use:nth-child(1) {
+#skils .wave .parallax > use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
-.page_outer #skils .wave .parallax > use:nth-child(2) {
+#skils .wave .parallax > use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
-.page_outer #skils .wave .parallax > use:nth-child(3) {
+#skils .wave .parallax > use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
-.page_outer #skils .wave .parallax > use:nth-child(4) {
+#skils .wave .parallax > use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
 }
@@ -535,23 +698,23 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .page_outer #skils .wave .waves {
+  #skils .wave .waves {
     height: 40px;
     min-height: 40px;
   }
 }
-.page_outer #skils .wave02 {
+#skils .wave02 {
   transform: scaleY(-1);
 }
-.page_outer #skils .skils_box_outer {
+#skils .skils_box_outer {
   background-color: #ebdfcb;
 }
-.page_outer #skils .skils_box_outer .skils_box {
+#skils .skils_box_outer .skils_box {
   width: 1100px;
   margin: 0 auto;
   position: relative;
 }
-.page_outer #skils .skils_box_outer .skils_box h5 {
+#skils .skils_box_outer .skils_box h5 {
   position: absolute;
   top: -150px;
   left: 50%;
@@ -560,180 +723,284 @@ body {
   font-family: "Chakra Petch", sans-serif;
   font-style: italic;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul {
+#skils .skils_box_outer .skils_box .skils_content ul {
   display: flex;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li {
+#skils .skils_box_outer .skils_box .skils_content ul li {
   width: 50%;
   height: 260px;
   padding: 20px;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li p {
+#skils .skils_box_outer .skils_box .skils_content ul li p {
   font-size: 20px;
   text-align: center;
   margin-bottom: 30px;
   font-family: "Chakra Petch", sans-serif;
   letter-spacing: 2px;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .progress_box {
+#skils .skils_box_outer .skils_box .skils_content ul li .progress_box {
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .progress_box img {
+#skils .skils_box_outer .skils_box .skils_content ul li .progress_box img {
   display: block;
   width: 45px;
   margin-right: 20px;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .progress_box .progressbar {
+#skils .skils_box_outer .skils_box .skils_content ul li .progress_box .progressbar {
   width: 100%;
   height: 15px;
   background-color: #c7c7c5;
   border-radius: 20px;
   margin-right: 20px;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .progress_box .progress {
+#skils .skils_box_outer .skils_box .skils_content ul li .progress_box .progress {
   width: 0%;
   height: 15px;
   background-color: rgb(75, 77, 75);
   border-radius: 20px;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .progress_box .num {
+#skils .skils_box_outer .skils_box .skils_content ul li .progress_box .num {
   font-weight: bold;
   font-size: 13px;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .icon {
+#skils .skils_box_outer .skils_box .skils_content ul li .icon {
   display: flex;
   justify-content: space-between;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .icon li {
+#skils .skils_box_outer .skils_box .skils_content ul li .icon li {
   height: auto;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .icon li img {
+#skils .skils_box_outer .skils_box .skils_content ul li .icon li img {
   width: 50px;
 }
-.page_outer #skils .skils_box_outer .skils_box .skils_content ul li .icon li p {
+#skils .skils_box_outer .skils_box .skils_content ul li .icon li p {
   font-size: 15px;
   font-weight: bold;
 }
-.page_outer #works {
+
+#works {
   height: 100vh;
   background: linear-gradient(to right, #ebdfcb 20%, #fff 70%);
   position: relative;
 }
-.page_outer #works .works_outer {
+#works .works_outer {
   width: 1280px;
   margin: 0 auto;
   display: flex;
 }
-.page_outer #works .works_outer .works_tapmenu_box {
+#works .works_outer .works_tapmenu_box {
   width: 50%;
   height: 100vh;
   background-color: #ebdfcb;
 }
-.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu {
+#works .works_outer .works_tapmenu_box .works_tapmenu {
   margin-top: 200px;
 }
-.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu p {
+#works .works_outer .works_tapmenu_box .works_tapmenu p {
   text-align: left;
   margin-bottom: 20px;
 }
-.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu h1 {
+#works .works_outer .works_tapmenu_box .works_tapmenu h1 {
   text-align: left;
   font-family: "Chakra Petch", sans-serif;
   font-weight: lighter;
   font-size: 40px;
   margin-bottom: 80px;
 }
-.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu ul li {
+#works .works_outer .works_tapmenu_box .works_tapmenu ul li {
   text-align: left;
   margin-bottom: 60px;
   font-size: 15px;
 }
-.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu ul li span {
+#works .works_outer .works_tapmenu_box .works_tapmenu ul li span {
   cursor: pointer;
 }
-.page_outer #works .works_outer .works_tapmenu_box .works_tapmenu ul .active {
+#works .works_outer .works_tapmenu_box .works_tapmenu ul .active {
   font-weight: bold;
 }
-.page_outer #works .works_outer .works_tap_box {
+#works .works_outer .works_tap_box {
   width: 60%;
   height: 100vh;
   background-color: #fff;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap {
+#works .works_outer .works_tap_box .works_tap {
   margin: 100px 0;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .works_tap {
+#works .works_outer .works_tap_box .works_tap ul .works_tap {
   height: 0;
   opacity: 0;
   transition: all 0.3s;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .active {
+#works .works_outer .works_tap_box .works_tap ul .active {
   opacity: 1;
   height: 100%;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_box {
-  width: 500px;
+@keyframes anime_textup {
+  0% {
+    top: 0;
+  }
+  20% {
+    top: -0.2rem;
+  }
+  40% {
+    top: 0;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span {
+  position: relative;
+  animation: anime_textup 1.5s infinite;
+  font-weight: bold;
+  font-size: 14px;
+  color: #F68514;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(5) {
+  animation-delay: 0.5s;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(6) {
+  animation-delay: 0.6s;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(7) {
+  animation-delay: 0.7s;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(8) {
+  animation-delay: 0.8s;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(9) {
+  animation-delay: 0.9s;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer {
+  position: relative;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .tab {
+  width: 148px;
+  position: absolute;
+  top: 143px;
+  left: 90px;
+  z-index: 1;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .mobile {
+  width: 70px;
+  position: absolute;
+  top: 207px;
+  right: 90px;
+  z-index: 1;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .mockup_box {
+  width: 440px;
   height: 350px;
-  border: 1px solid #000;
   margin: 0 auto;
+  overflow: hidden;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .mockup_box .pc {
+  content: "";
+  background: url(../img/pc_01.png) no-repeat;
+  background-size: cover;
+  height: 350px;
+  position: relative;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .mockup_box .pc span {
+  display: block;
+  width: 401px;
+  height: 228px;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  background: url(../img/pc_hover_02.png) no-repeat;
+  background-size: cover;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .mockup_box .pc span:hover {
+  animation: scroll 15s ease;
+  cursor: pointer;
+}
+@keyframes scroll {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 0 -780px;
+  }
+  100% {
+    background-position: 0 -780px;
+  }
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box {
   width: 500px;
   margin: 0 auto;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .title {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .title {
   font-family: "yg-jalnan";
   font-size: 20px;
   margin-top: 20px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .comment {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .comment {
   text-align: left;
   font-size: 14px;
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 25px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .plan {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .plan {
   text-align: left;
   margin-bottom: 5px;
   font-size: 15px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box h3 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box h3 {
   font-weight: bold;
   text-align: left;
   margin-top: 20px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan {
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color {
   width: 80px;
   text-align: center;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view {
   width: 40px;
   height: 40px;
   border-radius: 50px;
   margin-bottom: 10px;
   margin-left: 20px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view01 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view01 {
   background-color: #F68514;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view02 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view02 {
   background-color: #EFD6A1;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view03 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view03 {
   background-color: #C5C2BB;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color p {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color p {
   font-size: 11px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .url_box button {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .url_box button {
   border: none;
   width: 140px;
   height: 40px;
@@ -741,12 +1008,13 @@ body {
   letter-spacing: 2px;
   font-weight: bold;
   color: #2e2d2d;
+  margin-bottom: 5px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .url_box button:hover {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .url_box button:hover {
   background-color: #ebdfcb;
   color: black;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background {
   position: fixed;
   top: 0;
   left: 0;
@@ -756,7 +1024,7 @@ body {
   display: none;
   z-index: 9999;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal {
   display: none;
   width: 1300px;
   height: 850px;
@@ -770,13 +1038,13 @@ body {
   box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.2);
   position: relative;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box {
   display: flex;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   padding-left: 20px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle {
   width: 15px;
   height: 15px;
   border-radius: 50px;
@@ -784,300 +1052,350 @@ body {
   margin-left: 5px;
   margin-top: 10px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle01 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle01 {
   background-color: #ec5a5a;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle02 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle02 {
   background-color: #f3d678;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle03 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle03 {
   background-color: #9de04f;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn {
   border: none;
   background: none;
   position: absolute;
   top: 3px;
   right: 20px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn i {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn i {
   font-size: 30px;
   transition: all 0.3s;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn:hover {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn:hover {
   color: rgb(247, 43, 43);
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
   margin-top: 50px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu {
   font-size: 14px;
   letter-spacing: 2px;
   color: #969494;
   font-weight: bold;
   cursor: pointer;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu i {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu i {
   font-size: 30px;
   margin-bottom: 10px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu:hover {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu:hover {
   color: #66c7ee;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .active {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .active {
   color: #66c7ee;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 {
   width: 1200px;
   margin: 50px auto 0;
   overflow: hidden;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .active {
+  display: block;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 {
   width: 100%;
   height: 100%;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-slide img {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-slide img {
   width: 90%;
   height: auto;
   display: block;
   margin: 0 5%;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-horizontal > .swiper-scrollbar, .page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-scrollbar.swiper-scrollbar-horizontal {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: relative;
   left: 0;
   cursor: pointer;
   width: 1200px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev,
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
   color: black;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
   right: 40px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev {
   left: 40px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet {
   background-color: rgb(173, 171, 169);
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet-active {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet-active {
   background-color: black;
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 {
-  width: 1200px;
-  margin: 50px auto 0;
-  overflow: hidden;
-  display: none;
-}
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box {
   display: flex;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 {
   width: 50%;
   overflow: hidden;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-slide img {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-slide img {
   width: 70%;
   height: auto;
   display: block;
   margin: 0 15%;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-scrollbar, .page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-scrollbar.swiper-scrollbar-horizontal {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: relative;
   left: 0;
   cursor: pointer;
   width: 1200px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev,
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
   color: black;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
   right: 650px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev {
   left: 50px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet {
   background-color: rgb(173, 171, 169);
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet-active {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet-active {
   background-color: black;
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-pagination-bullets,
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullets.swiper-pagination-horizontal,
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-custom, .page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-fraction {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-pagination-bullets,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullets.swiper-pagination-horizontal,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-custom,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-fraction {
   width: 50%;
   bottom: var(--swiper-pagination-bottom, 19px);
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box {
   width: 50%;
   -moz-text-align-last: left;
        text-align-last: left;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info {
   width: 400px;
   margin: 0 auto;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h1 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h1 {
   font-size: 40px;
   letter-spacing: 2px;
   font-style: italic;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h3 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h3 {
   margin-top: 50px;
   margin-bottom: 10px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info .text {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info .text {
   text-align: left;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 {
-  width: 1200px;
-  margin: 50px auto 0;
-  overflow: hidden;
-  display: none;
-}
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box {
   display: flex;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 {
   width: 50%;
   overflow: hidden;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img01 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img01 {
   width: 50%;
   height: auto;
   display: block;
   margin: 0 25%;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img02 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img02 {
   width: 38%;
   height: auto;
   display: block;
   margin: 0 29%;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img03,
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img04 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img03,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img04 {
   width: 32%;
   height: auto;
   display: block;
   margin: 0 34%;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img05 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img05 {
   width: 52%;
   height: auto;
   display: block;
   margin: 0 24%;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img06 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img06 {
   width: 48%;
   height: auto;
   display: block;
   margin: 0 26%;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img07,
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img08 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img07,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img08 {
   width: 28%;
   height: auto;
   display: block;
   margin: 0 36%;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-scrollbar, .page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-scrollbar.swiper-scrollbar-horizontal {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: relative;
   left: 0;
   cursor: pointer;
   width: 1200px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev,
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
   color: black;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
   right: 650px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev {
   left: 50px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet {
   background-color: rgb(173, 171, 169);
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet-active {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet-active {
   background-color: black;
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-pagination-bullets,
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullets.swiper-pagination-horizontal,
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-custom, .page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-fraction {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-pagination-bullets,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullets.swiper-pagination-horizontal,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-custom,
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-fraction {
   width: 50%;
   bottom: var(--swiper-pagination-bottom, 19px);
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box {
   width: 50%;
   -moz-text-align-last: left;
        text-align-last: left;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info {
   width: 400px;
   margin: 0 auto;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h1 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h1 {
   font-size: 40px;
   letter-spacing: 2px;
   font-style: italic;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h3 {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h3 {
   margin-top: 50px;
   margin-bottom: 10px;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .active {
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box {
+  width: 80%;
+  margin: 0 10%;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box img {
+  width: 100%;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text .title {
+  font-family: "yg-jalnan";
+  margin-top: 30px;
+  font-size: 25px;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap01 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap02 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap02 .code_box {
+  width: 80%;
+  margin: 0 10%;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap02 .code_box img {
+  width: 80%;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap03 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .active {
   display: block;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 {
-  background-color: teal;
-}
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap02 {
+#works .works_outer .works_tap_box .works_tap ul .tap02 {
   background-color: red;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap03 {
+#works .works_outer .works_tap_box .works_tap ul .tap03 {
   background-color: yellowgreen;
 }
-.page_outer #works .works_outer .works_tap_box .works_tap ul .tap04 {
+#works .works_outer .works_tap_box .works_tap ul .tap04 {
   background-color: green;
 }
-.page_outer .contact {
+
+#contact {
   height: 100vh;
   text-align: center;
-  border: 1px solid #000;
+  border: 1px solid #ebdfcb;
   background-color: #ebdfcb;
 }
-.page_outer .contact .title {
+#contact .title {
   margin-top: 150px;
   margin-bottom: 50px;
   font-family: "Chakra Petch", sans-serif;
@@ -1085,44 +1403,55 @@ body {
   font-weight: 100;
   letter-spacing: 5px;
 }
-.page_outer .contact .contact_box {
+#contact .contact_box {
   width: 1000px;
   height: 500px;
   margin: 0 auto;
   background-color: #fff;
 }
-.page_outer .contact .contact_box ul {
+#contact .contact_box ul {
   display: flex;
   width: 800px;
   margin: 0 auto;
   padding-top: 70px;
 }
-.page_outer .contact .contact_box ul .left {
+#contact .contact_box ul .left {
   width: 30%;
   margin-right: 30%;
 }
-.page_outer .contact .contact_box ul .left img {
+#contact .contact_box ul .left img {
   width: 350px;
   height: auto;
   display: block;
   border-radius: 180px 180px 0 0;
 }
-.page_outer .contact .contact_box ul .right {
-  border: 1px solid #000;
+#contact .contact_box ul .right {
+  padding: 30px 0;
 }
-.page_outer .contact .contact_box ul .right h5 {
+#contact .contact_box ul .right h5 {
   font-family: "yg-jalnan";
   font-size: 25px;
+  margin-bottom: 30px;
 }
-.page_outer .contact .footer01 {
+#contact .contact_box ul .right p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+#contact .contact_box ul .right .point {
+  margin-top: 50px;
+  font-weight: bold;
+  font-style: italic;
+}
+#contact .footer01 {
   font-weight: bold;
   margin-top: 40px;
 }
-.page_outer .contact .footer02 {
+#contact .footer02 {
   font-size: 13px;
   margin-top: 40px;
 }
-.page_outer .contact .footer03 {
+#contact .footer03 {
   font-size: 13px;
 }
 
@@ -1130,11 +1459,17 @@ body {
   position: fixed;
   right: 100px;
   bottom: 100px;
+  display: flex;
+  flex-direction: column;
 }
 .scroll_btns .scroll_btn {
   border: none;
   width: 30px;
   height: 30px;
-  border-radius: 50px;
-  background-color: #ebdfcb;
+  margin-top: 10px;
+  font-size: 20px;
+  background-color: transparent;
+}
+.scroll_btns .scroll_btn:hover {
+  color: rgb(243, 98, 98);
 }/*# sourceMappingURL=main.css.map */
