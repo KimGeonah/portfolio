@@ -5,13 +5,6 @@ window.onscroll = function() {
   console.log(scrollTop);
 }  
 
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
 
 
  //[자바스크립트] 풀페이지 기능 ----------------------------------------------
