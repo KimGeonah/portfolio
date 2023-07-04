@@ -258,6 +258,9 @@ url01.addEventListener('click', function() {
   modal01.style.display = 'block';
   back01.style.display = 'block';
   body.style.overflow = 'hidden';
+  swiper01.slideTo(0);
+
+
 });
 
 
@@ -277,6 +280,84 @@ close01.addEventListener('click', function() {
 
 
 
+  
+//[바닐라] 탭메뉴1번 모달창 : swiper 3개  -----------------------------------------------
+
+var swiper01 = new Swiper(".swiper01", {
+  initialSlide:0,
+  grabCursor:true,
+
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  observer: true,
+  observeParents: true,
+
+
+});
+
+
+var swiper02 = new Swiper(".swiper02", {
+  initialSlide:0,
+  grabCursor:true,
+
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  observer: true,
+  observeParents: true,
+
+});
+
+
+var swiper03 = new Swiper(".swiper03", {
+  initialSlide:0,
+  grabCursor:true,
+
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  observer: true,
+  observeParents: true,
+
+});
+
+
+
+
+
 //[제이쿼리] works : 탭1 모달창2   -----------------------------------------------
 const modal02 = document.querySelector('#modal_02')
 const url02 = document.querySelector('.url_02')
@@ -291,6 +372,7 @@ url02.addEventListener('click', function() {
   modal02.style.display = 'block';
   back02.style.display = 'block';
   body.style.overflow = 'hidden';
+
 });
 
 
@@ -312,6 +394,12 @@ close02.addEventListener('click', function() {
 
 
 
+
+
+
+
+
+
 //[바닐라] 모달창1 : 탭메뉴 -----------------------------------------------
 
 
@@ -319,7 +407,6 @@ close02.addEventListener('click', function() {
 
  //모달 메뉴를 클릭할때
 $('#modal_01 .modal_menu .menu').click(function() {
-
   //메뉴전체에서 일단 active를 지우고
   $('#modal_01 .modal_menu .menu').removeClass('active');
   //선택된 메뉴만 active시킨다
@@ -336,11 +423,14 @@ $('#modal_01 .modal_menu .menu').click(function() {
   //탭메뉴의 스와이퍼 첫페이지시작
   if (index == 0) {
     swiper01.slideTo(0);
-  } else if (index == 1) {
+} else if (index == 1) {
     swiper02.slideTo(0);
-  } else if (index == 2) {
+} else if (index == 2) {
     swiper03.slideTo(0);
-  }
+}else{
+  swiper01.slideTo(0);
+}
+
 });
 
 
@@ -369,72 +459,6 @@ $('#modal_01 .modal_menu .menu').click(function() {
   $('#modal_02 .modal_tap').eq(index).css('display', 'block').addClass('active');
 
 });
-
-
-
-
-
-
-//[바닐라] 탭메뉴1번 모달창 : swiper 3개  -----------------------------------------------
-
-
-
-
-
-var swiper01 = new Swiper(".swiper01", {
-  initialSlide:0,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  loop:true,
-  grabCursor:true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-
-var swiper02 = new Swiper(".swiper02", {
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-  loop:true,
-  grabCursor:true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-
-var swiper03 = new Swiper(".swiper03", {
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-  loop:true,
-  grabCursor:true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
 
 
 
