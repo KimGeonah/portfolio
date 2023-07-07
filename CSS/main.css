@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "S-CoreDream-3Light";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
@@ -11,16 +10,10 @@
   font-weight: normal;
   font-style: normal;
 }
-/* #EFEBE4; */
 * {
   margin: 0;
   padding: 0;
   font-family: "S-CoreDream-3Light";
-  /* 드래그나 더블클릭 시에 텍스트가 선택이 되지 않도록 설정
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;  */
 }
 
 li {
@@ -473,136 +466,6 @@ body {
 .profile_02 {
   height: 100vh;
   background-color: #fff;
-  /*          
-      .flow_wrap {
-          margin-bottom: 15px;
-          padding: 5px 0;
-          font-size: 15px;
-          font-weight: bold;
-          font-style: italic;
-
-          display: flex;
-          flex: 0 0 auto;
-          white-space: nowrap;
-          overflow: hidden;
-          transition: all 0.3s;
-          cursor: pointer;
-
-
-
-          &:hover .flow_text {
-              animation-play-state: paused;
-          }
-
-          .flow_text {
-              padding-right: 10px;
-          }
-
-      }
-
-      .flow_wrap01 {
-          background-color: #ece0e0;
-
-          &:hover {
-              background-color: #ecf6ce;
-          }
-
-
-          .flow_text {
-              animation: textLoop01 10s linear infinite;
-          }
-
-          @keyframes textLoop01 {
-              0% {
-                  -webkit-transform: translate3d(0, 0, 0);
-                  transform: translate3d(0, 0, 0);
-              }
-
-              100% {
-                  -webkit-transform: translate3d(-100%, 0, 0);
-                  transform: translate3d(100%, 0, 0);
-              }
-          }
-
-      }
-
-      .flow_wrap02 {
-          background-color: #f5f7ca;
-
-          &:hover {
-              background-color: #aeecac;
-          }
-
-
-          .flow_text {
-              animation: textLoop02 10s linear infinite;
-          }
-
-          @keyframes textLoop02 {
-              0% {
-                  -webkit-transform: translate3d(0, 0, 0);
-                  transform: translate3d(0, 0, 0);
-              }
-
-              100% {
-                  -webkit-transform: translate3d(-100%, 0, 0);
-                  transform: translate3d(-100%, 0, 0);
-              }
-          }
-
-      }
-
-      .flow_wrap03 {
-          background-color: #dedcfc;
-
-          &:hover {
-              background-color: #ead1f3;
-          }
-
-
-          .flow_text {
-              animation: textLoop03 10s linear infinite;
-          }
-
-          @keyframes textLoop03 {
-              0% {
-                  -webkit-transform: translate3d(0, 0, 0);
-                  transform: translate3d(0, 0, 0);
-              }
-
-              100% {
-                  -webkit-transform: translate3d(-100%, 0, 0);
-                  transform: translate3d(100%, 0, 0);
-              }
-          }
-
-      }
-
-      .flow_wrap04 {
-          background-color: #ddffdf;
-          &:hover {
-              background-color: #e7fac4;
-          }
-
-
-          .flow_text {
-              animation: textLoop04 10s linear infinite;
-          }
-
-          @keyframes textLoop04 {
-              0% {
-                  -webkit-transform: translate3d(0, 0, 0);
-                  transform: translate3d(0, 0, 0);
-              }
-
-              100% {
-                  -webkit-transform: translate3d(-100%, 0, 0);
-                  transform: translate3d(-100%, 0, 0);
-              }
-          }
-
-      }
-   */
 }
 .profile_02 #ask {
   padding-top: 300px;
@@ -647,11 +510,16 @@ body {
   height: 100px;
   line-height: 100px;
 }
+.profile_02 #ask .ask_wrap .swiper .swiper-slide .text_box .ask_text p {
+  font-family: "yg-jalnan";
+}
 .profile_02 #ask .ask_wrap .swiper .swiper-slide .text_box .answer_text {
   background-color: #fff;
   padding: 50px;
-  font-size: 17px;
+  font-size: 15px;
+  color: #000;
   text-align: justify;
+  font-weight: bold;
 }
 .profile_02 #ask .ask_wrap .swiper .swiper-slide .text_box .answer_text strong {
   color: red;
@@ -660,15 +528,14 @@ body {
 #skils {
   background-color: #fff;
   padding-top: 200px;
+  height: 100vh;
 }
 #skils .wave {
   position: relative;
   width: 100%;
   margin-bottom: -7px;
-  /*Fix for safari gap*/
   max-height: 150px;
   /* Animation */
-  /*Shrinking for mobile*/
 }
 #skils .wave .parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
@@ -697,17 +564,9 @@ body {
     transform: translate3d(85px, 0, 0);
   }
 }
-@media (max-width: 768px) {
-  #skils .wave .waves {
-    height: 40px;
-    min-height: 40px;
-  }
-}
-#skils .wave02 {
-  transform: scaleY(-1);
-}
 #skils .skils_box_outer {
   background-color: #ebdfcb;
+  height: calc(100vh - 140px);
 }
 #skils .skils_box_outer .skils_box {
   width: 1100px;
@@ -782,7 +641,7 @@ body {
 
 #works {
   height: 100vh;
-  background: linear-gradient(to right, #ebdfcb 20%, #fff 70%);
+  background: linear-gradient(to right, #ebdfcb 35%, rgb(255, 255, 255) 52%);
   position: relative;
 }
 #works .works_outer {
@@ -796,21 +655,19 @@ body {
   background-color: #ebdfcb;
 }
 #works .works_outer .works_tapmenu_box .works_tapmenu {
-  margin-top: 200px;
+  margin-top: 250px;
+  text-align: left;
 }
 #works .works_outer .works_tapmenu_box .works_tapmenu p {
-  text-align: left;
   margin-bottom: 20px;
 }
 #works .works_outer .works_tapmenu_box .works_tapmenu h1 {
-  text-align: left;
   font-family: "Chakra Petch", sans-serif;
   font-weight: lighter;
   font-size: 40px;
   margin-bottom: 80px;
 }
 #works .works_outer .works_tapmenu_box .works_tapmenu ul li {
-  text-align: left;
   margin-bottom: 60px;
   font-size: 15px;
 }
@@ -825,17 +682,11 @@ body {
   height: 100vh;
   background-color: #fff;
 }
-#works .works_outer .works_tap_box .works_tap {
+#works .works_outer .works_tap_box .works_taps {
   margin: 100px 0;
 }
-#works .works_outer .works_tap_box .works_tap ul .works_tap {
-  height: 0;
-  opacity: 0;
-  transition: all 0.3s;
-}
-#works .works_outer .works_tap_box .works_tap ul .active {
-  opacity: 1;
-  height: 100%;
+#works .works_outer .works_tap_box .works_taps ul .works_tap {
+  display: none;
 }
 @keyframes anime_textup {
   0% {
@@ -857,81 +708,507 @@ body {
     top: 0;
   }
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .text_up span {
   position: relative;
   animation: anime_textup 1.5s infinite;
   font-weight: bold;
   font-size: 14px;
-  color: #F68514;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(1) {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .text_up span:nth-of-type(1) {
   animation-delay: 0.1s;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(2) {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .text_up span:nth-of-type(2) {
   animation-delay: 0.2s;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(3) {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .text_up span:nth-of-type(3) {
   animation-delay: 0.3s;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(4) {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .text_up span:nth-of-type(4) {
   animation-delay: 0.4s;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(5) {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .text_up span:nth-of-type(5) {
   animation-delay: 0.5s;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(6) {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .text_up span:nth-of-type(6) {
   animation-delay: 0.6s;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(7) {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .text_up span:nth-of-type(7) {
   animation-delay: 0.7s;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(8) {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .text_up span:nth-of-type(8) {
   animation-delay: 0.8s;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .text_up span:nth-of-type(9) {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .text_up span:nth-of-type(9) {
   animation-delay: 0.9s;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .info_box {
+  width: 500px;
+  margin: 0 auto;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .info_box .title {
+  font-family: "yg-jalnan";
+  font-size: 20px;
+  margin-top: 40px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .info_box .comment {
+  font-size: 14px;
+  margin: 10px auto 30px;
+  line-height: 25px;
+  text-align: center;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .info_box .planbox {
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .info_box .planbox .plan {
+  text-align: left;
+  margin-bottom: 5px;
+  display: flex;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .info_box .planbox .plan .bold_text {
+  font-weight: 900;
+  margin-right: 20px;
+  letter-spacing: 2.5px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .info_box .planbox .color_box {
+  display: flex;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .info_box .planbox .color_box .view {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .url_box {
+  width: 500px;
+  margin: 0 auto;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .url_box button {
+  border: none;
+  width: 140px;
+  height: 40px;
+  margin-right: 5px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #2e2d2d;
+  margin-bottom: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .url_box button:hover {
+  background-color: #ebdfcb;
+  color: black;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #EDF0F3;
+  display: none;
+  z-index: 9999;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal {
+  display: none;
+  width: 1300px;
+  height: 850px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 2 !important;
+  box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.2);
   position: relative;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .tab {
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .circle_box {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .circle_box .circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background-color: black;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .circle_box .circle01 {
+  background-color: #ec5a5a;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .circle_box .circle02 {
+  background-color: #f3d678;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .circle_box .circle03 {
+  background-color: #9de04f;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .close_btn {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .close_btn i {
+  font-size: 30px;
+  transition: all 0.3s;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .close_btn:hover {
+  color: rgb(247, 43, 43);
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .content .modal_menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .content .modal_menu .menu {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #969494;
+  font-weight: bold;
+  cursor: pointer;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .content .modal_menu .menu i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .content .modal_menu .menu:hover {
+  color: #66c7ee;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .content .modal_menu .active {
+  color: #66c7ee;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .content .modal_tap_box .modal_tap01 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .content .modal_tap_box .modal_tap02 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .content .modal_tap_box .modal_tap03 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background .modal .content .modal_tap_box .active {
+  display: block;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 {
+  width: 100%;
+  height: 100%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-slide img {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 5%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  width: 1200px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
+  color: black;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
+  right: 40px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev {
+  left: 40px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet {
+  background-color: rgb(173, 171, 169);
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet-active {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box {
+  display: flex;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 {
+  width: 50%;
+  overflow: hidden;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-slide img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 15%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  width: 1200px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
+  color: black;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
+  right: 650px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev {
+  left: 50px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet {
+  background-color: rgb(173, 171, 169);
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet-active {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-pagination-bullets,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullets.swiper-pagination-horizontal,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-custom,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-fraction {
+  width: 50%;
+  bottom: var(--swiper-pagination-bottom, 19px);
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box {
+  width: 50%;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info {
+  width: 400px;
+  margin: 0 auto;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info .text {
+  text-align: left;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box {
+  display: flex;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 {
+  width: 50%;
+  overflow: hidden;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img01 {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 25%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img02 {
+  width: 38%;
+  height: auto;
+  display: block;
+  margin: 0 29%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img03,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img04 {
+  width: 32%;
+  height: auto;
+  display: block;
+  margin: 0 34%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img05 {
+  width: 52%;
+  height: auto;
+  display: block;
+  margin: 0 24%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img06 {
+  width: 48%;
+  height: auto;
+  display: block;
+  margin: 0 26%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img07,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img08 {
+  width: 28%;
+  height: auto;
+  display: block;
+  margin: 0 36%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  width: 1200px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
+  color: black;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
+  right: 650px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev {
+  left: 50px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet {
+  background-color: rgb(173, 171, 169);
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet-active {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-pagination-bullets,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullets.swiper-pagination-horizontal,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-custom,
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-fraction {
+  width: 50%;
+  bottom: var(--swiper-pagination-bottom, 19px);
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box {
+  width: 50%;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info {
+  width: 400px;
+  margin: 0 auto;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box {
+  width: 80%;
+  margin: 0 10%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box img {
+  width: 100%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text .title {
+  font-family: "yg-jalnan";
+  margin-top: 30px;
+  font-size: 25px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .modal_tap01 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .modal_tap02 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .modal_tap02 .code_box {
+  width: 80%;
+  margin: 0 10%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .modal_tap02 .code_box img {
+  width: 80%;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .modal_tap03 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_taps ul .works_tap .modal_background #modal_02 .content .modal_tap_box .active {
+  display: block;
+}
+#works .works_outer .works_tap_box .works_taps ul .active {
+  display: block;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap01 .text_up span {
+  color: #f68514;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap01 .mockup_outer {
+  position: relative;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap01 .mockup_outer .tab {
   width: 148px;
   position: absolute;
   top: 143px;
   left: 90px;
   z-index: 1;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .mobile {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .mockup_outer .mobile {
   width: 70px;
   position: absolute;
   top: 207px;
   right: 90px;
   z-index: 1;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .mockup_box {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .mockup_outer .mockup_box {
   width: 440px;
   height: 350px;
   margin: 0 auto;
   overflow: hidden;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .mockup_box .pc {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .mockup_outer .mockup_box .pc {
   content: "";
   background: url(../img/pc_01.png) no-repeat;
   background-size: cover;
   height: 350px;
   position: relative;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .mockup_box .pc span {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .mockup_outer .mockup_box .pc span {
   display: block;
   width: 401px;
   height: 228px;
   position: absolute;
   top: 18px;
   left: 20px;
-  background: url(../img/pc_hover_02.png) no-repeat;
+  background: url(../img/hover_chv.png) no-repeat;
   background-size: cover;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .mockup_outer .mockup_box .pc span:hover {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .mockup_outer .mockup_box .pc span:hover {
   animation: scroll 15s ease;
   cursor: pointer;
 }
@@ -946,75 +1223,16 @@ body {
     background-position: 0 -780px;
   }
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box {
-  width: 500px;
-  margin: 0 auto;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .title {
-  font-family: "yg-jalnan";
-  font-size: 20px;
-  margin-top: 20px;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .comment {
-  text-align: left;
-  font-size: 14px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  line-height: 25px;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .plan {
-  text-align: left;
-  margin-bottom: 5px;
-  font-size: 15px;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box h3 {
-  font-weight: bold;
-  text-align: left;
-  margin-top: 20px;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color {
-  width: 80px;
-  text-align: center;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view {
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view01 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .color_box .view01 {
   background-color: #F68514;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view02 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .color_box .view02 {
   background-color: #EFD6A1;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color .view03 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .color_box .view03 {
   background-color: #C5C2BB;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .info_box .color_plan .color p {
-  font-size: 11px;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .url_box button {
-  border: none;
-  width: 140px;
-  height: 40px;
-  margin-right: 20px;
-  letter-spacing: 2px;
-  font-weight: bold;
-  color: #2e2d2d;
-  margin-bottom: 5px;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .url_box button:hover {
-  background-color: #ebdfcb;
-  color: black;
-}
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background {
   position: fixed;
   top: 0;
   left: 0;
@@ -1024,7 +1242,7 @@ body {
   display: none;
   z-index: 9999;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal {
   display: none;
   width: 1300px;
   height: 850px;
@@ -1038,13 +1256,13 @@ body {
   box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.2);
   position: relative;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .circle_box {
   display: flex;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   padding-left: 20px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .circle_box .circle {
   width: 15px;
   height: 15px;
   border-radius: 50px;
@@ -1052,340 +1270,755 @@ body {
   margin-left: 5px;
   margin-top: 10px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle01 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .circle_box .circle01 {
   background-color: #ec5a5a;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle02 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .circle_box .circle02 {
   background-color: #f3d678;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .circle_box .circle03 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .circle_box .circle03 {
   background-color: #9de04f;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .close_btn {
   border: none;
   background: none;
   position: absolute;
   top: 3px;
   right: 20px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn i {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .close_btn i {
   font-size: 30px;
   transition: all 0.3s;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .close_btn:hover {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .close_btn:hover {
   color: rgb(247, 43, 43);
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .content .modal_menu {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
   margin-top: 50px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .content .modal_menu .menu {
   font-size: 14px;
   letter-spacing: 2px;
   color: #969494;
   font-weight: bold;
   cursor: pointer;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu i {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .content .modal_menu .menu i {
   font-size: 30px;
   margin-bottom: 10px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .menu:hover {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .content .modal_menu .menu:hover {
   color: #66c7ee;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_menu .active {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .content .modal_menu .active {
   color: #66c7ee;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap01 {
   width: 1200px;
   margin: 50px auto 0;
   overflow: hidden;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap02 {
   width: 1200px;
   margin: 50px auto 0;
   overflow: hidden;
   display: none;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .content .modal_tap_box .modal_tap03 {
   width: 1200px;
   margin: 50px auto 0;
   overflow: hidden;
   display: none;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background .modal .content .modal_tap_box .active {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background .modal .content .modal_tap_box .active {
   display: block;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 {
   width: 100%;
   height: 100%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-slide img {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-slide img {
   width: 90%;
   height: auto;
   display: block;
   margin: 0 5%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-horizontal > .swiper-scrollbar,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-scrollbar.swiper-scrollbar-horizontal {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: relative;
   left: 0;
   cursor: pointer;
   width: 1200px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
   color: black;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-next {
   right: 40px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-button-prev {
   left: 40px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet {
   background-color: rgb(173, 171, 169);
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet-active {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap01 .swiper01 .swiper-pagination-bullet-active {
   background-color: black;
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box {
   display: flex;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 {
   width: 50%;
   overflow: hidden;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-slide img {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-slide img {
   width: 70%;
   height: auto;
   display: block;
   margin: 0 15%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-scrollbar,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-scrollbar.swiper-scrollbar-horizontal {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: relative;
   left: 0;
   cursor: pointer;
   width: 1200px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
   color: black;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-next {
   right: 650px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-button-prev {
   left: 50px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet {
   background-color: rgb(173, 171, 169);
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet-active {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullet-active {
   background-color: black;
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-pagination-bullets,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullets.swiper-pagination-horizontal,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-custom,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-fraction {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-horizontal > .swiper-pagination-bullets,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-bullets.swiper-pagination-horizontal,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-custom,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .swiper02 .swiper-pagination-fraction {
   width: 50%;
   bottom: var(--swiper-pagination-bottom, 19px);
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box {
   width: 50%;
   -moz-text-align-last: left;
        text-align-last: left;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info {
   width: 400px;
   margin: 0 auto;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h1 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h1 {
   font-size: 40px;
   letter-spacing: 2px;
   font-style: italic;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h3 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h3 {
   margin-top: 50px;
   margin-bottom: 10px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info .text {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info .text {
   text-align: left;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box {
   display: flex;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 {
   width: 50%;
   overflow: hidden;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img01 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img01 {
   width: 50%;
   height: auto;
   display: block;
   margin: 0 25%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img02 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img02 {
   width: 38%;
   height: auto;
   display: block;
   margin: 0 29%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img03,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img04 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img03,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img04 {
   width: 32%;
   height: auto;
   display: block;
   margin: 0 34%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img05 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img05 {
   width: 52%;
   height: auto;
   display: block;
   margin: 0 24%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img06 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img06 {
   width: 48%;
   height: auto;
   display: block;
   margin: 0 26%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img07,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img08 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img07,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-slide .img08 {
   width: 28%;
   height: auto;
   display: block;
   margin: 0 36%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-scrollbar,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-scrollbar.swiper-scrollbar-horizontal {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-scrollbar.swiper-scrollbar-horizontal {
   position: relative;
   left: 0;
   cursor: pointer;
   width: 1200px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
   color: black;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-next {
   right: 650px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-button-prev {
   left: 50px;
   top: var(--swiper-navigation-top-offset, 58%);
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet {
   background-color: rgb(173, 171, 169);
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet-active {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullet-active {
   background-color: black;
   width: 10px;
   height: 10px;
   border-radius: 0;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-pagination-bullets,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullets.swiper-pagination-horizontal,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-custom,
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-fraction {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-horizontal > .swiper-pagination-bullets,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-bullets.swiper-pagination-horizontal,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-custom,
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .swiper03 .swiper-pagination-fraction {
   width: 50%;
   bottom: var(--swiper-pagination-bottom, 19px);
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box {
   width: 50%;
   -moz-text-align-last: left;
        text-align-last: left;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info {
   width: 400px;
   margin: 0 auto;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h1 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h1 {
   font-size: 40px;
   letter-spacing: 2px;
   font-style: italic;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h3 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_01 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h3 {
   margin-top: 50px;
   margin-bottom: 10px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box {
   width: 80%;
   margin: 0 10%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box img {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box img {
   width: 100%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text {
   -moz-text-align-last: left;
        text-align-last: left;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text .title {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text .title {
   font-family: "yg-jalnan";
   margin-top: 30px;
   font-size: 25px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text p {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap .code_box .code_text p {
   font-size: 20px;
   margin-top: 10px;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap01 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap01 {
   width: 1200px;
   margin: 50px auto 0;
   overflow: hidden;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap02 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap02 {
   width: 1200px;
   margin: 50px auto 0;
   overflow: hidden;
   display: none;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap02 .code_box {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap02 .code_box {
   width: 80%;
   margin: 0 10%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap02 .code_box img {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap02 .code_box img {
   width: 80%;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap03 {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .modal_tap03 {
   width: 1200px;
   margin: 50px auto 0;
   overflow: hidden;
   display: none;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap01 .modal_background #modal_02 .content .modal_tap_box .active {
+#works .works_outer .works_tap_box .works_taps ul .tap01 .modal_background #modal_02 .content .modal_tap_box .active {
   display: block;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap02 {
-  background-color: red;
+#works .works_outer .works_tap_box .works_taps ul .tap02 .text_up span {
+  color: #002053;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap03 {
+#works .works_outer .works_tap_box .works_taps ul .tap02 .mockup_outer {
+  position: relative;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .mockup_outer .mockup_box {
+  width: 440px;
+  height: 350px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .mockup_outer .mockup_box .pc {
+  content: "";
+  background: url(../img/pc_01.png) no-repeat;
+  background-size: cover;
+  height: 350px;
+  position: relative;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .mockup_outer .mockup_box .pc span {
+  display: block;
+  width: 402px;
+  height: 228px;
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  background: url(../img/hover_fila.png) no-repeat;
+  background-size: cover;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .mockup_outer .mockup_box .pc span:hover {
+  animation: scroll02 15s ease;
+  cursor: pointer;
+}
+@keyframes scroll02 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 0 -1370px;
+  }
+  100% {
+    background-position: 0 -1370px;
+  }
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .color_box .view01 {
+  background-color: #002053;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .color_box .view02 {
+  background-color: #c7c4c4;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .url_box button {
+  width: 110px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #EDF0F3;
+  display: none;
+  z-index: 9999;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal {
+  display: none;
+  width: 1300px;
+  height: 850px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 2 !important;
+  box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.2);
+  position: relative;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .circle_box {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .circle_box .circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background-color: black;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .circle_box .circle01 {
+  background-color: #ec5a5a;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .circle_box .circle02 {
+  background-color: #f3d678;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .circle_box .circle03 {
+  background-color: #9de04f;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .close_btn {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .close_btn i {
+  font-size: 30px;
+  transition: all 0.3s;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .close_btn:hover {
+  color: rgb(247, 43, 43);
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .content .modal_menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .content .modal_menu .menu {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #969494;
+  font-weight: bold;
+  cursor: pointer;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .content .modal_menu .menu i {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .content .modal_menu .menu:hover {
+  color: #66c7ee;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .content .modal_menu .active {
+  color: #66c7ee;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .content .modal_tap_box .modal_tap01 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .content .modal_tap_box .modal_tap02 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .content .modal_tap_box .modal_tap03 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background .modal .content .modal_tap_box .active {
+  display: block;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap01 .swiper04 {
+  width: 100%;
+  height: 100%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap01 .swiper04 .swiper-slide img {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 5%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap01 .swiper04 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap01 .swiper04 .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  width: 1200px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap01 .swiper04 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap01 .swiper04 .swiper-button-next {
+  color: black;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap01 .swiper04 .swiper-button-next {
+  right: 40px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap01 .swiper04 .swiper-button-prev {
+  left: 40px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap01 .swiper04 .swiper-pagination-bullet {
+  background-color: rgb(173, 171, 169);
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap01 .swiper04 .swiper-pagination-bullet-active {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box {
+  display: flex;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 {
+  width: 50%;
+  overflow: hidden;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-slide img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin: 0 15%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  width: 1200px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-button-next {
+  color: black;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-button-next {
+  right: 650px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-button-prev {
+  left: 50px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-pagination-bullet {
+  background-color: rgb(173, 171, 169);
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-pagination-bullet-active {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-horizontal > .swiper-pagination-bullets,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-pagination-bullets.swiper-pagination-horizontal,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-pagination-custom,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .swiper05 .swiper-pagination-fraction {
+  width: 50%;
+  bottom: var(--swiper-pagination-bottom, 19px);
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box {
+  width: 50%;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info {
+  width: 400px;
+  margin: 0 auto;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap02 .swiper_box .modal_info_box .modal_info .text {
+  text-align: left;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box {
+  display: flex;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 {
+  width: 50%;
+  overflow: hidden;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-slide .img01 {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 25%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-slide .img02 {
+  width: 38%;
+  height: auto;
+  display: block;
+  margin: 0 29%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-slide .img03,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-slide .img04 {
+  width: 32%;
+  height: auto;
+  display: block;
+  margin: 0 34%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-slide .img05 {
+  width: 52%;
+  height: auto;
+  display: block;
+  margin: 0 24%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-slide .img06 {
+  width: 48%;
+  height: auto;
+  display: block;
+  margin: 0 26%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-slide .img07,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-slide .img08 {
+  width: 28%;
+  height: auto;
+  display: block;
+  margin: 0 36%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-horizontal > .swiper-scrollbar,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  width: 1200px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-button-prev,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-button-next {
+  color: black;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-button-next {
+  right: 650px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-button-prev {
+  left: 50px;
+  top: var(--swiper-navigation-top-offset, 58%);
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-pagination-bullet {
+  background-color: rgb(173, 171, 169);
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-pagination-bullet-active {
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-horizontal > .swiper-pagination-bullets,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-pagination-bullets.swiper-pagination-horizontal,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-pagination-custom,
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .swiper06 .swiper-pagination-fraction {
+  width: 50%;
+  bottom: var(--swiper-pagination-bottom, 19px);
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box {
+  width: 50%;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info {
+  width: 400px;
+  margin: 0 auto;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_03 .content .modal_tap_box .modal_tap03 .swiper_box .modal_info_box .modal_info h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .modal_tap .code_box {
+  width: 80%;
+  margin: 0 10%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .modal_tap .code_box img {
+  width: 100%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .modal_tap .code_box .code_text {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .modal_tap .code_box .code_text .title {
+  font-family: "yg-jalnan";
+  margin-top: 30px;
+  font-size: 25px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .modal_tap .code_box .code_text p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .modal_tap01 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .modal_tap02 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .modal_tap02 .code_box {
+  width: 80%;
+  margin: 0 10%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .modal_tap02 .code_box img {
+  width: 80%;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .modal_tap03 {
+  width: 1200px;
+  margin: 50px auto 0;
+  overflow: hidden;
+  display: none;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap02 .modal_background #modal_04 .content .modal_tap_box .active {
+  display: block;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap03 {
   background-color: yellowgreen;
 }
-#works .works_outer .works_tap_box .works_tap ul .tap04 {
+#works .works_outer .works_tap_box .works_taps ul .tap04 {
   background-color: green;
 }
 
