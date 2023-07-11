@@ -1890,7 +1890,7 @@ body {
 
                     .modal_tap01 {
                       width: 1200px;
-                      margin: 50px auto 0;
+                      margin: 40px auto 0;
                       overflow: hidden;
                     }
 
@@ -1974,7 +1974,15 @@ body {
                           width: 10px;
                           height: 10px;
                           border-radius: 0;
+
                         }
+
+                        .swiper-horizontal>.swiper-pagination-bullets, 
+                        .swiper-pagination-bullets.swiper-pagination-horizontal, 
+                        .swiper-pagination-custom, .swiper-pagination-fraction{
+                                                    bottom: var(--swiper-pagination-bottom,20px);
+                        }
+                        
 
                         .swiper-pagination-bullet-active {
                           background-color: black;
@@ -2319,7 +2327,7 @@ body {
                         margin: 0 10%;
 
                         img {
-                          width: 80%;
+                          width: 97%;
                         }
                       }
 
@@ -2510,9 +2518,9 @@ body {
 
                   .modal_menu {
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-evenly;
                     margin: 0 auto;
-                    margin-top: 50px;
+                    margin-top: 30px;
 
                     .menu {
                       font-size: 14px;
@@ -2542,7 +2550,7 @@ body {
 
                     .modal_tap01 {
                       width: 1200px;
-                      margin: 50px auto 0;
+                      margin: 30px auto 0;
                       overflow: hidden;
                     }
 
@@ -2557,6 +2565,13 @@ body {
 
 
                     .modal_tap03 {
+                      width: 1200px;
+                      margin: 50px auto 0;
+                      overflow: hidden;
+                      display: none;
+                    }
+
+                    .modal_tap04 {
                       width: 1200px;
                       margin: 50px auto 0;
                       overflow: hidden;
@@ -2633,6 +2648,12 @@ body {
                           width: 10px;
                           height: 10px;
                           border-radius: 0;
+                        }
+
+                        .swiper-horizontal>.swiper-pagination-bullets, 
+                        .swiper-pagination-bullets.swiper-pagination-horizontal, 
+                        .swiper-pagination-custom, .swiper-pagination-fraction{
+                          bottom: var(--swiper-pagination-bottom,20px);
                         }
 
 
@@ -2761,65 +2782,1194 @@ body {
 
                       .swiper_box {
 
+                        .swiper06 {
+                          width: 100%;
+                          height: 100%;
+  
+                          //각 슬라이드
+                          .swiper-slide {
+                            img {
+                              width: 900px;
+                              height: auto;
+                              display: block;
+                              margin: 50px auto 0;
+                            }
+                            .img09{width: 800px;}
+                            .img10,
+                            .img11{
+                              width: 1000px;
+                              margin: 100px auto 0;
+                            }
+
+
+                          }
+  
+                          //하단 스크롤바
+                          .swiper-horizontal>.swiper-scrollbar,
+                          .swiper-scrollbar.swiper-scrollbar-horizontal {
+                            position: relative;
+                            left: 0;
+                            cursor: pointer;
+                            width: 1200px;
+                          }
+  
+                          //양쪽 버튼
+                          .swiper-button-prev,
+                          .swiper-button-next {
+                            color: black;
+                          }
+  
+                          .swiper-button-next {
+                            right: 40px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+  
+                          .swiper-button-prev {
+                            left: 40px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+  
+                          .swiper-pagination-bullet {
+                            background-color: rgb(173, 171, 169);
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+  
+                          .swiper-pagination-bullet-active {
+                            background-color: black;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+  
+                          .swiper-horizontal>.swiper-pagination-bullets, 
+                          .swiper-pagination-bullets.swiper-pagination-horizontal, 
+                          .swiper-pagination-custom, .swiper-pagination-fraction{
+                            bottom: var(--swiper-pagination-bottom,20px);
+                          }
+  
+  
+                        }
+
+
+
+                      }
+
+
+
+
+
+                    }
+
+
+                    .modal_tap04 {
+
+                      .swiper_box {
+
                         display: flex;
 
-                        .swiper06 {
+                        .swiper07 {
                           width: 50%;
                           overflow: hidden;
 
                           //각 슬라이드
                           .swiper-slide {
-                            .img01 {
-                              width: 50%;
+                            img {
+                              width: 60%;
                               height: auto;
                               display: block;
-                              margin: 0 25%;
+                              margin: 0 20%;
                             }
-
-                            .img02 {
-                              width: 38%;
-                              height: auto;
-                              display: block;
-                              margin: 0 29%;
-                            }
-
-                            .img03,
-                            .img04 {
-                              width: 32%;
-                              height: auto;
-                              display: block;
-                              margin: 0 34%;
-                            }
-
-
-                            .img05 {
-                              width: 52%;
-                              height: auto;
-                              display: block;
-                              margin: 0 24%;
-                            }
-
-
-
-                            .img06 {
-                              width: 48%;
-                              height: auto;
-                              display: block;
-                              margin: 0 26%;
-                            }
-
-
                             .img07,
-                            .img08 {
-                              width: 28%;
-                              height: auto;
-                              display: block;
-                              margin: 0 36%;
+                            .img08{
+                              width: 70%;
+                              margin: 50px 15% 0;
+                            }
+
+                            .img09{
+                              width: 70%;
+                              margin: 0 15%;
                             }
 
 
 
 
+
+                          }
+
+                          //하단 스크롤바
+                          .swiper-horizontal>.swiper-scrollbar,
+                          .swiper-scrollbar.swiper-scrollbar-horizontal {
+                            position: relative;
+                            left: 0;
+                            cursor: pointer;
+                            width: 1200px;
+                          }
+
+                          //양쪽 버튼
+                          .swiper-button-prev,
+                          .swiper-button-next {
+                            color: black;
+                          }
+
+                          .swiper-button-next {
+                            right: 650px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+
+                          .swiper-button-prev {
+                            left: 50px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+
+                          .swiper-pagination-bullet {
+                            background-color: rgb(173, 171, 169);
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+
+                          .swiper-pagination-bullet-active {
+                            background-color: black;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+
+                          .swiper-horizontal>.swiper-pagination-bullets,
+                          .swiper-pagination-bullets.swiper-pagination-horizontal,
+                          .swiper-pagination-custom,
+                          .swiper-pagination-fraction {
+                            width: 50%;
+                            bottom: var(--swiper-pagination-bottom, 19px);
+                          }
+
+
+                        }
+
+                        .modal_info_box {
+                          width: 50%;
+                          text-align-last: left;
+
+                          .modal_info {
+                            width: 400px;
+                            margin: 0 auto;
+
+                            h1 {
+                              font-size: 40px;
+                              letter-spacing: 2px;
+                              font-style: italic;
+                              margin-top: 70px;
+                            }
+
+                            h3 {
+                              margin-top: 50px;
+                              margin-bottom: 10px;
+                            }
+
+
+
+
+
+
+                          }
+                        }
+
+                      }
+
+
+
+
+
+                    }
+
+
+                  }
+
+
+
+                }
+
+
+
+              }
+
+              #modal_04 {
+
+                .content {
+                  .modal_tap_box {
+
+                    .modal_tap {
+                      margin: 30px auto 0;
+                      .code_box {
+                        width: 80%;
+                        margin: 0 10%;
+
+                        .code{
+                          height: 500px;
+                          overflow: auto;
+                          .colorscripter-code-table{
+                            background-color: pink;
+                          }
+                        }
+
+                        .code_text {
+                          text-align-last: left;
+
+                          .title {
+                            font-family: $subfont;
+                            margin-top: 30px;
+                            font-size: 25px;
+                          }
+
+                          p {
+                            font-size: 18px;
+                            margin-top: 10px;
+                          }
+                        }
+                      }
+                    }
+
+                    .modal_tap01 {
+                      .code{
+                        font-size: 14.6px;
+                      }
+                    }
+
+
+                    .modal_tap02 {
+                      .code{
+                        font-size: 15px;
+                      }
+                    }
+
+
+                    .modal_tap03 {
+                      .code{
+                        font-size: 17px;
+                      }
+
+                    }
+
+                    .active {
+                      display: block;
+
+                    }
+
+                  }
+
+
+
+                }
+
+
+
+              }
+
+            }
+
+          }
+
+          .tap03 {
+
+            .text_up span {
+              color: #002053;
+            }
+
+            .mockup_outer {
+              position: relative;
+
+              .mockup_box {
+                width: 440px;
+                height: 350px;
+                margin: 0 auto;
+                overflow: hidden;
+
+                .pc {
+                  content: "";
+                  background: url(../img/pc_01.png) no-repeat;
+                  background-size: cover;
+                  height: 350px;
+                  position: relative;
+                  span {
+                    display: block;
+                    width: 400px;
+                    height: 225px;
+                    position: absolute;
+                    top: 19px;
+                    left: 19px;
+                    background: url(../img/hover_login.png) no-repeat;
+                    background-size: cover;
+                    
+
+
+                     &:hover {
+                      background: url(../img/hover_login02.png)  no-repeat;
+                      background-size: cover;
+                      cursor: pointer;
+                    } 
+                  }
+
+
+                }
+
+
+
+              }
+            }
+
+            .color_box {
+              .view01 {
+                background-color: #002053;
+              }
+
+              .view02 {
+                background-color: #c7c4c4;
+              }
+
+            }
+
+            .url_box {
+              button {
+                width: 110px;
+              }
+            }
+
+            .modal_background {
+              position: fixed;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              background: #EDF0F3;
+              display: none;
+              z-index: 9999;
+              .modal {
+                display: none;
+                width: 1300px;
+                height: 850px;
+                background-color: #fff;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+                z-index: 2 !important;
+                box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
+                position: relative;
+                .circle_box {
+                  display: flex;
+                  border-bottom: 1px solid #ccc;
+                  padding-bottom: 10px;
+                  padding-left: 20px;
+
+                  .circle {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50px;
+                    background-color: black;
+                    margin-left: 5px;
+                    margin-top: 10px;
+                  }
+
+                  .circle01 {
+                    background-color: #ec5a5a;
+                  }
+
+                  .circle02 {
+                    background-color: #f3d678;
+                  }
+
+                  .circle03 {
+                    background-color: #9de04f;
+                  }
+                }
+
+                .close_btn {
+                  border: none;
+                  background: none;
+                  position: absolute;
+                  top: 3px;
+                  right: 20px;
+
+                  i {
+                    font-size: 30px;
+                    transition: all 0.3s;
+
+                  }
+
+                  &:hover {
+                    color: rgb(247, 43, 43);
+                  }
+                }
+
+                .content {
+
+
+                  .modal_menu {
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin: 0 auto;
+                    margin-top: 30px;
+
+                    .menu {
+                      font-size: 14px;
+                      letter-spacing: 2px;
+                      color: #969494;
+                      font-weight: bold;
+                      cursor: pointer;
+
+                      i {
+                        font-size: 30px;
+                        margin-bottom: 10px;
+                      }
+
+                      &:hover {
+                        color: #66c7ee;
+                      }
+                    }
+
+                    .active {
+                      color: #66c7ee;
+                    }
+
+                  }
+
+                  .modal_tap_box {
+
+
+                    .modal_tap01 {
+                      width: 1200px;
+                      margin: 30px auto 0;
+                      overflow: hidden;
+                    }
+
+
+                    .modal_tap02 {
+                      width: 1200px;
+                      margin: 50px auto 0;
+                      overflow: hidden;
+                      display: none;
+
+                    }
+
+
+                    .modal_tap03 {
+                      width: 1200px;
+                      margin: 50px auto 0;
+                      overflow: hidden;
+                      display: none;
+                    }
+
+                    .modal_tap04 {
+                      width: 1200px;
+                      margin: 50px auto 0;
+                      overflow: hidden;
+                      display: none;
+
+                    }
+
+                    .active {
+                      display: block;
+
+                    }
+
+                  }
+
+                }
+              }
+
+
+
+              #modal_05 {
+
+                .content {
+
+                  .modal_tap_box {
+                    .modal_tap01 {
+                      .swiper08 {
+                        margin-top: 30px;
+                        width: 103%;
+                        height: 100%;
+
+                        //각 슬라이드
+                        .swiper-slide {
+                          img {
+                            width: 90%;
+                            height: auto;
+                            display: block;
+                            margin: 0 5%;
+                          }
+                        }
+
+                        //하단 스크롤바
+                        .swiper-horizontal>.swiper-scrollbar,
+                        .swiper-scrollbar.swiper-scrollbar-horizontal {
+                          position: relative;
+                          left: 0;
+                          cursor: pointer;
+                          width: 1200px;
+                        }
+
+                        //양쪽 버튼
+                        .swiper-button-prev,
+                        .swiper-button-next {
+                          color: black;
+                        }
+
+                        .swiper-button-next {
+                          right: 40px;
+                          top: var(--swiper-navigation-top-offset, 58%);
+                        }
+
+                        .swiper-button-prev {
+                          left: 40px;
+                          top: var(--swiper-navigation-top-offset, 58%);
+                        }
+
+                        .swiper-pagination-bullet {
+                          background-color: rgb(173, 171, 169);
+                          width: 10px;
+                          height: 10px;
+                          border-radius: 0;
+                        }
+
+                        .swiper-pagination-bullet-active {
+                          background-color: black;
+                          width: 10px;
+                          height: 10px;
+                          border-radius: 0;
+                        }
+
+                        .swiper-horizontal>.swiper-pagination-bullets, 
+                        .swiper-pagination-bullets.swiper-pagination-horizontal, 
+                        .swiper-pagination-custom, .swiper-pagination-fraction{
+                          bottom: var(--swiper-pagination-bottom,20px);
+                        }
+
+
+                      }
+                    }
+
+
+
+                    .modal_tap02 {
+
+                      .swiper_box {
+
+                        .swiper09 {
+                          width: 100%;
+                          height: 100%;
+  
+                          //각 슬라이드
+                          .swiper-slide {
+                            img {
+                              width: 900px;
+                              height: auto;
+                              display: block;
+                              margin: 50px auto 0;
+                            }
+                            .img02,
+                            .img03{
+                              width: 1200px;
+                            }
+
+                            .img04{
+                              margin: 0 auto;
+                              width: 800px;
+                            }
+                            .img05{
+                              width: 1000px;
+                              margin: 0 auto;
+                            }
+
+
+                          }
+  
+                          //하단 스크롤바
+                          .swiper-horizontal>.swiper-scrollbar,
+                          .swiper-scrollbar.swiper-scrollbar-horizontal {
+                            position: relative;
+                            left: 0;
+                            cursor: pointer;
+                            width: 1200px;
+                          }
+  
+                          //양쪽 버튼
+                          .swiper-button-prev,
+                          .swiper-button-next {
+                            color: black;
+                          }
+  
+                          .swiper-button-next {
+                            right: 40px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+  
+                          .swiper-button-prev {
+                            left: 40px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+  
+                          .swiper-pagination-bullet {
+                            background-color: rgb(173, 171, 169);
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+  
+                          .swiper-pagination-bullet-active {
+                            background-color: black;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+  
+                          .swiper-horizontal>.swiper-pagination-bullets, 
+                          .swiper-pagination-bullets.swiper-pagination-horizontal, 
+                          .swiper-pagination-custom, .swiper-pagination-fraction{
+                            bottom: var(--swiper-pagination-bottom,20px);
+                          }
+  
+  
+                        }
+
+
+
+                      }
+
+
+
+
+
+                    }
+
+
+                    .modal_tap04 {
+
+                      .swiper_box {
+
+                        display: flex;
+
+                        .swiper11 {
+                          width: 50%;
+                          overflow: hidden;
+
+                          //각 슬라이드
+                          .swiper-slide {
+                            img {
+                              width: 60%;
+                              height: auto;
+                              display: block;
+                              margin: 0 20%;
+                            }
+                            .img07,
+                            .img08{
+                              width: 70%;
+                              margin: 50px 15% 0;
+                            }
+
+                            .img09{
+                              width: 70%;
+                              margin: 0 15%;
+                            }
+
+
+
+
+
+                          }
+
+                          //하단 스크롤바
+                          .swiper-horizontal>.swiper-scrollbar,
+                          .swiper-scrollbar.swiper-scrollbar-horizontal {
+                            position: relative;
+                            left: 0;
+                            cursor: pointer;
+                            width: 1200px;
+                          }
+
+                          //양쪽 버튼
+                          .swiper-button-prev,
+                          .swiper-button-next {
+                            color: black;
+                          }
+
+                          .swiper-button-next {
+                            right: 650px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+
+                          .swiper-button-prev {
+                            left: 50px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+
+                          .swiper-pagination-bullet {
+                            background-color: rgb(173, 171, 169);
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+
+                          .swiper-pagination-bullet-active {
+                            background-color: black;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+
+                          .swiper-horizontal>.swiper-pagination-bullets,
+                          .swiper-pagination-bullets.swiper-pagination-horizontal,
+                          .swiper-pagination-custom,
+                          .swiper-pagination-fraction {
+                            width: 50%;
+                            bottom: var(--swiper-pagination-bottom, 19px);
+                          }
+
+
+                        }
+
+                        .modal_info_box {
+                          width: 50%;
+                          text-align-last: left;
+
+                          .modal_info {
+                            width: 400px;
+                            margin: 0 auto;
+
+                            h1 {
+                              font-size: 40px;
+                              letter-spacing: 2px;
+                              font-style: italic;
+                              margin-top: 70px;
+                            }
+
+                            h3 {
+                              margin-top: 50px;
+                              margin-bottom: 10px;
+                            }
+
+
+
+
+
+
+                          }
+                        }
+
+                      }
+
+
+
+
+
+                    }
+
+
+                  }
+
+
+
+                }
+
+
+
+              }
+
+              #modal_06 {
+
+                .content {
+                  .modal_tap_box {
+
+                    .modal_tap {
+                      margin: 30px auto 0;
+                      .code_box {
+                        width: 80%;
+                        margin: 0 10%;
+
+                        .code{
+                          height: 500px;
+                          overflow: auto;
+                          .colorscripter-code-table{
+                            background-color: pink;
+                          }
+                        }
+
+                        .code_text {
+                          text-align-last: left;
+
+                          .title {
+                            font-family: $subfont;
+                            margin-top: 30px;
+                            font-size: 25px;
+                          }
+
+                          p {
+                            font-size: 18px;
+                            margin-top: 10px;
+                          }
+                        }
+                      }
+                    }
+
+                    .modal_tap01 {
+                      .code{
+                        font-size: 14.6px;
+                      }
+                    }
+
+
+                    .modal_tap02 {
+                      .code{
+                        font-size: 15px;
+                      }
+                    }
+
+
+                    .modal_tap03 {
+                      .code{
+                        font-size: 17px;
+                      }
+
+                    }
+
+                    .active {
+                      display: block;
+
+                    }
+
+                  }
+
+
+
+                }
+
+
+
+              }
+
+            }
+
+          }
+
+          .tap04 {
+
+            .text_up span {
+              color: #002053;
+            }
+
+            .mockup_outer {
+              position: relative;
+
+              .mockup_box {
+                width: 440px;
+                height: 350px;
+                margin: 0 auto;
+                overflow: hidden;
+
+                .pc {
+                  content: "";
+                  background: url(../img/pc_01.png) no-repeat;
+                  background-size: cover;
+                  height: 350px;
+                  position: relative;
+
+                  span {
+                    display: block;
+                    width: 402px;
+                    height: 228px;
+                    position: absolute;
+                    top: 19px;
+                    left: 19px;
+                    background: url(../img/hover_fila.png) no-repeat;
+                    background-size: cover;
+
+                    &:hover {
+                      animation: scroll02 15s ease;
+                      cursor: pointer;
+                    }
+                  }
+
+
+                  @keyframes scroll02 {
+                    0% {
+                      background-position: 0 0
+                    }
+
+                    50% {
+                      background-position: 0 -1370px
+                    }
+
+                    100% {
+                      background-position: 0 -1370px
+                    }
+
+                  }
+                }
+
+
+
+              }
+            }
+
+            .color_box {
+              .view01 {
+                background-color: #002053;
+              }
+
+              .view02 {
+                background-color: #c7c4c4;
+              }
+
+            }
+
+            .url_box {
+              button {
+                width: 110px;
+              }
+            }
+
+            .modal_background {
+              position: fixed;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              background: #EDF0F3;
+              display: none;
+              z-index: 9999;
+              .modal {
+                display: none;
+                width: 1300px;
+                height: 850px;
+                background-color: #fff;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+                z-index: 2 !important;
+                box-shadow: 0 1rem 2rem hsl(0 0% 0% / 20%);
+                position: relative;
+                .circle_box {
+                  display: flex;
+                  border-bottom: 1px solid #ccc;
+                  padding-bottom: 10px;
+                  padding-left: 20px;
+
+                  .circle {
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50px;
+                    background-color: black;
+                    margin-left: 5px;
+                    margin-top: 10px;
+                  }
+
+                  .circle01 {
+                    background-color: #ec5a5a;
+                  }
+
+                  .circle02 {
+                    background-color: #f3d678;
+                  }
+
+                  .circle03 {
+                    background-color: #9de04f;
+                  }
+                }
+
+                .close_btn {
+                  border: none;
+                  background: none;
+                  position: absolute;
+                  top: 3px;
+                  right: 20px;
+
+                  i {
+                    font-size: 30px;
+                    transition: all 0.3s;
+
+                  }
+
+                  &:hover {
+                    color: rgb(247, 43, 43);
+                  }
+                }
+
+                .content {
+
+
+                  .modal_menu {
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin: 0 auto;
+                    margin-top: 30px;
+
+                    .menu {
+                      font-size: 14px;
+                      letter-spacing: 2px;
+                      color: #969494;
+                      font-weight: bold;
+                      cursor: pointer;
+
+                      i {
+                        font-size: 30px;
+                        margin-bottom: 10px;
+                      }
+
+                      &:hover {
+                        color: #66c7ee;
+                      }
+                    }
+
+                    .active {
+                      color: #66c7ee;
+                    }
+
+                  }
+
+                  .modal_tap_box {
+
+
+                    .modal_tap01 {
+                      width: 1200px;
+                      margin: 30px auto 0;
+                      overflow: hidden;
+                    }
+
+
+                    .modal_tap02 {
+                      width: 1200px;
+                      margin: 50px auto 0;
+                      overflow: hidden;
+                      display: none;
+
+                    }
+
+
+                    .modal_tap03 {
+                      width: 1200px;
+                      margin: 50px auto 0;
+                      overflow: hidden;
+                      display: none;
+                    }
+
+                    .modal_tap04 {
+                      width: 1200px;
+                      margin: 50px auto 0;
+                      overflow: hidden;
+                      display: none;
+
+                    }
+
+                    .active {
+                      display: block;
+
+                    }
+
+                  }
+
+                }
+              }
+
+
+
+              #modal_03 {
+
+                .content {
+
+                  .modal_tap_box {
+                    .modal_tap01 {
+                      .swiper04 {
+                        width: 100%;
+                        height: 100%;
+
+                        //각 슬라이드
+                        .swiper-slide {
+                          img {
+                            width: 90%;
+                            height: auto;
+                            display: block;
+                            margin: 0 5%;
+                          }
+                        }
+
+                        //하단 스크롤바
+                        .swiper-horizontal>.swiper-scrollbar,
+                        .swiper-scrollbar.swiper-scrollbar-horizontal {
+                          position: relative;
+                          left: 0;
+                          cursor: pointer;
+                          width: 1200px;
+                        }
+
+                        //양쪽 버튼
+                        .swiper-button-prev,
+                        .swiper-button-next {
+                          color: black;
+                        }
+
+                        .swiper-button-next {
+                          right: 40px;
+                          top: var(--swiper-navigation-top-offset, 58%);
+                        }
+
+                        .swiper-button-prev {
+                          left: 40px;
+                          top: var(--swiper-navigation-top-offset, 58%);
+                        }
+
+                        .swiper-pagination-bullet {
+                          background-color: rgb(173, 171, 169);
+                          width: 10px;
+                          height: 10px;
+                          border-radius: 0;
+                        }
+
+                        .swiper-pagination-bullet-active {
+                          background-color: black;
+                          width: 10px;
+                          height: 10px;
+                          border-radius: 0;
+                        }
+
+                        .swiper-horizontal>.swiper-pagination-bullets, 
+                        .swiper-pagination-bullets.swiper-pagination-horizontal, 
+                        .swiper-pagination-custom, .swiper-pagination-fraction{
+                          bottom: var(--swiper-pagination-bottom,20px);
+                        }
+
+
+                      }
+
+
+
+
+
+                    }
+
+
+                    .modal_tap02 {
+
+                      .swiper_box {
+
+                        display: flex;
+
+                        .swiper05 {
+                          width: 50%;
+                          overflow: hidden;
+
+                          //각 슬라이드
+                          .swiper-slide {
+                            img {
+                              width: 70%;
+                              height: auto;
+                              display: block;
+                              margin: 0 15%;
+                            }
                           }
 
                           //하단 스크롤바
@@ -2891,6 +4041,219 @@ body {
                               margin-bottom: 10px;
                             }
 
+                            .text {
+                              text-align: left;
+                            }
+
+
+
+
+
+                          }
+                        }
+
+
+                      }
+
+
+
+
+
+
+
+                    }
+
+
+                    .modal_tap03 {
+
+                      .swiper_box {
+
+                        .swiper06 {
+                          width: 100%;
+                          height: 100%;
+  
+                          //각 슬라이드
+                          .swiper-slide {
+                            img {
+                              width: 900px;
+                              height: auto;
+                              display: block;
+                              margin: 50px auto 0;
+                            }
+                            .img09{width: 800px;}
+                            .img10,
+                            .img11{
+                              width: 1000px;
+                              margin: 100px auto 0;
+                            }
+
+
+                          }
+  
+                          //하단 스크롤바
+                          .swiper-horizontal>.swiper-scrollbar,
+                          .swiper-scrollbar.swiper-scrollbar-horizontal {
+                            position: relative;
+                            left: 0;
+                            cursor: pointer;
+                            width: 1200px;
+                          }
+  
+                          //양쪽 버튼
+                          .swiper-button-prev,
+                          .swiper-button-next {
+                            color: black;
+                          }
+  
+                          .swiper-button-next {
+                            right: 40px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+  
+                          .swiper-button-prev {
+                            left: 40px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+  
+                          .swiper-pagination-bullet {
+                            background-color: rgb(173, 171, 169);
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+  
+                          .swiper-pagination-bullet-active {
+                            background-color: black;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+  
+                          .swiper-horizontal>.swiper-pagination-bullets, 
+                          .swiper-pagination-bullets.swiper-pagination-horizontal, 
+                          .swiper-pagination-custom, .swiper-pagination-fraction{
+                            bottom: var(--swiper-pagination-bottom,20px);
+                          }
+  
+  
+                        }
+
+
+
+                      }
+
+
+
+
+
+                    }
+
+
+                    .modal_tap04 {
+
+                      .swiper_box {
+
+                        display: flex;
+
+                        .swiper07 {
+                          width: 50%;
+                          overflow: hidden;
+
+                          //각 슬라이드
+                          .swiper-slide {
+                            img {
+                              width: 60%;
+                              height: auto;
+                              display: block;
+                              margin: 0 20%;
+                            }
+                            .img07,
+                            .img08{
+                              width: 70%;
+                              margin: 50px 15% 0;
+                            }
+
+                            .img09{
+                              width: 70%;
+                              margin: 0 15%;
+                            }
+
+
+
+
+
+                          }
+
+                          //하단 스크롤바
+                          .swiper-horizontal>.swiper-scrollbar,
+                          .swiper-scrollbar.swiper-scrollbar-horizontal {
+                            position: relative;
+                            left: 0;
+                            cursor: pointer;
+                            width: 1200px;
+                          }
+
+                          //양쪽 버튼
+                          .swiper-button-prev,
+                          .swiper-button-next {
+                            color: black;
+                          }
+
+                          .swiper-button-next {
+                            right: 650px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+
+                          .swiper-button-prev {
+                            left: 50px;
+                            top: var(--swiper-navigation-top-offset, 58%);
+                          }
+
+                          .swiper-pagination-bullet {
+                            background-color: rgb(173, 171, 169);
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+
+                          .swiper-pagination-bullet-active {
+                            background-color: black;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 0;
+                          }
+
+                          .swiper-horizontal>.swiper-pagination-bullets,
+                          .swiper-pagination-bullets.swiper-pagination-horizontal,
+                          .swiper-pagination-custom,
+                          .swiper-pagination-fraction {
+                            width: 50%;
+                            bottom: var(--swiper-pagination-bottom, 19px);
+                          }
+
+
+                        }
+
+                        .modal_info_box {
+                          width: 50%;
+                          text-align-last: left;
+
+                          .modal_info {
+                            width: 400px;
+                            margin: 0 auto;
+
+                            h1 {
+                              font-size: 40px;
+                              letter-spacing: 2px;
+                              font-style: italic;
+                              margin-top: 70px;
+                            }
+
+                            h3 {
+                              margin-top: 50px;
+                              margin-bottom: 10px;
+                            }
+
 
 
 
@@ -2906,7 +4269,6 @@ body {
 
 
                     }
-
 
 
                   }
@@ -2919,19 +4281,23 @@ body {
 
               }
 
-
               #modal_04 {
 
                 .content {
                   .modal_tap_box {
 
                     .modal_tap {
+                      margin: 30px auto 0;
                       .code_box {
                         width: 80%;
                         margin: 0 10%;
 
-                        img {
-                          width: 100%;
+                        .code{
+                          height: 500px;
+                          overflow: auto;
+                          .colorscripter-code-table{
+                            background-color: pink;
+                          }
                         }
 
                         .code_text {
@@ -2944,7 +4310,7 @@ body {
                           }
 
                           p {
-                            font-size: 20px;
+                            font-size: 18px;
                             margin-top: 10px;
                           }
                         }
@@ -2952,37 +4318,23 @@ body {
                     }
 
                     .modal_tap01 {
-                      width: 1200px;
-                      margin: 50px auto 0;
-                      overflow: hidden;
-
-
+                      .code{
+                        font-size: 14.6px;
+                      }
                     }
 
 
                     .modal_tap02 {
-                      width: 1200px;
-                      margin: 50px auto 0;
-                      overflow: hidden;
-                      display: none;
-
-                      .code_box {
-                        width: 80%;
-                        margin: 0 10%;
-
-                        img {
-                          width: 80%;
-                        }
+                      .code{
+                        font-size: 15px;
                       }
-
                     }
 
 
                     .modal_tap03 {
-                      width: 1200px;
-                      margin: 50px auto 0;
-                      overflow: hidden;
-                      display: none;
+                      .code{
+                        font-size: 17px;
+                      }
 
                     }
 
@@ -3001,26 +4353,12 @@ body {
 
               }
 
-
-
-
-
-
-
-
             }
 
           }
 
 
 
-          .tap03 {
-            background-color: yellowgreen;
-          }
-
-          .tap04 {
-            background-color: green;
-          }
 
 
 

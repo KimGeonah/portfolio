@@ -565,6 +565,8 @@
       swiper05.slideTo(0);
     } else if (index == 2) {
       swiper06.slideTo(0);
+    } else if (index == 3) {
+      swiper07.slideTo(0);
     } else {
       swiper04.slideTo(0);
     }
@@ -652,9 +654,302 @@
   });
 
 
+  var swiper07 = new Swiper(".swiper07", {
+    initialSlide: 0,
+    grabCursor: true,
+
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    observer: true,
+    observeParents: true,
+
+  });
 
 
 
+
+  // ----------------------------------------------------------------------------------------------
+  // ----------------------------------- #modal_04  -----------------------------------------------
+  // ----------------------------------------------------------------------------------------------
+
+
+
+
+
+  //[제이쿼리] 작품 : 탭메뉴(2) - #modal_04 켜기    -----------------------------------------------
+
+  
+  const url04 = document.querySelector('.tap02 .url_02')
+  const modal04 = document.querySelector('.tap02 #modal_04')
+  const back04 = document.querySelector('.tap02 #background_04')
+  const close04 = document.querySelector('.tap02 #close_04')
+
+
+
+
+  //코드리뷰 버튼 클릭시 작동되는 탭
+  url04.addEventListener('click', function () {
+    modal04.style.display = 'block';
+    back04.style.display = 'block';
+    body.style.overflow = 'hidden';
+  });
+
+
+
+  //코드리뷰 닫기 클릭시 작동
+  close04.addEventListener('click', function () {
+    modal04.style.display = 'none';
+    back04.style.display = 'none';
+    body.style.overflowY = 'auto';
+
+    //나갔다 들어올때 active 첫번재 이동
+    $('.tap02 #modal_04 .modal_menu .menu').removeClass('active');
+    $('.tap02 #modal_04 .modal_menu .menu').eq(0).addClass('active');
+    $('.tap02 #modal_04 .modal_tap').css('display', 'none').removeClass('active');
+    $('.tap02 #modal_04 .modal_tap').eq(0).css('display', 'block').addClass('active');
+  });
+
+
+
+
+
+  //[바닐라] 작품 : 탭메뉴(1) - #modal_04 내부 탭메뉴 -----------------------------------------------
+
+
+  //모달 메뉴를 클릭할때
+  $('#modal_04 .modal_menu .menu').click(function () {
+
+    //메뉴전체에서 일단 active를 지우고
+    $('#modal_04 .modal_menu .menu').removeClass('active');
+    //선택된 메뉴만 active시킨다
+    $(this).addClass('active');
+
+    //그리고 선택된 메뉴에 해당하는 인덱스를 찾아서
+    let index = $(this).index();
+
+
+    $('#modal_04 .modal_tap').css('display', 'none').removeClass('active');
+    $('#modal_04 .modal_tap').eq(index).css('display', 'block').addClass('active');
+
+  });
+
+
+  // ----------------------------------------------------------------------------------------------
+  // ----------------------------------- #modal_05  -----------------------------------------------
+  // ----------------------------------------------------------------------------------------------
+
+
+
+
+  //[제이쿼리] 작품 : 탭메뉴(3) - #modal_05 켜기    -----------------------------------------------
+
+
+
+  const url05 = document.querySelector('.tap03 .url_01')
+  const modal05 = document.querySelector('.tap03 #modal_05')
+  const back05 = document.querySelector('.tap03 #background_05')
+  const close05 = document.querySelector('.tap03 #close_05')
+
+
+  //기획서 버튼 클릭시 작동되는 탭
+  url05.addEventListener('click', function () {
+    modal05.style.display = 'block';
+    back05.style.display = 'block';
+    body.style.overflow = 'hidden';
+    swiper08.slideTo(0);
+  });
+
+  
+
+  //기획서 닫기 클릭시 작동
+  close05.addEventListener('click', function () {
+    modal05.style.display = 'none';
+    back05.style.display = 'none';
+    body.style.overflowY = 'auto';
+
+    //나갔다 들어올때 active 첫번재 이동
+    $('.tap03 #modal_05 .modal_menu .menu').removeClass('active');
+    $('.tap03 #modal_05 .modal_menu .menu').eq(0).addClass('active');
+    $('.tap03 #modal_05 .modal_tap').css('display', 'none').removeClass('active');
+    $('.tap03 #modal_05 .modal_tap').eq(0).css('display', 'block').addClass('active');
+  });
+
+
+
+ 
+
+
+
+  //[바닐라] 작품 : 탭메뉴(3) - #modal_05 내부 탭메뉴 -----------------------------------------------
+
+
+
+
+  //모달 메뉴를 클릭할때
+  $('#modal_05 .modal_menu .menu').click(function () {
+    //메뉴전체에서 일단 active를 지우고
+    $('#modal_05 .modal_menu .menu').removeClass('active');
+    //선택된 메뉴만 active시킨다
+    $(this).addClass('active');
+
+    //그리고 선택된 메뉴에 해당하는 인덱스를 찾아서
+    let index = $(this).index();
+
+
+    $('#modal_05 .modal_tap').css('display', 'none').removeClass('active');
+    $('#modal_05 .modal_tap').eq(index).css('display', 'block').addClass('active');
+
+
+    //탭메뉴의 스와이퍼 첫페이지시작
+    if (index == 0) {
+      swiper08.slideTo(0);
+    } else if (index == 1) {
+      swiper09.slideTo(0);
+    }  else {
+      swiper08.slideTo(0);
+    }
+
+  });
+
+
+
+
+
+
+
+
+  //[바닐라] 작품 : 탭메뉴(3) - #modal_05 swiper  -----------------------------------------------
+
+  var swiper08 = new Swiper(".swiper08", {
+    initialSlide: 0,
+    grabCursor: true,
+
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    observer: true,
+    observeParents: true,
+
+
+  });
+
+
+  var swiper09 = new Swiper(".swiper09", {
+    initialSlide: 0,
+    grabCursor: true,
+
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    observer: true,
+    observeParents: true,
+
+  });
+
+
+ 
+
+
+
+
+
+  // ----------------------------------------------------------------------------------------------
+  // ----------------------------------- #modal_06  -----------------------------------------------
+  // ----------------------------------------------------------------------------------------------
+
+
+
+
+
+  //[제이쿼리] 작품 : 탭메뉴(3) - #modal_06 켜기    -----------------------------------------------
+
+  
+  const url06 = document.querySelector('.tap03 .url_02')
+  const modal06 = document.querySelector('.tap03 #modal_06')
+  const back06 = document.querySelector('.tap03 #background_06')
+  const close06 = document.querySelector('.tap03 #close_06')
+
+
+
+
+  //코드리뷰 버튼 클릭시 작동되는 탭
+  url06.addEventListener('click', function () {
+    modal06.style.display = 'block';
+    back06.style.display = 'block';
+    body.style.overflow = 'hidden';
+  });
+
+
+
+  //코드리뷰 닫기 클릭시 작동
+  close06.addEventListener('click', function () {
+    modal06.style.display = 'none';
+    back06.style.display = 'none';
+    body.style.overflowY = 'auto';
+
+    //나갔다 들어올때 active 첫번재 이동
+    $('.tap03 #modal_06 .modal_menu .menu').removeClass('active');
+    $('.tap03 #modal_06 .modal_menu .menu').eq(0).addClass('active');
+    $('.tap03 #modal_06 .modal_tap').css('display', 'none').removeClass('active');
+    $('.tap03 #modal_06 .modal_tap').eq(0).css('display', 'block').addClass('active');
+  });
+
+
+
+
+
+  //[바닐라] 작품 : 탭메뉴(3) - #modal_06 내부 탭메뉴 -----------------------------------------------
+
+
+  //모달 메뉴를 클릭할때
+  $('#modal_06 .modal_menu .menu').click(function () {
+
+    //메뉴전체에서 일단 active를 지우고
+    $('#modal_06 .modal_menu .menu').removeClass('active');
+    //선택된 메뉴만 active시킨다
+    $(this).addClass('active');
+
+    //그리고 선택된 메뉴에 해당하는 인덱스를 찾아서
+    let index = $(this).index();
+
+
+    $('#modal_06 .modal_tap').css('display', 'none').removeClass('active');
+    $('#modal_06 .modal_tap').eq(index).css('display', 'block').addClass('active');
+
+  });
 
 
 
