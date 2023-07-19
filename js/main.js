@@ -953,6 +953,78 @@
 
 
 
+  // ----------------------------------------------------------------------------------------------
+  // ----------------------------------- #modal_07  -----------------------------------------------
+  // ----------------------------------------------------------------------------------------------
+
+
+
+
+
+  //[제이쿼리] 작품 : 탭메뉴(4) - #modal_07 켜기    -----------------------------------------------
+
+  
+  const url07 = document.querySelector('.tap04 .url_01')
+  const modal07 = document.querySelector('.tap04 #modal_07')
+  const back07 = document.querySelector('.tap04 #background_07')
+  const close07 = document.querySelector('.tap04 #close_07')
+
+
+
+
+  //코드리뷰 버튼 클릭시 작동되는 탭
+  url07.addEventListener('click', function () {
+    modal07.style.display = 'block';
+    back07.style.display = 'block';
+    body.style.overflow = 'hidden';
+  });
+
+
+
+  //코드리뷰 닫기 클릭시 작동
+  close07.addEventListener('click', function () {
+    modal07.style.display = 'none';
+    back07.style.display = 'none';
+    body.style.overflowY = 'auto';
+
+    //나갔다 들어올때 active 첫번재 이동
+    $('.tap04 #modal_07 .modal_menu .menu').removeClass('active');
+    $('.tap04 #modal_07 .modal_menu .menu').eq(0).addClass('active');
+    $('.tap04 #modal_07 .modal_tap').css('display', 'none').removeClass('active');
+    $('.tap04 #modal_07 .modal_tap').eq(0).css('display', 'block').addClass('active');
+  });
+
+
+
+
+
+  //[바닐라] 작품 : 탭메뉴(4) - #modal_07 내부 탭메뉴 -----------------------------------------------
+
+
+  //모달 메뉴를 클릭할때
+  $('#modal_07 .modal_menu .menu').click(function () {
+
+    //메뉴전체에서 일단 active를 지우고
+    $('#modal_07 .modal_menu .menu').removeClass('active');
+    //선택된 메뉴만 active시킨다
+    $(this).addClass('active');
+
+    //그리고 선택된 메뉴에 해당하는 인덱스를 찾아서
+    let index = $(this).index();
+
+
+    $('#modal_07 .modal_tap').css('display', 'none').removeClass('active');
+    $('#modal_07 .modal_tap').eq(index).css('display', 'block').addClass('active');
+
+  });
+
+
+
+
+
+
+
+
 
   //[바닐라]  AOS  -----------------------------------------------
 
