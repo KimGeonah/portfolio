@@ -220,7 +220,7 @@
         width: "70%"
       }, 1500);
       $("#progress04").animate({
-        width: "40%"
+        width: "60%"
       }, 1500);
       $("#progress05").animate({
         width: "70%"
@@ -1017,8 +1017,6 @@
     $('#modal_07 .modal_tap').eq(index).css('display', 'block').addClass('active');
 
   });
-
-
 
 
 

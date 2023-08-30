@@ -84,7 +84,7 @@ body {
   border: none;
   background-color: transparent;
   font-size: 15px;
-  border: 2px solid #707070;
+  border: 1px solid #707070;
   padding: 5px 0px;
   width: 0px;
   transition: all 0.3s;
@@ -2434,50 +2434,60 @@ body {
 #works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_06 .content .active {
   display: block;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .text_up span {
-  color: #002053;
+#works .works_outer .works_tap_box .works_taps ul .tap04 .text_up span {
+  color: #70da7d;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .mockup_outer {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .mockup_outer {
   position: relative;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .mockup_outer .mockup_box {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .mockup_outer .mockup_box {
   width: 440px;
   height: 350px;
   margin: 0 auto;
   overflow: hidden;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .mockup_outer .mockup_box .pc {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .mockup_outer .mockup_box .pc {
   content: "";
   background: url(../img/pc_01.png) no-repeat;
   background-size: cover;
   height: 350px;
   position: relative;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .mockup_outer .mockup_box .pc span {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .mockup_outer .mockup_box .pc span {
   display: block;
-  width: 400px;
-  height: 225px;
+  width: 402px;
+  height: 228px;
   position: absolute;
   top: 19px;
   left: 19px;
-  background: url(../img/hover_login.png) no-repeat;
+  background: url(../img/hover_salad.png) no-repeat;
   background-size: cover;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .mockup_outer .mockup_box .pc span:hover {
-  background: url(../img/hover_login02.png) no-repeat;
-  background-size: cover;
+#works .works_outer .works_tap_box .works_taps ul .tap04 .mockup_outer .mockup_box .pc span:hover {
+  animation: scroll03 15s ease;
   cursor: pointer;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .color_box .view01 {
-  background-color: #002053;
+@keyframes scroll03 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 0 -940px;
+  }
+  100% {
+    background-position: 0 -940px;
+  }
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .color_box .view02 {
-  background-color: #c7c4c4;
+#works .works_outer .works_tap_box .works_taps ul .tap04 .color_box .view01 {
+  background-color: #e8d6b1;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .url_box button {
-  width: 110px;
+#works .works_outer .works_tap_box .works_taps ul .tap04 .color_box .view02 {
+  background-color: #70da7d;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .url_box button {
+  width: 220px;
+}
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background {
   position: fixed;
   top: 0;
   left: 0;
@@ -2487,7 +2497,7 @@ body {
   display: none;
   z-index: 9999;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal {
   display: none;
   width: 1300px;
   height: 850px;
@@ -2501,13 +2511,13 @@ body {
   box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.2);
   position: relative;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .circle_box {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .circle_box {
   display: flex;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   padding-left: 20px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .circle_box .circle {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .circle_box .circle {
   width: 15px;
   height: 15px;
   border-radius: 50px;
@@ -2515,118 +2525,118 @@ body {
   margin-left: 5px;
   margin-top: 10px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .circle_box .circle01 {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .circle_box .circle01 {
   background-color: #ec5a5a;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .circle_box .circle02 {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .circle_box .circle02 {
   background-color: #f3d678;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .circle_box .circle03 {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .circle_box .circle03 {
   background-color: #9de04f;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .close_btn {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .close_btn {
   border: none;
   background: none;
   position: absolute;
   top: 3px;
   right: 20px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .close_btn i {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .close_btn i {
   font-size: 30px;
   transition: all 0.3s;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .close_btn:hover {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .close_btn:hover {
   color: rgb(247, 43, 43);
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .content .modal_menu {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .content .modal_menu {
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
   margin-top: 25px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .content .modal_menu .menu {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .content .modal_menu .menu {
   font-size: 14px;
   letter-spacing: 2px;
   color: #969494;
   font-weight: bold;
   cursor: pointer;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .content .modal_menu .menu i {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .content .modal_menu .menu i {
   font-size: 30px;
   margin-bottom: 10px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .content .modal_menu .menu:hover {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .content .modal_menu .menu:hover {
   color: #66c7ee;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .content .modal_menu .active {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .content .modal_menu .active {
   color: #66c7ee;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .content .modal_tap_box .modal_tap01 {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .content .modal_tap_box .modal_tap01 {
   width: 1200px;
   margin: 30px auto 0;
   overflow: hidden;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .content .modal_tap_box .modal_tap02 {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .content .modal_tap_box .modal_tap02 {
   width: 1200px;
   margin: 50px auto 0;
   overflow: hidden;
   display: none;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .content .modal_tap_box .modal_tap03 {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .content .modal_tap_box .modal_tap03 {
   width: 1200px;
   margin: 50px auto 0;
   overflow: hidden;
   display: none;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .content .modal_tap_box .modal_tap04 {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .content .modal_tap_box .modal_tap04 {
   width: 1200px;
   margin: 50px auto 0;
   overflow: hidden;
   display: none;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background .modal .content .modal_tap_box .active {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background .modal .content .modal_tap_box .active {
   display: block;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap_box .modal_tap {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap_box .modal_tap {
   margin: 30px auto 0;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box {
   width: 80%;
   margin: 0 10%;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .code {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .code {
   height: 500px;
   overflow: auto;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .code .colorscripter-code-table {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .code .colorscripter-code-table {
   background-color: pink;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .code_text {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .code_text {
   -moz-text-align-last: left;
        text-align-last: left;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .code_text .title {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .code_text .title {
   font-family: "yg-jalnan";
   margin-top: 22px;
   font-size: 23px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box p {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box p {
   font-size: 15px;
   margin-top: 10px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap01 .code {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap01 .code {
   font-size: 15.1px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap02 .code {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap02 .code {
   font-size: 15px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap03 .code {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap03 .code {
   font-size: 17px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .modal_tap04 .code {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap04 .code {
   font-size: 15.8px;
 }
-#works .works_outer .works_tap_box .works_taps ul .tap03 .modal_background #modal_07 .content .active {
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .active {
   display: block;
 }
 

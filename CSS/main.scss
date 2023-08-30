@@ -114,7 +114,7 @@ body {
       border: none;
       background-color: transparent;
       font-size: 15px;
-      border: 2px solid #707070;
+      border: 1px solid #707070;
       padding: 5px 0px;
       width: 0px;
       transition: all 0.3s;
@@ -3647,23 +3647,16 @@ body {
                       display: block;
 
                     }
-
                   }
-
-
-
                 }
-
-
-
               }
 
-            }
+            } 
 
-            .tap03 {
+          .tap04 {
 
               .text_up span {
-                color: #002053;
+                color: #70da7d;
               }
   
               .mockup_outer {
@@ -3681,26 +3674,38 @@ body {
                     background-size: cover;
                     height: 350px;
                     position: relative;
+  
                     span {
                       display: block;
-                      width: 400px;
-                      height: 225px;
+                      width: 402px;
+                      height: 228px;
                       position: absolute;
                       top: 19px;
                       left: 19px;
-                      background: url(../img/hover_login.png) no-repeat;
+                      background: url(../img/hover_salad.png) no-repeat;
                       background-size: cover;
-                      
   
-  
-                       &:hover {
-                        background: url(../img/hover_login02.png)  no-repeat;
-                        background-size: cover;
+                      &:hover {
+                        animation: scroll03 15s ease;
                         cursor: pointer;
-                      } 
+                      }
                     }
   
   
+                    @keyframes scroll03 {
+                      0% {
+                        background-position: 0 0
+                      }
+  
+                      50% {
+                        background-position: 0 -940px
+                      }
+  
+                      100% {
+                        background-position: 0 -940px
+                      }
+  
+                    }
                   }
   
   
@@ -3710,18 +3715,19 @@ body {
   
               .color_box {
                 .view01 {
-                  background-color: #002053;
+                  background-color: #e8d6b1;
+                }
+
+                .view02 {
+                  background-color: #70da7d;
                 }
   
-                .view02 {
-                  background-color: #c7c4c4;
-                }
   
               }
   
               .url_box {
                 button {
-                  width: 110px;
+                  width: 220px;
                 }
               }
   
