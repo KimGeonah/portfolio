@@ -2611,6 +2611,9 @@ body {
 #works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .code .colorscripter-code-table {
   background-color: pink;
 }
+#works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .react_img {
+  width: 1000px;
+}
 #works .works_outer .works_tap_box .works_taps ul .tap04 .modal_background #modal_07 .content .modal_tap_box .modal_tap .code_box .code_text {
   -moz-text-align-last: left;
        text-align-last: left;
