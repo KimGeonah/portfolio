@@ -209,7 +209,7 @@
 
   $(window).scroll(function () {
     let scrollTop = $(window).scrollTop();
-    if (scrollTop >= 4965) {
+    if (scrollTop >= 4950) {
       $("#progress01").animate({
         width: "90%"
       }, 1500);
